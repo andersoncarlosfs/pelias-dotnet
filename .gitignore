@@ -1,52 +1,79 @@
-# Prerequisites
-*.d
+# System 
+$RECYCLE.BIN/
+*.lnk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Temporary 
+*.tmp
+*.bak
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Compiled 
+*.class
+*.jar
 
-# Precompiled Headers
-*.gch
-*.pch
+# Package 
+*.tar.gz
+*.zip
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# Build
+build/
 
-# Shared objects (inc. Windows DLLs)
+# Chat history or logs
+logs/
+chat_history.txt
+
+# Python
+venv/
+env/
+*.pyc
+__pycache__/
+
+# .NET
+bin/
+obj/
+artifacts/
 *.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
 *.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
 *.pdb
+*.user
+*.suo
+*.cache
+*.log
+project.lock.json
+project.fragment.lock.json
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Visual Studio Code
+.vscode/
+.vs/
+
+# Rider
+.idea/
+
+# Editor-specific 
+.cache/
+.config/
+.ipython/
+.ivy2/
+.jupyter/
+.local/
+
+# User-specific 
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated 
+mono_crash.*
+
+# Windows Installer 
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Other generated files during development
