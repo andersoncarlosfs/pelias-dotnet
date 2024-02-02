@@ -1,0 +1,51 @@
+name: Deploy Pages
+
+on:
+  workflow_run:
+    workflows: ["Run CI/CD"]
+    types: [completed]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    steps:
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.x'   
+
+    - name: Update DocFX
+      run: dotnet tool update -g docfx  
+    
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: Update Documentation
+      run: docfx ./docfx.json    
+        
+    - name: Setup Pages
+      uses: actions/configure-pages@v3
+        
+    - name: Upload Artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './documentation/latest/site'
+          
+    - name: Deploy Pages
+      id: deployment
+      uses: actions/deploy-pages@v4

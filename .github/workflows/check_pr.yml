@@ -1,4 +1,5 @@
 name: Check PR
+
 on:
   pull_request_target:
     types:
@@ -6,13 +7,14 @@ on:
       - reopened
       - synchronize
       - edited
+
 jobs:
-  check-branches:
+  check:
     runs-on: ubuntu-latest
     steps:
-      - name: Check branches
-        run: |
-          if [ ${{ github.head_ref }} != "dev" ] && [ ${{ github.base_ref }} == "main" ]; then
-            echo "Merge requests to main branch are only allowed from dev branch."
-            exit 1
-          fi
+    - name: Check branches
+      run: |
+        if [ ${{ github.head_ref }} != "development" ] && [ ${{ github.base_ref }} == "main" ]; then
+          echo "Merge requests to main branch are only allowed from development branch."
+          exit 1
+        fi

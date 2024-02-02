@@ -8,10 +8,10 @@
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="Microsoft.NETCore.App" targetFramework="net8.0" />
     </frameworkAssemblies>
-    <readme>documentation\README.md</readme>
+    <readme>README.md</readme>
   </metadata>
   <files>
     <file src="build\bin\Release\net8.0\Pelias.NET.dll" target="lib\net8.0" />
-    <file src="README.md" target="documentation\" />
+    <file src="README.md" target="" />
   </files>
 </package>

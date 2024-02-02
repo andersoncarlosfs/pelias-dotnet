@@ -1,0 +1,51 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "./sources/Pelias.NET",
+          "files": [
+            "**/*.csproj"
+          ]
+        }
+      ],
+      "dest": "./documentation/latest/api"
+    }
+  ],
+  "build": {
+    "markdownEngineProperties": {
+      "markdigExtensions": [
+        "Abbreviations",
+        "Footnotes"
+      ]
+    },
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "./documentation/latest/site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "Pelias.NET",
+      "_appTitle": "Pelias.NET",
+      "_enableSearch": true,
+      "pdf": true
+    }
+  }
+}

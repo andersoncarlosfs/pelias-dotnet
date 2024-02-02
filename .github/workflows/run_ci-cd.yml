@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Install Dependencies
       run: sudo apt-get install -y xmlstarlet
@@ -19,7 +18,7 @@ jobs:
         dotnet-version: '8.x'
 
     - name: Checkout Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: Set up Variables
       run: |
@@ -61,8 +60,7 @@ jobs:
       run: zip -jr v${{ env.version }}.zip ./build/*
    
     - name: Create Zip Release
-      run: |
-        gh release create v${{ env.version }} './v${{ env.version }}.tar.gz#Binaries (tar.gz)' './v${{ env.version }}.zip#Binaries (zip)'
+      run: gh release create v${{ env.version }} './v${{ env.version }}.tar.gz#Binaries (tar.gz)' './v${{ env.version }}.zip#Binaries (zip)'
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
 
