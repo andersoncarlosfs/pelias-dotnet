@@ -11,6 +11,8 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Install Dependencies
       run: sudo apt-get install -y xmlstarlet
@@ -55,8 +57,8 @@ jobs:
    
     - name: Create Zip Release
       run: gh release create v${{ env.version }} './v${{ env.version }}.tar.gz#Binaries (tar.gz)' './v${{ env.version }}.zip#Binaries (zip)'
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+      #env:
+      #  GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
 
     - name: Publish to NuGet
       run: exit 0 #dotnet nuget push ./build/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.TOKEN_NUGET }}
