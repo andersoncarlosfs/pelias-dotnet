@@ -2,8 +2,10 @@ name: Publish
 
 on:
   workflow_run:
-    workflows: ["Release"]
-    types: [completed]
+    workflows:
+      - Release
+    types:
+      - completed
 
   workflow_dispatch:
 

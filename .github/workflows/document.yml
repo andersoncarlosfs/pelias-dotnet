@@ -1,0 +1,36 @@
+name: Document
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - edited
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.x'
+
+    - name: Update DocFX
+      run: dotnet tool update -g docfx
+      
+    - name: Update Documentation
+      run: docfx ./docfx.json    
+ 
+    - name: Commit Documentation
+      run: |
+        git config user.name "$(git log -n 1 --pretty=format:%an)"
+        git config user.email "$(git log -n 1 --pretty=format:%ae)"
+        git add ./documentation/latest/site
+        git commit -m "Updating the documentation for the commit: $(git log -n 1 --pretty=format:%H)"
+        git push
