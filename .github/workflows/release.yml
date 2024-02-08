@@ -68,11 +68,10 @@ jobs:
  
     - name: Commit Documentation
       run: |
-        echo 0
         git config user.name "$(git log -n 1 --pretty=format:%an)"
         git config user.email "$(git log -n 1 --pretty=format:%ae)"
         git add ./documentation/latest/site
         git commit -m "Updating the documentation for the commit: $(git log -n 1 --pretty=format:%H)"
         git push -f    
       env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+        PAT_TOKEN: ${{ secrets.TOKEN_GITHUB }}
