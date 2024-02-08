@@ -34,6 +34,7 @@ jobs:
       run: |
         git config user.name "$(git log -n 1 --pretty=format:%an)"
         git config user.email "$(git log -n 1 --pretty=format:%ae)"
+        git pull 
         git checkout ${{ github.head_ref }}
         git add ./documentation/latest/site
         git commit -m "Updating the documentation for the commit: $(git log -n 1 --pretty=format:%H)"
