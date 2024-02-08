@@ -54,7 +54,7 @@ jobs:
       run: zip -jr v${{ env.version }}.zip ./build/*
    
     - name: Create Zip Release
-      run: exit 0 #gh release create v${{ env.version }} './v${{ env.version }}.tar.gz#Binaries (tar.gz)' './v${{ env.version }}.zip#Binaries (zip)'
+      run: gh release create v${{ env.version }} './v${{ env.version }}.tar.gz#Binaries (tar.gz)' './v${{ env.version }}.zip#Binaries (zip)'
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
 
