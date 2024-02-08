@@ -72,6 +72,6 @@ jobs:
         git config user.email "$(git log -n 1 --pretty=format:%ae)"
         git add ./documentation/latest/site
         git commit -m "Updating the documentation for the commit: $(git log -n 1 --pretty=format:%H)"
-        git push -f    
+        git push origin HEAD:${{ github.ref_name }}    
       env:
         PAT_TOKEN: ${{ secrets.TOKEN_GITHUB }}
