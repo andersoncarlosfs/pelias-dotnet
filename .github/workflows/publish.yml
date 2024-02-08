@@ -20,23 +20,12 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: pages
       url: ${{ steps.deployment.outputs.page_url }}
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
-    steps:
-    - name: Set up .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: '8.x'   
-
-    - name: Update DocFX
-      run: dotnet tool update -g docfx  
-    
+    steps:    
     - name: Checkout Repository
       uses: actions/checkout@v4
-      
-    - name: Update Documentation
-      run: docfx ./docfx.json    
         
     - name: Setup Pages
       uses: actions/configure-pages@v3
