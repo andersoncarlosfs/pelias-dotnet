@@ -68,6 +68,7 @@ jobs:
  
     - name: Commit Documentation
       run: |
+        echo 0
         git config user.name "$(git log -n 1 --pretty=format:%an)"
         git config user.email "$(git log -n 1 --pretty=format:%ae)"
         git add ./documentation/latest/site
