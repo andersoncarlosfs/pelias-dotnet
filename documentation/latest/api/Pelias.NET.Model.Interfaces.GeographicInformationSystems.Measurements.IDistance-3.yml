@@ -1,0 +1,372 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3
+  id: IDistance`3
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  children:
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3.Compute(`0,`0)
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3.MEAN_EARTH_RADIUS
+  langs:
+  - csharp
+  - vb
+  name: IDistance<TCoordinates, TAngle, TLength>
+  nameWithType: IDistance<TCoordinates, TAngle, TLength>
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance<TCoordinates, TAngle, TLength>
+  type: Interface
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/IDistance.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: IDistance
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/IDistance.cs
+    startLine: 11
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  summary: >-
+    Represents an interface for calculating geographical distance between two points,
+
+    extending the general measurement interface.
+  example: []
+  syntax:
+    content: 'public interface IDistance<TCoordinates, TAngle, TLength> : IMeasurement, IEntity where TCoordinates : ICoordinates<TAngle> where TAngle : IAngle where TLength : ILength'
+    typeParameters:
+    - id: TCoordinates
+      description: The type representing the coordinates of the points.
+    - id: TAngle
+      description: The type representing an angle measurement.
+    - id: TLength
+      description: The type representing a length measurement.
+    content.vb: Public Interface IDistance(Of TCoordinates As ICoordinates(Of TAngle), TAngle As IAngle, TLength As ILength) Inherits IMeasurement, IEntity
+  inheritedMembers:
+  - Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  nameWithType.vb: IDistance(Of TCoordinates, TAngle, TLength)
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance(Of TCoordinates, TAngle, TLength)
+  name.vb: IDistance(Of TCoordinates, TAngle, TLength)
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3.MEAN_EARTH_RADIUS
+  commentId: F:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3.MEAN_EARTH_RADIUS
+  id: MEAN_EARTH_RADIUS
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3
+  langs:
+  - csharp
+  - vb
+  name: MEAN_EARTH_RADIUS
+  nameWithType: IDistance<TCoordinates, TAngle, TLength>.MEAN_EARTH_RADIUS
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance<TCoordinates, TAngle, TLength>.MEAN_EARTH_RADIUS
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/IDistance.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: MEAN_EARTH_RADIUS
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/IDistance.cs
+    startLine: 19
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  summary: Radius at equator in meters (World Geodetic System 1984).
+  example: []
+  syntax:
+    content: public const double MEAN_EARTH_RADIUS = 6371009
+    return:
+      type: System.Double
+    content.vb: Public Const MEAN_EARTH_RADIUS As Double = 6371009
+  nameWithType.vb: IDistance(Of TCoordinates, TAngle, TLength).MEAN_EARTH_RADIUS
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance(Of TCoordinates, TAngle, TLength).MEAN_EARTH_RADIUS
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3.Compute(`0,`0)
+  commentId: M:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3.Compute(`0,`0)
+  id: Compute(`0,`0)
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3
+  langs:
+  - csharp
+  - vb
+  name: Compute(TCoordinates, TCoordinates)
+  nameWithType: IDistance<TCoordinates, TAngle, TLength>.Compute(TCoordinates, TCoordinates)
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance<TCoordinates, TAngle, TLength>.Compute(TCoordinates, TCoordinates)
+  type: Method
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/IDistance.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Compute
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/IDistance.cs
+    startLine: 27
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  summary: Computes the geographical distance between two points.
+  example: []
+  syntax:
+    content: TLength Compute(TCoordinates source, TCoordinates target)
+    parameters:
+    - id: source
+      type: '{TCoordinates}'
+      description: The coordinates of the source point.
+    - id: target
+      type: '{TCoordinates}'
+      description: The coordinates of the target point.
+    return:
+      type: '{TLength}'
+      description: The distance between the two points in the specified length unit.
+    content.vb: Function Compute(source As TCoordinates, target As TCoordinates) As TLength
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3.Compute*
+  nameWithType.vb: IDistance(Of TCoordinates, TAngle, TLength).Compute(TCoordinates, TCoordinates)
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance(Of TCoordinates, TAngle, TLength).Compute(TCoordinates, TCoordinates)
+references:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  commentId: N:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  nameWithType: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.html
+- uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  commentId: M:Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  parent: Pelias.NET.Model.Interfaces.IEntity
+  isExternal: true
+  href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  name: GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  nameWithType: IEntity.GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  fullName: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List<System.Text.Json.JsonProperty>, System.Collections.Generic.List<System.Exception>, bool)
+  nameWithType.vb: IEntity.GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  fullName.vb: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List(Of System.Text.Json.JsonProperty), System.Collections.Generic.List(Of System.Exception), Boolean)
+  name.vb: GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.IEntity
+  commentId: T:Pelias.NET.Model.Interfaces.IEntity
+  parent: Pelias.NET.Model.Interfaces
+  href: Pelias.NET.Model.Interfaces.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: Pelias.NET.Model.Interfaces.IEntity
+- uid: Pelias.NET.Model.Interfaces
+  commentId: N:Pelias.NET.Model.Interfaces
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces
+  nameWithType: Pelias.NET.Model.Interfaces
+  fullName: Pelias.NET.Model.Interfaces
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3.Compute*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3.Compute
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance-3.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_Measurements_IDistance_3_Compute__0__0_
+  name: Compute
+  nameWithType: IDistance<TCoordinates, TAngle, TLength>.Compute
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance<TCoordinates, TAngle, TLength>.Compute
+  nameWithType.vb: IDistance(Of TCoordinates, TAngle, TLength).Compute
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance(Of TCoordinates, TAngle, TLength).Compute
+- uid: '{TCoordinates}'
+  commentId: '!:TCoordinates'
+  definition: TCoordinates
+  name: TCoordinates
+  nameWithType: TCoordinates
+  fullName: TCoordinates
+- uid: '{TLength}'
+  commentId: '!:TLength'
+  definition: TLength
+  name: TLength
+  nameWithType: TLength
+  fullName: TLength
+- uid: TCoordinates
+  name: TCoordinates
+  nameWithType: TCoordinates
+  fullName: TCoordinates
+- uid: TLength
+  commentId: '!:TLength'
+  name: TLength
+  nameWithType: TLength
+  fullName: TLength

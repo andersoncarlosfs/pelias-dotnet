@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
+  commentId: N:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
+  id: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
+  children:
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response
+  langs:
+  - csharp
+  - vb
+  name: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
+  nameWithType: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
+  type: Namespace
+  assemblies:
+  - Pelias.NET
+references:
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response.html
+  name: Response
+  nameWithType: Response
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response

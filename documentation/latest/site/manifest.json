@@ -1,0 +1,708 @@
+{
+  "source_base_path": "C:/Users/anderson.carlos/Downloads/pelias-dotnet",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "documentation/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Controller.Services.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Controller.Services.Client.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Controller.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Controller.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Exceptions.CollectionIterationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Exceptions.CollectionIterationException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Exceptions.MissingEntryException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Exceptions.MissingEntryException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Exceptions.TypeMismatchException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Exceptions.TypeMismatchException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Exceptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature-5.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature-5.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IGeocoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IGeocoding.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IGeometry-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IGeometry-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IMeasurement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IMeasurement.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IMeasure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IMeasure.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.IAngle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.IAngle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.GeographicInformationSystems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.IClient-8.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.IClient-8.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.IEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.IEntity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.Protocols.Http.IResponse-7.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.Protocols.Http.IResponse-7.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.Protocols.Http.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.Protocols.Http.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.MatchType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.MatchType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Path.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Path.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Version.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Version.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Extensions.IDistanceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Extensions.IDistanceExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Geocoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Geocoding.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Geometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Geometry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid.VincentyFormulae.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid.VincentyFormulae.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere.HaversineFormula.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere.HaversineFormula.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere.SphericalLawOfCosines.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere.SphericalLawOfCosines.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Length.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Length.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Properties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Properties.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "documentation/latest/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/toc.html"
+        },
+        ".json": {
+          "relative_path": "documentation/latest/api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "documentation/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/toc.html"
+        },
+        ".json": {
+          "relative_path": "documentation/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

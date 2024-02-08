@@ -1,0 +1,602 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  id: IProperties
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  children:
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Accuracy
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Confidence
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.GroupIdentifier
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Identifier
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Label
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Layer
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Name
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Source
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.SourceIdentifier
+  langs:
+  - csharp
+  - vb
+  name: IProperties
+  nameWithType: IProperties
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  type: Interface
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: IProperties
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+    startLine: 5
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Represents an interface for properties of a geographic entity, extending the general entity interface.
+  example: []
+  syntax:
+    content: 'public interface IProperties : IEntity'
+    content.vb: Public Interface IProperties Inherits IEntity
+  inheritedMembers:
+  - Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Identifier
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Identifier
+  id: Identifier
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  langs:
+  - csharp
+  - vb
+  name: Identifier
+  nameWithType: IProperties.Identifier
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Identifier
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Identifier
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+    startLine: 10
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the identifier of the geographic entity.
+  example: []
+  syntax:
+    content: string Identifier { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Identifier As String
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Identifier*
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.GroupIdentifier
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.GroupIdentifier
+  id: GroupIdentifier
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  langs:
+  - csharp
+  - vb
+  name: GroupIdentifier
+  nameWithType: IProperties.GroupIdentifier
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.GroupIdentifier
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: GroupIdentifier
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+    startLine: 15
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the group identifier of the geographic entity.
+  example: []
+  syntax:
+    content: string GroupIdentifier { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property GroupIdentifier As String
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.GroupIdentifier*
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Layer
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Layer
+  id: Layer
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  langs:
+  - csharp
+  - vb
+  name: Layer
+  nameWithType: IProperties.Layer
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Layer
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Layer
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+    startLine: 20
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the layer of the geographic entity.
+  example: []
+  syntax:
+    content: string Layer { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Layer As String
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Layer*
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Source
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Source
+  id: Source
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: IProperties.Source
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Source
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Source
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+    startLine: 25
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the source of the geographic entity.
+  example: []
+  syntax:
+    content: string Source { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Source As String
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Source*
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.SourceIdentifier
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.SourceIdentifier
+  id: SourceIdentifier
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  langs:
+  - csharp
+  - vb
+  name: SourceIdentifier
+  nameWithType: IProperties.SourceIdentifier
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.SourceIdentifier
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: SourceIdentifier
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+    startLine: 30
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the source identifier of the geographic entity.
+  example: []
+  syntax:
+    content: string SourceIdentifier { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property SourceIdentifier As String
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.SourceIdentifier*
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Name
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Name
+  id: Name
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: IProperties.Name
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Name
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Name
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+    startLine: 35
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the name of the geographic entity.
+  example: []
+  syntax:
+    content: string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Name As String
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Name*
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Confidence
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Confidence
+  id: Confidence
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  langs:
+  - csharp
+  - vb
+  name: Confidence
+  nameWithType: IProperties.Confidence
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Confidence
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Confidence
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+    startLine: 40
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the confidence level of the geographic entity.
+  example: []
+  syntax:
+    content: double Confidence { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: ReadOnly Property Confidence As Double
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Confidence*
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Accuracy
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Accuracy
+  id: Accuracy
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  langs:
+  - csharp
+  - vb
+  name: Accuracy
+  nameWithType: IProperties.Accuracy
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Accuracy
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Accuracy
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+    startLine: 45
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the accuracy information of the geographic entity.
+  example: []
+  syntax:
+    content: string Accuracy { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Accuracy As String
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Accuracy*
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Label
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Label
+  id: Label
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+  langs:
+  - csharp
+  - vb
+  name: Label
+  nameWithType: IProperties.Label
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Label
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Label
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
+    startLine: 50
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the label of the geographic entity.
+  example: []
+  syntax:
+    content: string Label { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Label As String
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Label*
+references:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  commentId: N:Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  nameWithType: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+- uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  commentId: M:Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  parent: Pelias.NET.Model.Interfaces.IEntity
+  isExternal: true
+  href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  name: GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  nameWithType: IEntity.GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  fullName: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List<System.Text.Json.JsonProperty>, System.Collections.Generic.List<System.Exception>, bool)
+  nameWithType.vb: IEntity.GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  fullName.vb: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List(Of System.Text.Json.JsonProperty), System.Collections.Generic.List(Of System.Exception), Boolean)
+  name.vb: GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.IEntity
+  commentId: T:Pelias.NET.Model.Interfaces.IEntity
+  parent: Pelias.NET.Model.Interfaces
+  href: Pelias.NET.Model.Interfaces.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: Pelias.NET.Model.Interfaces.IEntity
+- uid: Pelias.NET.Model.Interfaces
+  commentId: N:Pelias.NET.Model.Interfaces
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces
+  nameWithType: Pelias.NET.Model.Interfaces
+  fullName: Pelias.NET.Model.Interfaces
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Identifier*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Identifier
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IProperties_Identifier
+  name: Identifier
+  nameWithType: IProperties.Identifier
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Identifier
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.GroupIdentifier*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.GroupIdentifier
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IProperties_GroupIdentifier
+  name: GroupIdentifier
+  nameWithType: IProperties.GroupIdentifier
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.GroupIdentifier
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Layer*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Layer
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IProperties_Layer
+  name: Layer
+  nameWithType: IProperties.Layer
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Layer
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Source*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Source
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IProperties_Source
+  name: Source
+  nameWithType: IProperties.Source
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Source
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.SourceIdentifier*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.SourceIdentifier
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IProperties_SourceIdentifier
+  name: SourceIdentifier
+  nameWithType: IProperties.SourceIdentifier
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.SourceIdentifier
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Name*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Name
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IProperties_Name
+  name: Name
+  nameWithType: IProperties.Name
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Name
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Confidence*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Confidence
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IProperties_Confidence
+  name: Confidence
+  nameWithType: IProperties.Confidence
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Confidence
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Accuracy*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Accuracy
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IProperties_Accuracy
+  name: Accuracy
+  nameWithType: IProperties.Accuracy
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Accuracy
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Label*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Label
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IProperties_Label
+  name: Label
+  nameWithType: IProperties.Label
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties.Label

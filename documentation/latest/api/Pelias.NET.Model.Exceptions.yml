@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Exceptions
+  commentId: N:Pelias.NET.Model.Exceptions
+  id: Pelias.NET.Model.Exceptions
+  children:
+  - Pelias.NET.Model.Exceptions.CollectionIterationException
+  - Pelias.NET.Model.Exceptions.MissingEntryException
+  - Pelias.NET.Model.Exceptions.TypeMismatchException
+  langs:
+  - csharp
+  - vb
+  name: Pelias.NET.Model.Exceptions
+  nameWithType: Pelias.NET.Model.Exceptions
+  fullName: Pelias.NET.Model.Exceptions
+  type: Namespace
+  assemblies:
+  - Pelias.NET
+references:
+- uid: Pelias.NET.Model.Exceptions.CollectionIterationException
+  commentId: T:Pelias.NET.Model.Exceptions.CollectionIterationException
+  href: Pelias.NET.Model.Exceptions.CollectionIterationException.html
+  name: CollectionIterationException
+  nameWithType: CollectionIterationException
+  fullName: Pelias.NET.Model.Exceptions.CollectionIterationException
+- uid: Pelias.NET.Model.Exceptions.MissingEntryException
+  commentId: T:Pelias.NET.Model.Exceptions.MissingEntryException
+  href: Pelias.NET.Model.Exceptions.MissingEntryException.html
+  name: MissingEntryException
+  nameWithType: MissingEntryException
+  fullName: Pelias.NET.Model.Exceptions.MissingEntryException
+- uid: Pelias.NET.Model.Exceptions.TypeMismatchException
+  commentId: T:Pelias.NET.Model.Exceptions.TypeMismatchException
+  href: Pelias.NET.Model.Exceptions.TypeMismatchException.html
+  name: TypeMismatchException
+  nameWithType: TypeMismatchException
+  fullName: Pelias.NET.Model.Exceptions.TypeMismatchException

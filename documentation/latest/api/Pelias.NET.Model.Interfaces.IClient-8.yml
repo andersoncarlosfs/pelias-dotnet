@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Interfaces.IClient`8
+  commentId: T:Pelias.NET.Model.Interfaces.IClient`8
+  id: IClient`8
+  parent: Pelias.NET.Model.Interfaces
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IClient<TResponse, TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  nameWithType: IClient<TResponse, TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  fullName: Pelias.NET.Model.Interfaces.IClient<TResponse, TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  type: Interface
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/IClient.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: IClient
+    path: sources/Pelias.NET/Model/Interfaces/IClient.cs
+    startLine: 17
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces
+  summary: Represents a generic interface for Pelias API clients with specified generic types.
+  example: []
+  syntax:
+    content: 'public interface IClient<TResponse, TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle> where TResponse : IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle> where TGeocoding : IGeocoding where TFeature : IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle> where TProperties : IProperties where TGeometry : IGeometry<TBoundingBox, TCoordinates, TAngle> where TBoundingBox : IBoundingBox<TCoordinates, TAngle> where TCoordinates : ICoordinates<TAngle> where TAngle : IAngle'
+    typeParameters:
+    - id: TResponse
+      description: The type representing the response from Pelias API.
+    - id: TGeocoding
+      description: The type representing geocoding information in the response.
+    - id: TFeature
+      description: The type representing a feature in the response.
+    - id: TProperties
+      description: The type representing properties of a feature.
+    - id: TGeometry
+      description: The type representing the geometry of a feature.
+    - id: TBoundingBox
+      description: The type representing the bounding box of a feature.
+    - id: TCoordinates
+      description: The type representing the coordinates of a feature.
+    - id: TAngle
+      description: The type representing an angle measurement.
+    content.vb: Public Interface IClient(Of TResponse As IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle), TGeocoding As IGeocoding, TFeature As IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle), TProperties As IProperties, TGeometry As IGeometry(Of TBoundingBox, TCoordinates, TAngle), TBoundingBox As IBoundingBox(Of TCoordinates, TAngle), TCoordinates As ICoordinates(Of TAngle), TAngle As IAngle)
+  nameWithType.vb: IClient(Of TResponse, TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+  fullName.vb: Pelias.NET.Model.Interfaces.IClient(Of TResponse, TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+  name.vb: IClient(Of TResponse, TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+references:
+- uid: Pelias.NET.Model.Interfaces
+  commentId: N:Pelias.NET.Model.Interfaces
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces
+  nameWithType: Pelias.NET.Model.Interfaces
+  fullName: Pelias.NET.Model.Interfaces
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html

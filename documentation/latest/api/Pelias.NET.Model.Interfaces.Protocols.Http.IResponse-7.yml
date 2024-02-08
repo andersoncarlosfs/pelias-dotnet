@@ -1,0 +1,561 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+  commentId: T:Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+  id: IResponse`7
+  parent: Pelias.NET.Model.Interfaces.Protocols.Http
+  children:
+  - Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.BoundingBox
+  - Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Features
+  - Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Geocoding
+  - Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Type
+  langs:
+  - csharp
+  - vb
+  name: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  nameWithType: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  type: Interface
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: IResponse
+    path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
+    startLine: 16
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.Protocols.Http
+  summary: >-
+    Represents a generic interface for a Pelias API response with specified generic types,
+
+    extending the general entity interface.
+  example: []
+  syntax:
+    content: 'public interface IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle> : IEntity where TGeocoding : IGeocoding where TFeature : IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle> where TProperties : IProperties where TGeometry : IGeometry<TBoundingBox, TCoordinates, TAngle> where TBoundingBox : IBoundingBox<TCoordinates, TAngle> where TCoordinates : ICoordinates<TAngle> where TAngle : IAngle'
+    typeParameters:
+    - id: TGeocoding
+      description: The type representing geocoding information in the response.
+    - id: TFeature
+      description: The type representing a feature in the response.
+    - id: TProperties
+      description: The type representing properties of a feature.
+    - id: TGeometry
+      description: The type representing the geometry of a feature.
+    - id: TBoundingBox
+      description: The type representing the bounding box of a feature.
+    - id: TCoordinates
+      description: The type representing the coordinates of a feature.
+    - id: TAngle
+      description: The type representing an angle measurement.
+    content.vb: Public Interface IResponse(Of TGeocoding As IGeocoding, TFeature As IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle), TProperties As IProperties, TGeometry As IGeometry(Of TBoundingBox, TCoordinates, TAngle), TBoundingBox As IBoundingBox(Of TCoordinates, TAngle), TCoordinates As ICoordinates(Of TAngle), TAngle As IAngle) Inherits IEntity
+  inheritedMembers:
+  - Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  nameWithType.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+  fullName.vb: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+  name.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Geocoding
+  commentId: P:Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Geocoding
+  id: Geocoding
+  parent: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+  langs:
+  - csharp
+  - vb
+  name: Geocoding
+  nameWithType: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Geocoding
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Geocoding
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Geocoding
+    path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
+    startLine: 28
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.Protocols.Http
+  summary: Gets the geocoding information of the response.
+  example: []
+  syntax:
+    content: TGeocoding Geocoding { get; }
+    parameters: []
+    return:
+      type: '{TGeocoding}'
+    content.vb: ReadOnly Property Geocoding As TGeocoding
+  overload: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Geocoding*
+  nameWithType.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Geocoding
+  fullName.vb: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Geocoding
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Type
+  commentId: P:Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Type
+  id: Type
+  parent: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Type
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Type
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Type
+    path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
+    startLine: 33
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.Protocols.Http
+  summary: Gets the type of the response.
+  example: []
+  syntax:
+    content: string Type { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Type As String
+  overload: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Type*
+  nameWithType.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Type
+  fullName.vb: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Type
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Features
+  commentId: P:Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Features
+  id: Features
+  parent: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+  langs:
+  - csharp
+  - vb
+  name: Features
+  nameWithType: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Features
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Features
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Features
+    path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
+    startLine: 38
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.Protocols.Http
+  summary: Gets a list of features in the response.
+  example: []
+  syntax:
+    content: IList<TFeature> Features { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{{TFeature}}
+    content.vb: ReadOnly Property Features As IList(Of TFeature)
+  overload: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Features*
+  nameWithType.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Features
+  fullName.vb: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Features
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.BoundingBox
+  commentId: P:Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.BoundingBox
+  id: BoundingBox
+  parent: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+  langs:
+  - csharp
+  - vb
+  name: BoundingBox
+  nameWithType: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.BoundingBox
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.BoundingBox
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: BoundingBox
+    path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
+    startLine: 43
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.Protocols.Http
+  summary: Gets or sets the bounding box of the response.
+  example: []
+  syntax:
+    content: TBoundingBox BoundingBox { get; }
+    parameters: []
+    return:
+      type: '{TBoundingBox}'
+    content.vb: ReadOnly Property BoundingBox As TBoundingBox
+  overload: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.BoundingBox*
+  nameWithType.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).BoundingBox
+  fullName.vb: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).BoundingBox
+references:
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http
+  commentId: N:Pelias.NET.Model.Interfaces.Protocols.Http
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.Protocols.Http
+  nameWithType: Pelias.NET.Model.Interfaces.Protocols.Http
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols
+    name: Protocols
+    href: Pelias.NET.Model.Interfaces.Protocols.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols.Http
+    name: Http
+    href: Pelias.NET.Model.Interfaces.Protocols.Http.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols
+    name: Protocols
+    href: Pelias.NET.Model.Interfaces.Protocols.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols.Http
+    name: Http
+    href: Pelias.NET.Model.Interfaces.Protocols.Http.html
+- uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  commentId: M:Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  parent: Pelias.NET.Model.Interfaces.IEntity
+  isExternal: true
+  href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  name: GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  nameWithType: IEntity.GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  fullName: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List<System.Text.Json.JsonProperty>, System.Collections.Generic.List<System.Exception>, bool)
+  nameWithType.vb: IEntity.GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  fullName.vb: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List(Of System.Text.Json.JsonProperty), System.Collections.Generic.List(Of System.Exception), Boolean)
+  name.vb: GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.IEntity
+  commentId: T:Pelias.NET.Model.Interfaces.IEntity
+  parent: Pelias.NET.Model.Interfaces
+  href: Pelias.NET.Model.Interfaces.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: Pelias.NET.Model.Interfaces.IEntity
+- uid: Pelias.NET.Model.Interfaces
+  commentId: N:Pelias.NET.Model.Interfaces
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces
+  nameWithType: Pelias.NET.Model.Interfaces
+  fullName: Pelias.NET.Model.Interfaces
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Geocoding*
+  commentId: Overload:Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Geocoding
+  href: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse-7.html#Pelias_NET_Model_Interfaces_Protocols_Http_IResponse_7_Geocoding
+  name: Geocoding
+  nameWithType: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Geocoding
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Geocoding
+  nameWithType.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Geocoding
+  fullName.vb: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Geocoding
+- uid: '{TGeocoding}'
+  commentId: '!:TGeocoding'
+  definition: TGeocoding
+  name: TGeocoding
+  nameWithType: TGeocoding
+  fullName: TGeocoding
+- uid: TGeocoding
+  commentId: '!:TGeocoding'
+  name: TGeocoding
+  nameWithType: TGeocoding
+  fullName: TGeocoding
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Type*
+  commentId: Overload:Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Type
+  href: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse-7.html#Pelias_NET_Model_Interfaces_Protocols_Http_IResponse_7_Type
+  name: Type
+  nameWithType: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Type
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Type
+  nameWithType.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Type
+  fullName.vb: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Type
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Features*
+  commentId: Overload:Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.Features
+  href: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse-7.html#Pelias_NET_Model_Interfaces_Protocols_Http_IResponse_7_Features
+  name: Features
+  nameWithType: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Features
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Features
+  nameWithType.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Features
+  fullName.vb: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Features
+- uid: System.Collections.Generic.IList{{TFeature}}
+  commentId: T:System.Collections.Generic.IList{`1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<TFeature>
+  nameWithType: IList<TFeature>
+  fullName: System.Collections.Generic.IList<TFeature>
+  nameWithType.vb: IList(Of TFeature)
+  fullName.vb: System.Collections.Generic.IList(Of TFeature)
+  name.vb: IList(Of TFeature)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: TFeature
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFeature
+  - name: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.BoundingBox*
+  commentId: Overload:Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7.BoundingBox
+  href: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse-7.html#Pelias_NET_Model_Interfaces_Protocols_Http_IResponse_7_BoundingBox
+  name: BoundingBox
+  nameWithType: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.BoundingBox
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.BoundingBox
+  nameWithType.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).BoundingBox
+  fullName.vb: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).BoundingBox
+- uid: '{TBoundingBox}'
+  commentId: '!:TBoundingBox'
+  definition: TBoundingBox
+  name: TBoundingBox
+  nameWithType: TBoundingBox
+  fullName: TBoundingBox
+- uid: TBoundingBox
+  name: TBoundingBox
+  nameWithType: TBoundingBox
+  fullName: TBoundingBox

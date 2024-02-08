@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  commentId: N:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  id: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  children:
+  - Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+  - Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Length
+  langs:
+  - csharp
+  - vb
+  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  nameWithType: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  type: Namespace
+  assemblies:
+  - Pelias.NET
+references:
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+  commentId: T:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+  parent: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html
+  name: Angle
+  nameWithType: Angle
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Length
+  commentId: T:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Length
+  parent: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Length.html
+  name: Length
+  nameWithType: Length
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Length
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  commentId: N:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  nameWithType: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+    name: Measures
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+    name: Measures
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.html

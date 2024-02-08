@@ -1,0 +1,731 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
+  commentId: T:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
+  id: Coordinates
+  parent: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  children:
+  - Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Latitude
+  - Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Longitude
+  - Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray
+  langs:
+  - csharp
+  - vb
+  name: Coordinates
+  nameWithType: Coordinates
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
+  type: Class
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Coordinates
+    path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
+    startLine: 5
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  syntax:
+    content: 'public class Coordinates : ICoordinates<Angle>, IEntity'
+    content.vb: Public Class Coordinates Implements ICoordinates(Of Angle), IEntity
+  inheritance:
+  - System.Object
+  implements:
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}
+  - Pelias.NET.Model.Interfaces.IEntity
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Longitude
+  commentId: P:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Longitude
+  id: Longitude
+  parent: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
+  langs:
+  - csharp
+  - vb
+  name: Longitude
+  nameWithType: Coordinates.Longitude
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Longitude
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Longitude
+    path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
+    startLine: 7
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  summary: Gets the longitude of the coordinates.
+  example: []
+  syntax:
+    content: public Angle Longitude { get; set; }
+    parameters: []
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+    content.vb: Public Property Longitude As Angle
+  overload: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Longitude*
+  implements:
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}.Longitude
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Latitude
+  commentId: P:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Latitude
+  id: Latitude
+  parent: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
+  langs:
+  - csharp
+  - vb
+  name: Latitude
+  nameWithType: Coordinates.Latitude
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Latitude
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Latitude
+    path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
+    startLine: 8
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  summary: Gets the latitude of the coordinates.
+  example: []
+  syntax:
+    content: public Angle Latitude { get; set; }
+    parameters: []
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+    content.vb: Public Property Latitude As Angle
+  overload: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Latitude*
+  implements:
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}.Latitude
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray
+  commentId: M:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray
+  id: ToArray
+  parent: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
+  langs:
+  - csharp
+  - vb
+  name: ToArray()
+  nameWithType: Coordinates.ToArray()
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray()
+  type: Method
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: ToArray
+    path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
+    startLine: 10
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  syntax:
+    content: public double[] ToArray()
+    return:
+      type: System.Double[]
+    content.vb: Public Function ToArray() As Double()
+  overload: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray*
+references:
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  commentId: N:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  nameWithType: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  definition: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html
+  name: ICoordinates<Angle>
+  nameWithType: ICoordinates<Angle>
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle>
+  nameWithType.vb: ICoordinates(Of Angle)
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle)
+  name.vb: ICoordinates(Of Angle)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+    name: ICoordinates
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html
+  - name: <
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+    name: Angle
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html
+  - name: '>'
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+    name: ICoordinates
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+    name: Angle
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.IEntity
+  commentId: T:Pelias.NET.Model.Interfaces.IEntity
+  parent: Pelias.NET.Model.Interfaces
+  href: Pelias.NET.Model.Interfaces.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: Pelias.NET.Model.Interfaces.IEntity
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html
+  name: ICoordinates<TAngle>
+  nameWithType: ICoordinates<TAngle>
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<TAngle>
+  nameWithType.vb: ICoordinates(Of TAngle)
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of TAngle)
+  name.vb: ICoordinates(Of TAngle)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+    name: ICoordinates
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html
+  - name: <
+  - name: TAngle
+  - name: '>'
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+    name: ICoordinates
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TAngle
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  commentId: N:Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  nameWithType: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+- uid: Pelias.NET.Model.Interfaces
+  commentId: N:Pelias.NET.Model.Interfaces
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces
+  nameWithType: Pelias.NET.Model.Interfaces
+  fullName: Pelias.NET.Model.Interfaces
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Longitude*
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Longitude
+  href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_Longitude
+  name: Longitude
+  nameWithType: Coordinates.Longitude
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Longitude
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}.Longitude
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}.Longitude
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}
+  definition: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Longitude
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_ICoordinates_1_Longitude
+  name: Longitude
+  nameWithType: ICoordinates<Angle>.Longitude
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle>.Longitude
+  nameWithType.vb: ICoordinates(Of Angle).Longitude
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle).Longitude
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+  commentId: T:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+  parent: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html
+  name: Angle
+  nameWithType: Angle
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Longitude
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Longitude
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_ICoordinates_1_Longitude
+  name: Longitude
+  nameWithType: ICoordinates<TAngle>.Longitude
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<TAngle>.Longitude
+  nameWithType.vb: ICoordinates(Of TAngle).Longitude
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of TAngle).Longitude
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  commentId: N:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  nameWithType: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+    name: Measures
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+    name: Measures
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.html
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Latitude*
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Latitude
+  href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_Latitude
+  name: Latitude
+  nameWithType: Coordinates.Latitude
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Latitude
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}.Latitude
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}.Latitude
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}
+  definition: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Latitude
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_ICoordinates_1_Latitude
+  name: Latitude
+  nameWithType: ICoordinates<Angle>.Latitude
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle>.Latitude
+  nameWithType.vb: ICoordinates(Of Angle).Latitude
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle).Latitude
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Latitude
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Latitude
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_ICoordinates_1_Latitude
+  name: Latitude
+  nameWithType: ICoordinates<TAngle>.Latitude
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<TAngle>.Latitude
+  nameWithType.vb: ICoordinates(Of TAngle).Latitude
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of TAngle).Latitude
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray*
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray
+  href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_ToArray
+  name: ToArray
+  nameWithType: Coordinates.ToArray
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray
+- uid: System.Double[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double[]
+  nameWithType: double[]
+  fullName: double[]
+  nameWithType.vb: Double()
+  fullName.vb: Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: (
+  - name: )

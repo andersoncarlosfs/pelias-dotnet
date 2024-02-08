@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  commentId: N:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  id: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  children:
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
+  langs:
+  - csharp
+  - vb
+  name: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  nameWithType: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  type: Namespace
+  assemblies:
+  - Pelias.NET
+references:
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html
+  name: QueryBase
+  nameWithType: QueryBase
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  commentId: N:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  nameWithType: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols
+    name: Protocols
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http
+    name: Http
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests
+    name: Requests
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+    name: Queries
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols
+    name: Protocols
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http
+    name: Http
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests
+    name: Requests
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+    name: Queries
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.html

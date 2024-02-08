@@ -1,15 +1,20 @@
 name: Release
 
 on:
-  push:
+  pull_request:
     branches:
       - main
+    types:
+      - closed
 
   workflow_dispatch:
 
 jobs:
   release:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Install Dependencies
       run: sudo apt-get install -y xmlstarlet
@@ -52,7 +57,7 @@ jobs:
     - name: Create Zip Release
       run: gh release create v${{ env.version }} './v${{ env.version }}.tar.gz#Binaries (tar.gz)' './v${{ env.version }}.zip#Binaries (zip)'
       env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+        GH_TOKEN: ${{ github.token }}
 
     - name: Publish to NuGet
       run: dotnet nuget push ./build/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.TOKEN_NUGET }}

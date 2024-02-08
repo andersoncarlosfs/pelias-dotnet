@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  commentId: N:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  id: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  children:
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IMeasure
+  langs:
+  - csharp
+  - vb
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  nameWithType: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  type: Namespace
+  assemblies:
+  - Pelias.NET
+references:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance-3.html
+  name: IDistance<TCoordinates, TAngle, TLength>
+  nameWithType: IDistance<TCoordinates, TAngle, TLength>
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance<TCoordinates, TAngle, TLength>
+  nameWithType.vb: IDistance(Of TCoordinates, TAngle, TLength)
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance(Of TCoordinates, TAngle, TLength)
+  name.vb: IDistance(Of TCoordinates, TAngle, TLength)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3
+    name: IDistance
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance-3.html
+  - name: <
+  - name: TCoordinates
+  - name: ','
+  - name: " "
+  - name: TAngle
+  - name: ','
+  - name: " "
+  - name: TLength
+  - name: '>'
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3
+    name: IDistance
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance-3.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCoordinates
+  - name: ','
+  - name: " "
+  - name: TAngle
+  - name: ','
+  - name: " "
+  - name: TLength
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IMeasure
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IMeasure
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IMeasure.html
+  name: IMeasure
+  nameWithType: IMeasure
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IMeasure
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  commentId: N:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  nameWithType: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.html

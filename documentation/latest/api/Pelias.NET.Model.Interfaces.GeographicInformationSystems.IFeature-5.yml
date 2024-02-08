@@ -1,0 +1,466 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5
+  id: IFeature`5
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  children:
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.BoundingBox
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Geometry
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Properties
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Type
+  langs:
+  - csharp
+  - vb
+  name: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  nameWithType: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  type: Interface
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: IFeature
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
+    startLine: 13
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: >-
+    Represents an interface for a geographic feature, extending the general entity interface,
+
+    with properties, geometry, and bounding box information.
+  example: []
+  syntax:
+    content: 'public interface IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle> : IEntity where TProperties : IProperties where TGeometry : IGeometry<TBoundingBox, TCoordinates, TAngle> where TBoundingBox : IBoundingBox<TCoordinates, TAngle> where TCoordinates : ICoordinates<TAngle> where TAngle : IAngle'
+    typeParameters:
+    - id: TProperties
+      description: The type representing properties of the feature.
+    - id: TGeometry
+      description: The type representing the geometry of the feature.
+    - id: TBoundingBox
+      description: The type representing the bounding box of the feature.
+    - id: TCoordinates
+      description: The type representing the coordinates of the feature.
+    - id: TAngle
+      description: The type representing an angle measurement.
+    content.vb: Public Interface IFeature(Of TProperties As IProperties, TGeometry As IGeometry(Of TBoundingBox, TCoordinates, TAngle), TBoundingBox As IBoundingBox(Of TCoordinates, TAngle), TCoordinates As ICoordinates(Of TAngle), TAngle As IAngle) Inherits IEntity
+  inheritedMembers:
+  - Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  nameWithType.vb: IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+  name.vb: IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Type
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Type
+  id: Type
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Type
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Type
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Type
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
+    startLine: 23
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the type of the feature.
+  example: []
+  syntax:
+    content: string Type { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Type As String
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Type*
+  nameWithType.vb: IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Type
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Type
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Properties
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Properties
+  id: Properties
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5
+  langs:
+  - csharp
+  - vb
+  name: Properties
+  nameWithType: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Properties
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Properties
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Properties
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
+    startLine: 28
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the properties of the feature.
+  example: []
+  syntax:
+    content: TProperties Properties { get; }
+    parameters: []
+    return:
+      type: '{TProperties}'
+    content.vb: ReadOnly Property Properties As TProperties
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Properties*
+  nameWithType.vb: IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Properties
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Properties
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Geometry
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Geometry
+  id: Geometry
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5
+  langs:
+  - csharp
+  - vb
+  name: Geometry
+  nameWithType: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Geometry
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Geometry
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: Geometry
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
+    startLine: 33
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the geometry of the feature.
+  example: []
+  syntax:
+    content: TGeometry Geometry { get; }
+    parameters: []
+    return:
+      type: '{TGeometry}'
+    content.vb: ReadOnly Property Geometry As TGeometry
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Geometry*
+  nameWithType.vb: IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Geometry
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Geometry
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.BoundingBox
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.BoundingBox
+  id: BoundingBox
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5
+  langs:
+  - csharp
+  - vb
+  name: BoundingBox
+  nameWithType: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.BoundingBox
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.BoundingBox
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet.git
+    id: BoundingBox
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
+    startLine: 38
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the bounding box of the feature.
+  example: []
+  syntax:
+    content: TBoundingBox BoundingBox { get; }
+    parameters: []
+    return:
+      type: '{TBoundingBox}'
+    content.vb: ReadOnly Property BoundingBox As TBoundingBox
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.BoundingBox*
+  nameWithType.vb: IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).BoundingBox
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).BoundingBox
+references:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  commentId: N:Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  nameWithType: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+- uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  commentId: M:Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  parent: Pelias.NET.Model.Interfaces.IEntity
+  isExternal: true
+  href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  name: GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  nameWithType: IEntity.GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  fullName: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List<System.Text.Json.JsonProperty>, System.Collections.Generic.List<System.Exception>, bool)
+  nameWithType.vb: IEntity.GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  fullName.vb: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List(Of System.Text.Json.JsonProperty), System.Collections.Generic.List(Of System.Exception), Boolean)
+  name.vb: GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.IEntity
+  commentId: T:Pelias.NET.Model.Interfaces.IEntity
+  parent: Pelias.NET.Model.Interfaces
+  href: Pelias.NET.Model.Interfaces.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: Pelias.NET.Model.Interfaces.IEntity
+- uid: Pelias.NET.Model.Interfaces
+  commentId: N:Pelias.NET.Model.Interfaces
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces
+  nameWithType: Pelias.NET.Model.Interfaces
+  fullName: Pelias.NET.Model.Interfaces
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Type*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Type
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature-5.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IFeature_5_Type
+  name: Type
+  nameWithType: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Type
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Type
+  nameWithType.vb: IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Type
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Type
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Properties*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Properties
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature-5.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IFeature_5_Properties
+  name: Properties
+  nameWithType: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Properties
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Properties
+  nameWithType.vb: IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Properties
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Properties
+- uid: '{TProperties}'
+  commentId: '!:TProperties'
+  definition: TProperties
+  name: TProperties
+  nameWithType: TProperties
+  fullName: TProperties
+- uid: TProperties
+  commentId: '!:TProperties'
+  name: TProperties
+  nameWithType: TProperties
+  fullName: TProperties
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Geometry*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.Geometry
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature-5.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IFeature_5_Geometry
+  name: Geometry
+  nameWithType: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Geometry
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.Geometry
+  nameWithType.vb: IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Geometry
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).Geometry
+- uid: '{TGeometry}'
+  commentId: '!:TGeometry'
+  definition: TGeometry
+  name: TGeometry
+  nameWithType: TGeometry
+  fullName: TGeometry
+- uid: TGeometry
+  commentId: '!:TGeometry'
+  name: TGeometry
+  nameWithType: TGeometry
+  fullName: TGeometry
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.BoundingBox*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5.BoundingBox
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature-5.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IFeature_5_BoundingBox
+  name: BoundingBox
+  nameWithType: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.BoundingBox
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>.BoundingBox
+  nameWithType.vb: IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).BoundingBox
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature(Of TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle).BoundingBox
+- uid: '{TBoundingBox}'
+  commentId: '!:TBoundingBox'
+  definition: TBoundingBox
+  name: TBoundingBox
+  nameWithType: TBoundingBox
+  fullName: TBoundingBox
+- uid: TBoundingBox
+  name: TBoundingBox
+  nameWithType: TBoundingBox
+  fullName: TBoundingBox
