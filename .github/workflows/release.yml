@@ -59,4 +59,4 @@ jobs:
         GH_TOKEN: ${{ github.token }}
 
     - name: Publish to NuGet
-      run: exit 0 #dotnet nuget push ./build/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.TOKEN_NUGET }}
+      run: dotnet nuget push ./build/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.TOKEN_NUGET }}

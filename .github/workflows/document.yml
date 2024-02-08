@@ -21,6 +21,9 @@ jobs:
       with:
         dotnet-version: '8.x'
 
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
     - name: Update DocFX
       run: dotnet tool update -g docfx
       
