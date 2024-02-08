@@ -59,8 +59,6 @@ jobs:
       run: gh release create v${{ env.version }} './v${{ env.version }}.tar.gz#Binaries (tar.gz)' './v${{ env.version }}.zip#Binaries (zip)'
       env:
         GH_TOKEN: ${{ github.token }}
-      #env:
-      #  GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
 
     - name: Publish to NuGet
       run: exit 0 #dotnet nuget push ./build/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.TOKEN_NUGET }}
@@ -75,3 +73,5 @@ jobs:
         git add ./documentation/latest/site
         git commit -m "Updating the documentation for the commit: $(git log -n 1 --pretty=format:%H)"
         git push -f    
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
