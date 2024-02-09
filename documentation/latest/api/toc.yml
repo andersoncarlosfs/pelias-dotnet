@@ -1,0 +1,142 @@
+### YamlMime:TableOfContent
+items:
+- uid: Pelias.NET.Controller.Services
+  name: Pelias.NET.Controller.Services
+  items:
+  - uid: Pelias.NET.Controller.Services.Client
+    name: Client
+- uid: Pelias.NET.Model.Exceptions
+  name: Pelias.NET.Model.Exceptions
+  items:
+  - uid: Pelias.NET.Model.Exceptions.CollectionIterationException
+    name: CollectionIterationException
+  - uid: Pelias.NET.Model.Exceptions.MissingEntryException
+    name: MissingEntryException
+  - uid: Pelias.NET.Model.Exceptions.TypeMismatchException
+    name: TypeMismatchException
+- uid: Pelias.NET.Model.Interfaces
+  name: Pelias.NET.Model.Interfaces
+  items:
+  - uid: Pelias.NET.Model.Interfaces.IClient`8
+    name: IClient<TResponse, TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  - uid: Pelias.NET.Model.Interfaces.IEntity
+    name: IEntity
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  items:
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2
+    name: IBoundingBox<TCoordinates, TAngle>
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+    name: ICoordinates<TAngle>
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5
+    name: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IGeocoding
+    name: IGeocoding
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IGeometry`3
+    name: IGeometry<TBoundingBox, TCoordinates, TAngle>
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IMeasurement
+    name: IMeasurement
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
+    name: IProperties
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  items:
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3
+    name: IDistance<TCoordinates, TAngle, TLength>
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IMeasure
+    name: IMeasure
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  items:
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.IAngle
+    name: IAngle
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength
+    name: ILength
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http
+  name: Pelias.NET.Model.Interfaces.Protocols.Http
+  items:
+  - uid: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
+    name: IQuery
+  - uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+    name: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+- uid: Pelias.NET.Model.Objects.Pelias.Converters
+  name: Pelias.NET.Model.Objects.Pelias.Converters
+  items:
+  - uid: Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter
+    name: AngleConverter
+  - uid: Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter
+    name: BoundingBoxConverter
+  - uid: Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter
+    name: CoordinatesConverter
+- uid: Pelias.NET.Model.Objects.Pelias.Enums
+  name: Pelias.NET.Model.Objects.Pelias.Enums
+  items:
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.MatchType
+    name: MatchType
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Path
+    name: Path
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Version
+    name: Version
+- uid: Pelias.NET.Model.Objects.Pelias.Extensions
+  name: Pelias.NET.Model.Objects.Pelias.Extensions
+  items:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+    name: EnumExtensions
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.IDistanceExtensions
+    name: IDistanceExtensions
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  items:
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox
+    name: BoundingBox
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
+    name: Coordinates
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature
+    name: Feature
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Geocoding
+    name: Geocoding
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Geometry
+    name: Geometry
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Properties
+    name: Properties
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid
+  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid
+  items:
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid.VincentyFormulae
+    name: VincentyFormulae
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere
+  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere
+  items:
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere.HaversineFormula
+    name: HaversineFormula
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere.SphericalLawOfCosines
+    name: SphericalLawOfCosines
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  items:
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
+    name: Angle
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Length
+    name: Length
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  name: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  items:
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
+    name: QueryBase
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  name: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  items:
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+    name: GeocodingBase
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters
+    name: ReverseParameters
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters
+    name: SearchParameters
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters
+    name: StructuredSearchParameters
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
+  name: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
+  items:
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response
+    name: Response
+memberLayout: SamePage

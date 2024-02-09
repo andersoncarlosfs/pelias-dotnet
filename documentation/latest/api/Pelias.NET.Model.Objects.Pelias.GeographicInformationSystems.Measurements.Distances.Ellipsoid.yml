@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid
+  commentId: N:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid
+  id: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid
+  children:
+  - Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid.VincentyFormulae
+  langs:
+  - csharp
+  - vb
+  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid
+  nameWithType: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid
+  type: Namespace
+  assemblies:
+  - Pelias.NET
+references:
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid.VincentyFormulae
+  commentId: T:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid.VincentyFormulae
+  href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid.VincentyFormulae.html
+  name: VincentyFormulae
+  nameWithType: VincentyFormulae
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid.VincentyFormulae

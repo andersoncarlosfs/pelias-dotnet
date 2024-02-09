@@ -1,0 +1,371 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength
+  id: ILength
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  children:
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.MILE
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Meters
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Miles
+  langs:
+  - csharp
+  - vb
+  name: ILength
+  nameWithType: ILength
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength
+  type: Interface
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/Measures/ILength.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: ILength
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/Measures/ILength.cs
+    startLine: 5
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  summary: Represents an interface for a length measurement, extending the general measurement interface.
+  example: []
+  syntax:
+    content: 'public interface ILength : IMeasure, IEntity'
+    content.vb: Public Interface ILength Inherits IMeasure, IEntity
+  inheritedMembers:
+  - Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.MILE
+  commentId: F:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.MILE
+  id: MILE
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength
+  langs:
+  - csharp
+  - vb
+  name: MILE
+  nameWithType: ILength.MILE
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.MILE
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/Measures/ILength.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: MILE
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/Measures/ILength.cs
+    startLine: 10
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  summary: 'Conversion factor: 1 mile in meters.'
+  example: []
+  syntax:
+    content: public const double MILE = 1609.344
+    return:
+      type: System.Double
+    content.vb: Public Const MILE As Double = 1609.344
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Meters
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Meters
+  id: Meters
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength
+  langs:
+  - csharp
+  - vb
+  name: Meters
+  nameWithType: ILength.Meters
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Meters
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/Measures/ILength.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Meters
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/Measures/ILength.cs
+    startLine: 15
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  summary: Gets the length value in meters.
+  example: []
+  syntax:
+    content: double Meters { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: ReadOnly Property Meters As Double
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Meters*
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Miles
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Miles
+  id: Miles
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength
+  langs:
+  - csharp
+  - vb
+  name: Miles
+  nameWithType: ILength.Miles
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Miles
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/Measures/ILength.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Miles
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/Measures/ILength.cs
+    startLine: 20
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  summary: Gets the length value in miles, calculated based on the conversion factor.
+  example: []
+  syntax:
+    content: double Miles { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: ReadOnly Property Miles As Double
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Miles*
+references:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  commentId: N:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  nameWithType: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+    name: Measures
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+    name: Measures
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.html
+- uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  commentId: M:Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  parent: Pelias.NET.Model.Interfaces.IEntity
+  isExternal: true
+  href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  name: GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  nameWithType: IEntity.GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  fullName: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List<System.Text.Json.JsonProperty>, System.Collections.Generic.List<System.Exception>, bool)
+  nameWithType.vb: IEntity.GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  fullName.vb: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List(Of System.Text.Json.JsonProperty), System.Collections.Generic.List(Of System.Exception), Boolean)
+  name.vb: GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.IEntity
+  commentId: T:Pelias.NET.Model.Interfaces.IEntity
+  parent: Pelias.NET.Model.Interfaces
+  href: Pelias.NET.Model.Interfaces.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: Pelias.NET.Model.Interfaces.IEntity
+- uid: Pelias.NET.Model.Interfaces
+  commentId: N:Pelias.NET.Model.Interfaces
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces
+  nameWithType: Pelias.NET.Model.Interfaces
+  fullName: Pelias.NET.Model.Interfaces
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Meters*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Meters
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_Measurements_Measures_ILength_Meters
+  name: Meters
+  nameWithType: ILength.Meters
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Meters
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Miles*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Miles
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_Measurements_Measures_ILength_Miles
+  name: Miles
+  nameWithType: ILength.Miles
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength.Miles

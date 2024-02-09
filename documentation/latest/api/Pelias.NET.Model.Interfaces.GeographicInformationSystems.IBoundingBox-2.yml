@@ -1,0 +1,400 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2
+  id: IBoundingBox`2
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  children:
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.BottomLeftCoordinates
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.Contains(`0)
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.TopRightCoordinates
+  langs:
+  - csharp
+  - vb
+  name: IBoundingBox<TCoordinates, TAngle>
+  nameWithType: IBoundingBox<TCoordinates, TAngle>
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox<TCoordinates, TAngle>
+  type: Interface
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: IBoundingBox
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
+    startLine: 10
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: >-
+    Represents an interface for a bounding box defined by top-right and bottom-left coordinates,
+
+    extending the general entity interface.
+  example: []
+  syntax:
+    content: 'public interface IBoundingBox<TCoordinates, TAngle> : IEntity where TCoordinates : ICoordinates<TAngle> where TAngle : IAngle'
+    typeParameters:
+    - id: TCoordinates
+      description: The type representing the coordinates of the bounding box.
+    - id: TAngle
+      description: The type representing an angle measurement.
+    content.vb: Public Interface IBoundingBox(Of TCoordinates As ICoordinates(Of TAngle), TAngle As IAngle) Inherits IEntity
+  inheritedMembers:
+  - Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  nameWithType.vb: IBoundingBox(Of TCoordinates, TAngle)
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox(Of TCoordinates, TAngle)
+  name.vb: IBoundingBox(Of TCoordinates, TAngle)
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.TopRightCoordinates
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.TopRightCoordinates
+  id: TopRightCoordinates
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2
+  langs:
+  - csharp
+  - vb
+  name: TopRightCoordinates
+  nameWithType: IBoundingBox<TCoordinates, TAngle>.TopRightCoordinates
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox<TCoordinates, TAngle>.TopRightCoordinates
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: TopRightCoordinates
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
+    startLine: 17
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the top-right coordinates of the bounding box.
+  example: []
+  syntax:
+    content: TCoordinates TopRightCoordinates { get; }
+    parameters: []
+    return:
+      type: '{TCoordinates}'
+    content.vb: ReadOnly Property TopRightCoordinates As TCoordinates
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.TopRightCoordinates*
+  nameWithType.vb: IBoundingBox(Of TCoordinates, TAngle).TopRightCoordinates
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox(Of TCoordinates, TAngle).TopRightCoordinates
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.BottomLeftCoordinates
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.BottomLeftCoordinates
+  id: BottomLeftCoordinates
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2
+  langs:
+  - csharp
+  - vb
+  name: BottomLeftCoordinates
+  nameWithType: IBoundingBox<TCoordinates, TAngle>.BottomLeftCoordinates
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox<TCoordinates, TAngle>.BottomLeftCoordinates
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: BottomLeftCoordinates
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
+    startLine: 22
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the bottom-left coordinates of the bounding box.
+  example: []
+  syntax:
+    content: TCoordinates BottomLeftCoordinates { get; }
+    parameters: []
+    return:
+      type: '{TCoordinates}'
+    content.vb: ReadOnly Property BottomLeftCoordinates As TCoordinates
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.BottomLeftCoordinates*
+  nameWithType.vb: IBoundingBox(Of TCoordinates, TAngle).BottomLeftCoordinates
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox(Of TCoordinates, TAngle).BottomLeftCoordinates
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.Contains(`0)
+  commentId: M:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.Contains(`0)
+  id: Contains(`0)
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2
+  langs:
+  - csharp
+  - vb
+  name: Contains(TCoordinates)
+  nameWithType: IBoundingBox<TCoordinates, TAngle>.Contains(TCoordinates)
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox<TCoordinates, TAngle>.Contains(TCoordinates)
+  type: Method
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Contains
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
+    startLine: 29
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Checks whether the specified coordinates are within the bounding box.
+  example: []
+  syntax:
+    content: bool Contains(TCoordinates coordinates)
+    parameters:
+    - id: coordinates
+      type: '{TCoordinates}'
+      description: The coordinates to check.
+    return:
+      type: System.Boolean
+      description: True if the coordinates are within the bounding box, otherwise false.
+    content.vb: Function Contains(coordinates As TCoordinates) As Boolean
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.Contains*
+  nameWithType.vb: IBoundingBox(Of TCoordinates, TAngle).Contains(TCoordinates)
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox(Of TCoordinates, TAngle).Contains(TCoordinates)
+references:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  commentId: N:Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  nameWithType: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+- uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  commentId: M:Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  parent: Pelias.NET.Model.Interfaces.IEntity
+  isExternal: true
+  href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  name: GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  nameWithType: IEntity.GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  fullName: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List<System.Text.Json.JsonProperty>, System.Collections.Generic.List<System.Exception>, bool)
+  nameWithType.vb: IEntity.GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  fullName.vb: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List(Of System.Text.Json.JsonProperty), System.Collections.Generic.List(Of System.Exception), Boolean)
+  name.vb: GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.IEntity
+  commentId: T:Pelias.NET.Model.Interfaces.IEntity
+  parent: Pelias.NET.Model.Interfaces
+  href: Pelias.NET.Model.Interfaces.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: Pelias.NET.Model.Interfaces.IEntity
+- uid: Pelias.NET.Model.Interfaces
+  commentId: N:Pelias.NET.Model.Interfaces
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces
+  nameWithType: Pelias.NET.Model.Interfaces
+  fullName: Pelias.NET.Model.Interfaces
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.TopRightCoordinates*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.TopRightCoordinates
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox-2.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IBoundingBox_2_TopRightCoordinates
+  name: TopRightCoordinates
+  nameWithType: IBoundingBox<TCoordinates, TAngle>.TopRightCoordinates
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox<TCoordinates, TAngle>.TopRightCoordinates
+  nameWithType.vb: IBoundingBox(Of TCoordinates, TAngle).TopRightCoordinates
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox(Of TCoordinates, TAngle).TopRightCoordinates
+- uid: '{TCoordinates}'
+  commentId: '!:TCoordinates'
+  definition: TCoordinates
+  name: TCoordinates
+  nameWithType: TCoordinates
+  fullName: TCoordinates
+- uid: TCoordinates
+  name: TCoordinates
+  nameWithType: TCoordinates
+  fullName: TCoordinates
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.BottomLeftCoordinates*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.BottomLeftCoordinates
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox-2.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IBoundingBox_2_BottomLeftCoordinates
+  name: BottomLeftCoordinates
+  nameWithType: IBoundingBox<TCoordinates, TAngle>.BottomLeftCoordinates
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox<TCoordinates, TAngle>.BottomLeftCoordinates
+  nameWithType.vb: IBoundingBox(Of TCoordinates, TAngle).BottomLeftCoordinates
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox(Of TCoordinates, TAngle).BottomLeftCoordinates
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.Contains*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.Contains
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox-2.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IBoundingBox_2_Contains__0_
+  name: Contains
+  nameWithType: IBoundingBox<TCoordinates, TAngle>.Contains
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox<TCoordinates, TAngle>.Contains
+  nameWithType.vb: IBoundingBox(Of TCoordinates, TAngle).Contains
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox(Of TCoordinates, TAngle).Contains
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

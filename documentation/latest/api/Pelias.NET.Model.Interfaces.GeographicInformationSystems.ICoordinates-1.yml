@@ -1,0 +1,334 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+  id: ICoordinates`1
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  children:
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Latitude
+  - Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Longitude
+  langs:
+  - csharp
+  - vb
+  name: ICoordinates<TAngle>
+  nameWithType: ICoordinates<TAngle>
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<TAngle>
+  type: Interface
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: ICoordinates
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
+    startLine: 9
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: >-
+    Represents an interface for geographic coordinates defined by longitude and latitude,
+
+    extending the general entity interface.
+  example: []
+  syntax:
+    content: 'public interface ICoordinates<TAngle> : IEntity where TAngle : IAngle'
+    typeParameters:
+    - id: TAngle
+      description: The type representing an angle measurement.
+    content.vb: Public Interface ICoordinates(Of TAngle As IAngle) Inherits IEntity
+  inheritedMembers:
+  - Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  nameWithType.vb: ICoordinates(Of TAngle)
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of TAngle)
+  name.vb: ICoordinates(Of TAngle)
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Longitude
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Longitude
+  id: Longitude
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+  langs:
+  - csharp
+  - vb
+  name: Longitude
+  nameWithType: ICoordinates<TAngle>.Longitude
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<TAngle>.Longitude
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Longitude
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
+    startLine: 15
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the longitude of the coordinates.
+  example: []
+  syntax:
+    content: TAngle Longitude { get; }
+    parameters: []
+    return:
+      type: '{TAngle}'
+    content.vb: ReadOnly Property Longitude As TAngle
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Longitude*
+  nameWithType.vb: ICoordinates(Of TAngle).Longitude
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of TAngle).Longitude
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Latitude
+  commentId: P:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Latitude
+  id: Latitude
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+  langs:
+  - csharp
+  - vb
+  name: Latitude
+  nameWithType: ICoordinates<TAngle>.Latitude
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<TAngle>.Latitude
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Latitude
+    path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
+    startLine: 20
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  summary: Gets the latitude of the coordinates.
+  example: []
+  syntax:
+    content: TAngle Latitude { get; }
+    parameters: []
+    return:
+      type: '{TAngle}'
+    content.vb: ReadOnly Property Latitude As TAngle
+  overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Latitude*
+  nameWithType.vb: ICoordinates(Of TAngle).Latitude
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of TAngle).Latitude
+references:
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  commentId: N:Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  nameWithType: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+- uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  commentId: M:Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  parent: Pelias.NET.Model.Interfaces.IEntity
+  isExternal: true
+  href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  name: GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  nameWithType: IEntity.GetMissingProperties(JsonElement, JsonElement, List<JsonProperty>, List<Exception>, bool)
+  fullName: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List<System.Text.Json.JsonProperty>, System.Collections.Generic.List<System.Exception>, bool)
+  nameWithType.vb: IEntity.GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  fullName.vb: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement, System.Text.Json.JsonElement, System.Collections.Generic.List(Of System.Text.Json.JsonProperty), System.Collections.Generic.List(Of System.Exception), Boolean)
+  name.vb: GetMissingProperties(JsonElement, JsonElement, List(Of JsonProperty), List(Of Exception), Boolean)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+    name: GetMissingProperties
+    href: Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_
+  - name: (
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Text.Json.JsonElement
+    name: JsonElement
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Text.Json.JsonProperty
+    name: JsonProperty
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.jsonproperty
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.IEntity
+  commentId: T:Pelias.NET.Model.Interfaces.IEntity
+  parent: Pelias.NET.Model.Interfaces
+  href: Pelias.NET.Model.Interfaces.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: Pelias.NET.Model.Interfaces.IEntity
+- uid: Pelias.NET.Model.Interfaces
+  commentId: N:Pelias.NET.Model.Interfaces
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces
+  nameWithType: Pelias.NET.Model.Interfaces
+  fullName: Pelias.NET.Model.Interfaces
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Longitude*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Longitude
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_ICoordinates_1_Longitude
+  name: Longitude
+  nameWithType: ICoordinates<TAngle>.Longitude
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<TAngle>.Longitude
+  nameWithType.vb: ICoordinates(Of TAngle).Longitude
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of TAngle).Longitude
+- uid: '{TAngle}'
+  commentId: '!:TAngle'
+  definition: TAngle
+  name: TAngle
+  nameWithType: TAngle
+  fullName: TAngle
+- uid: TAngle
+  name: TAngle
+  nameWithType: TAngle
+  fullName: TAngle
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Latitude*
+  commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Latitude
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_ICoordinates_1_Latitude
+  name: Latitude
+  nameWithType: ICoordinates<TAngle>.Latitude
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<TAngle>.Latitude
+  nameWithType.vb: ICoordinates(Of TAngle).Latitude
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of TAngle).Latitude

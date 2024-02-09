@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http
+  commentId: N:Pelias.NET.Model.Interfaces.Protocols.Http
+  id: Pelias.NET.Model.Interfaces.Protocols.Http
+  children:
+  - Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
+  - Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+  langs:
+  - csharp
+  - vb
+  name: Pelias.NET.Model.Interfaces.Protocols.Http
+  nameWithType: Pelias.NET.Model.Interfaces.Protocols.Http
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http
+  type: Namespace
+  assemblies:
+  - Pelias.NET
+references:
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
+  commentId: T:Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
+  parent: Pelias.NET.Model.Interfaces.Protocols.Http
+  href: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.html
+  name: IQuery
+  nameWithType: IQuery
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+  commentId: T:Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+  href: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse-7.html
+  name: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  nameWithType: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+  nameWithType.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+  fullName.vb: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+  name.vb: IResponse(Of TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+    name: IResponse
+    href: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse-7.html
+  - name: <
+  - name: TGeocoding
+  - name: ','
+  - name: " "
+  - name: TFeature
+  - name: ','
+  - name: " "
+  - name: TProperties
+  - name: ','
+  - name: " "
+  - name: TGeometry
+  - name: ','
+  - name: " "
+  - name: TBoundingBox
+  - name: ','
+  - name: " "
+  - name: TCoordinates
+  - name: ','
+  - name: " "
+  - name: TAngle
+  - name: '>'
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
+    name: IResponse
+    href: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse-7.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TGeocoding
+  - name: ','
+  - name: " "
+  - name: TFeature
+  - name: ','
+  - name: " "
+  - name: TProperties
+  - name: ','
+  - name: " "
+  - name: TGeometry
+  - name: ','
+  - name: " "
+  - name: TBoundingBox
+  - name: ','
+  - name: " "
+  - name: TCoordinates
+  - name: ','
+  - name: " "
+  - name: TAngle
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http
+  commentId: N:Pelias.NET.Model.Interfaces.Protocols.Http
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.Protocols.Http
+  nameWithType: Pelias.NET.Model.Interfaces.Protocols.Http
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols
+    name: Protocols
+    href: Pelias.NET.Model.Interfaces.Protocols.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols.Http
+    name: Http
+    href: Pelias.NET.Model.Interfaces.Protocols.Http.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols
+    name: Protocols
+    href: Pelias.NET.Model.Interfaces.Protocols.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols.Http
+    name: Http
+    href: Pelias.NET.Model.Interfaces.Protocols.Http.html

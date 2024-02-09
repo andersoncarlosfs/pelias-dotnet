@@ -1,0 +1,168 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
+  commentId: T:Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
+  id: IQuery
+  parent: Pelias.NET.Model.Interfaces.Protocols.Http
+  children:
+  - Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.ToNameValueCollection
+  langs:
+  - csharp
+  - vb
+  name: IQuery
+  nameWithType: IQuery
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
+  type: Interface
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IQuery.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: IQuery
+    path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IQuery.cs
+    startLine: 7
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.Protocols.Http
+  summary: Represents an interface for an HTTP query with methods to create parameters for URL encoding.
+  example: []
+  syntax:
+    content: public interface IQuery
+    content.vb: Public Interface IQuery
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.ToNameValueCollection
+  commentId: M:Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.ToNameValueCollection
+  id: ToNameValueCollection
+  parent: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
+  langs:
+  - csharp
+  - vb
+  name: ToNameValueCollection()
+  nameWithType: IQuery.ToNameValueCollection()
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.ToNameValueCollection()
+  type: Method
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IQuery.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: ToNameValueCollection
+    path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IQuery.cs
+    startLine: 13
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Interfaces.Protocols.Http
+  summary: Creates a collection of parameters with their respective values for URL encoding.
+  example: []
+  syntax:
+    content: NameValueCollection ToNameValueCollection()
+    return:
+      type: System.Collections.Specialized.NameValueCollection
+      description: A collection of parameters for URL encoding.
+    content.vb: Function ToNameValueCollection() As NameValueCollection
+  overload: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.ToNameValueCollection*
+references:
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http
+  commentId: N:Pelias.NET.Model.Interfaces.Protocols.Http
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.Protocols.Http
+  nameWithType: Pelias.NET.Model.Interfaces.Protocols.Http
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols
+    name: Protocols
+    href: Pelias.NET.Model.Interfaces.Protocols.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols.Http
+    name: Http
+    href: Pelias.NET.Model.Interfaces.Protocols.Http.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols
+    name: Protocols
+    href: Pelias.NET.Model.Interfaces.Protocols.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.Protocols.Http
+    name: Http
+    href: Pelias.NET.Model.Interfaces.Protocols.Http.html
+- uid: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.ToNameValueCollection*
+  commentId: Overload:Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.ToNameValueCollection
+  href: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.html#Pelias_NET_Model_Interfaces_Protocols_Http_IQuery_ToNameValueCollection
+  name: ToNameValueCollection
+  nameWithType: IQuery.ToNameValueCollection
+  fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.ToNameValueCollection
+- uid: System.Collections.Specialized.NameValueCollection
+  commentId: T:System.Collections.Specialized.NameValueCollection
+  parent: System.Collections.Specialized
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection
+  name: NameValueCollection
+  nameWithType: NameValueCollection
+  fullName: System.Collections.Specialized.NameValueCollection
+- uid: System.Collections.Specialized
+  commentId: N:System.Collections.Specialized
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Specialized
+  nameWithType: System.Collections.Specialized
+  fullName: System.Collections.Specialized
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Specialized
+    name: Specialized
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.specialized
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Specialized
+    name: Specialized
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.specialized

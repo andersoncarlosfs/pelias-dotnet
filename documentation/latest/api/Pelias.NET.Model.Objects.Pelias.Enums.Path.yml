@@ -1,0 +1,370 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Path
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Enums.Path
+  id: Path
+  parent: Pelias.NET.Model.Objects.Pelias.Enums
+  children:
+  - Pelias.NET.Model.Objects.Pelias.Enums.Path.Reverse
+  - Pelias.NET.Model.Objects.Pelias.Enums.Path.Search
+  - Pelias.NET.Model.Objects.Pelias.Enums.Path.StructuredSearch
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: Path
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Path
+  type: Enum
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Path
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
+    startLine: 5
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  syntax:
+    content: >-
+      [Flags]
+
+      [JsonConverter(typeof(JsonStringEnumConverter))]
+
+      public enum Path
+    content.vb: >-
+      <Flags>
+
+      <JsonConverter(GetType(JsonStringEnumConverter))>
+
+      Public Enum Path
+  extensionMethods:
+  - Pelias.NET.Model.Objects.Pelias.Enums.Path.Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  - type: System.Text.Json.Serialization.JsonConverterAttribute
+    ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.Text.Json.Serialization.JsonStringEnumConverter
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Path.Reverse
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Path.Reverse
+  id: Reverse
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Path
+  langs:
+  - csharp
+  - vb
+  name: Reverse
+  nameWithType: Path.Reverse
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Path.Reverse
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Reverse
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
+    startLine: 9
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  syntax:
+    content: >-
+      [EnumMember(Value = "reverse")]
+
+      Reverse = 0
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Path
+    content.vb: >-
+      <EnumMember(Value:="reverse")>
+
+      Reverse = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: reverse
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Path.Search
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Path.Search
+  id: Search
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Path
+  langs:
+  - csharp
+  - vb
+  name: Search
+  nameWithType: Path.Search
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Path.Search
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Search
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
+    startLine: 11
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  syntax:
+    content: >-
+      [EnumMember(Value = "search")]
+
+      Search = 1
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Path
+    content.vb: >-
+      <EnumMember(Value:="search")>
+
+      Search = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: search
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Path.StructuredSearch
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Path.StructuredSearch
+  id: StructuredSearch
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Path
+  langs:
+  - csharp
+  - vb
+  name: StructuredSearch
+  nameWithType: Path.StructuredSearch
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Path.StructuredSearch
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: StructuredSearch
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
+    startLine: 13
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  syntax:
+    content: >-
+      [EnumMember(Value = "search/structured")]
+
+      StructuredSearch = 2
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Path
+    content.vb: >-
+      <EnumMember(Value:="search/structured")>
+
+      StructuredSearch = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: search/structured
+references:
+- uid: Pelias.NET.Model.Objects.Pelias.Enums
+  commentId: N:Pelias.NET.Model.Objects.Pelias.Enums
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.Enums
+  nameWithType: Pelias.NET.Model.Objects.Pelias.Enums
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums
+    name: Enums
+    href: Pelias.NET.Model.Objects.Pelias.Enums.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums
+    name: Enums
+    href: Pelias.NET.Model.Objects.Pelias.Enums.html
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Path.Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  parent: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+  definition: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  name: GetEnumMemberValue<Path>(Path)
+  nameWithType: EnumExtensions.GetEnumMemberValue<Path>(Path)
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue<Pelias.NET.Model.Objects.Pelias.Enums.Path>(Pelias.NET.Model.Objects.Pelias.Enums.Path)
+  nameWithType.vb: EnumExtensions.GetEnumMemberValue(Of Path)(Path)
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue(Of Pelias.NET.Model.Objects.Pelias.Enums.Path)(Pelias.NET.Model.Objects.Pelias.Enums.Path)
+  name.vb: GetEnumMemberValue(Of Path)(Path)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(Pelias.NET.Model.Objects.Pelias.Enums.Path)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: <
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Path
+    name: Path
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Path.html
+  - name: '>'
+  - name: (
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Path
+    name: Path
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Path.html
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(Pelias.NET.Model.Objects.Pelias.Enums.Path)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Path
+    name: Path
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Path.html
+  - name: )
+  - name: (
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Path
+    name: Path
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Path.html
+  - name: )
+- uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  name: GetEnumMemberValue<T>(T)
+  nameWithType: EnumExtensions.GetEnumMemberValue<T>(T)
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue<T>(T)
+  nameWithType.vb: EnumExtensions.GetEnumMemberValue(Of T)(T)
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue(Of T)(T)
+  name.vb: GetEnumMemberValue(Of T)(T)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+  parent: Pelias.NET.Model.Objects.Pelias.Extensions
+  href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html
+  name: EnumExtensions
+  nameWithType: EnumExtensions
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+- uid: Pelias.NET.Model.Objects.Pelias.Extensions
+  commentId: N:Pelias.NET.Model.Objects.Pelias.Extensions
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.Extensions
+  nameWithType: Pelias.NET.Model.Objects.Pelias.Extensions
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions
+    name: Extensions
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions
+    name: Extensions
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.html
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Path
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Enums.Path
+  parent: Pelias.NET.Model.Objects.Pelias.Enums
+  href: Pelias.NET.Model.Objects.Pelias.Enums.Path.html
+  name: Path
+  nameWithType: Path
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Path

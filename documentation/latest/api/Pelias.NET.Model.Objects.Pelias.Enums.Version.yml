@@ -1,0 +1,286 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Version
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Enums.Version
+  id: Version
+  parent: Pelias.NET.Model.Objects.Pelias.Enums
+  children:
+  - Pelias.NET.Model.Objects.Pelias.Enums.Version.V1
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: Version
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Version
+  type: Enum
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Version.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Version
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Version.cs
+    startLine: 5
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  syntax:
+    content: >-
+      [Flags]
+
+      [JsonConverter(typeof(JsonStringEnumConverter))]
+
+      public enum Version
+    content.vb: >-
+      <Flags>
+
+      <JsonConverter(GetType(JsonStringEnumConverter))>
+
+      Public Enum Version
+  extensionMethods:
+  - Pelias.NET.Model.Objects.Pelias.Enums.Version.Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  - type: System.Text.Json.Serialization.JsonConverterAttribute
+    ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.Text.Json.Serialization.JsonStringEnumConverter
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Version.V1
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Version.V1
+  id: V1
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Version
+  langs:
+  - csharp
+  - vb
+  name: V1
+  nameWithType: Version.V1
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Version.V1
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Version.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: V1
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Version.cs
+    startLine: 9
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  syntax:
+    content: >-
+      [EnumMember(Value = "V1")]
+
+      V1 = 0
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Version
+    content.vb: >-
+      <EnumMember(Value:="V1")>
+
+      V1 = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: V1
+references:
+- uid: Pelias.NET.Model.Objects.Pelias.Enums
+  commentId: N:Pelias.NET.Model.Objects.Pelias.Enums
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.Enums
+  nameWithType: Pelias.NET.Model.Objects.Pelias.Enums
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums
+    name: Enums
+    href: Pelias.NET.Model.Objects.Pelias.Enums.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums
+    name: Enums
+    href: Pelias.NET.Model.Objects.Pelias.Enums.html
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Version.Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  parent: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+  definition: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  name: GetEnumMemberValue<Version>(Version)
+  nameWithType: EnumExtensions.GetEnumMemberValue<Version>(Version)
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue<Pelias.NET.Model.Objects.Pelias.Enums.Version>(Pelias.NET.Model.Objects.Pelias.Enums.Version)
+  nameWithType.vb: EnumExtensions.GetEnumMemberValue(Of Version)(Version)
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue(Of Pelias.NET.Model.Objects.Pelias.Enums.Version)(Pelias.NET.Model.Objects.Pelias.Enums.Version)
+  name.vb: GetEnumMemberValue(Of Version)(Version)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(Pelias.NET.Model.Objects.Pelias.Enums.Version)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: <
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Version
+    name: Version
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Version.html
+  - name: '>'
+  - name: (
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Version
+    name: Version
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Version.html
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(Pelias.NET.Model.Objects.Pelias.Enums.Version)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Version
+    name: Version
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Version.html
+  - name: )
+  - name: (
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Version
+    name: Version
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Version.html
+  - name: )
+- uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  name: GetEnumMemberValue<T>(T)
+  nameWithType: EnumExtensions.GetEnumMemberValue<T>(T)
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue<T>(T)
+  nameWithType.vb: EnumExtensions.GetEnumMemberValue(Of T)(T)
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue(Of T)(T)
+  name.vb: GetEnumMemberValue(Of T)(T)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+  parent: Pelias.NET.Model.Objects.Pelias.Extensions
+  href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html
+  name: EnumExtensions
+  nameWithType: EnumExtensions
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+- uid: Pelias.NET.Model.Objects.Pelias.Extensions
+  commentId: N:Pelias.NET.Model.Objects.Pelias.Extensions
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.Extensions
+  nameWithType: Pelias.NET.Model.Objects.Pelias.Extensions
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions
+    name: Extensions
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions
+    name: Extensions
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.html
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Version
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Enums.Version
+  parent: Pelias.NET.Model.Objects.Pelias.Enums
+  href: Pelias.NET.Model.Objects.Pelias.Enums.Version.html
+  name: Version
+  nameWithType: Version
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Version
