@@ -77,3 +77,6 @@ mono_crash.*
 *.msp
 
 # Other generated files during development
+
+# Locally generated documentation
+/documentation/latest/
