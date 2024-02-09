@@ -35,6 +35,6 @@ jobs:
       run: |
         git config user.name "$(git log -n 1 --pretty=format:%an)"
         git config user.email "$(git log -n 1 --pretty=format:%ae)"
-        git add ./documentation/latest
+        git add --force ./documentation/latest
         git commit -m "Updating the documentation for the commit: $(git log -n 1 --pretty=format:%H)"
         git push
