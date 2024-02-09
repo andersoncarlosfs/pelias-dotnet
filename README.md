@@ -30,3 +30,5 @@ namespace Pelias.NET
     }
 }
 ```
+
+## Contact
