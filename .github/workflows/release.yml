@@ -11,6 +11,7 @@ on:
 
 jobs:
   release:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -54,9 +55,9 @@ jobs:
       run: zip -jr v${{ env.version }}.zip ./build/*
    
     - name: Create Zip Release
-      run: gh release create v${{ env.version }} './v${{ env.version }}.tar.gz#Binaries (tar.gz)' './v${{ env.version }}.zip#Binaries (zip)'
+      run: echo 0 #gh release create v${{ env.version }} './v${{ env.version }}.tar.gz#Binaries (tar.gz)' './v${{ env.version }}.zip#Binaries (zip)'
       env:
         GH_TOKEN: ${{ github.token }}
 
     - name: Publish to NuGet
-      run: dotnet nuget push ./build/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.TOKEN_NUGET }}
+      run: echo 0 #dotnet nuget push ./build/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.TOKEN_NUGET }}
