@@ -37,7 +37,7 @@ namespace Pelias.NET.Model.DataAnnotations
         /// If <see cref="AllowWhitespace"/> is <c>false</c>, the method checks that the value does not consist solely of whitespace.
         /// It also ensures that the string length does not exceed the maximum length defined by the base class.
         /// </remarks>
-        public override bool IsValid(object value)
+        public override bool IsValid(object? value)
         {
             // Check if the value is not null and whitespace is not allowed
             if (value != null && !AllowWhitespace && string.IsNullOrWhiteSpace(value.ToString()))
