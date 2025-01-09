@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Pelias.NET.Model.Objects.Pelias.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 
@@ -9,6 +10,7 @@ namespace Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocod
         [JsonRequired]
         [JsonPropertyName("address")]
         [Required]
+        [Text]
         public required string Address { get; set; }
         [JsonPropertyName("neighbourhood")]
         [AllowNull]

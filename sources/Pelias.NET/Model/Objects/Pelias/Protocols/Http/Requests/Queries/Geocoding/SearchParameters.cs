@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Pelias.NET.Model.Objects.Pelias.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
@@ -8,7 +9,7 @@ namespace Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocod
         [JsonRequired]
         [JsonPropertyName("text")]
         [Required]
-        [MinLength(1)]
+        [Text]
         public required string Text { get; set; }
     }
 }
