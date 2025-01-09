@@ -1,4 +1,4 @@
-﻿using Pelias.NET.Model.Objects.Pelias.DataAnnotations;
+﻿using Pelias.NET.Model.DataAnnotations;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
