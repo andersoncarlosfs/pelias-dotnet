@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pelias.NET.Model.Objects.Pelias.Resources {
+namespace Pelias.NET.Model.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Pelias.NET.Model.Objects.Pelias.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pelias.NET.Model.Objects.Pelias.Resources.DataAnnotationsResources", typeof(DataAnnotationsResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pelias.NET.Model.Resources.DataAnnotationsResources", typeof(DataAnnotationsResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

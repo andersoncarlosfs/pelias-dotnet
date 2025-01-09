@@ -1,7 +1,7 @@
 ﻿using Pelias.NET.Model.Objects.Pelias.Resources;
 using System.ComponentModel.DataAnnotations;
 
-namespace Pelias.NET.Model.Objects.Pelias.DataAnnotations
+namespace Pelias.NET.Model.DataAnnotations
 {
     /// <summary>
     /// Represents a custom data annotation attribute for validating string values with optional whitespace handling.
@@ -25,7 +25,7 @@ namespace Pelias.NET.Model.Objects.Pelias.DataAnnotations
         public TextAttribute(bool allowWhitespace = false, int maximumLength = int.MaxValue)
             : base(maximumLength) // Sets the maximum length to the largest possible integer value
         {
-            this.AllowWhitespace = allowWhitespace; // Default behavior is to disallow whitespace
+            AllowWhitespace = allowWhitespace; // Default behavior is to disallow whitespace
         }
 
         /// <summary>
