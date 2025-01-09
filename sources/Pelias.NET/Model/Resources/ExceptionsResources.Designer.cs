@@ -61,6 +61,24 @@ namespace Pelias.NET.Model.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The collection &apos;{(0)}&apos; has &apos;{(1)}&apos; elements instead of &apos;{(2)}&apos;..
+        /// </summary>
+        internal static string CollectionIterationException {
+            get {
+                return ResourceManager.GetString("CollectionIterationException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The entry &apos;{(0)}&apos; in &apos;{(1)}&apos; is not supported..
+        /// </summary>
+        internal static string MissingEntryException {
+            get {
+                return ResourceManager.GetString("MissingEntryException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The reader &apos;{(0)}&apos; read a token type of &apos;{(1)}&apos; and it is not equal to the type &apos;{(2)}&apos; of the argument &apos;{(3)}&apos;..
         /// </summary>
         internal static string TypeMismatchException_NotEqual_JsonTokenType {

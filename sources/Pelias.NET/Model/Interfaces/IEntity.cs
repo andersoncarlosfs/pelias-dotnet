@@ -79,7 +79,7 @@ namespace Pelias.NET.Model.Interfaces
                         }
                         else
                         {
-                            exceptions.Add(new CollectionIterationException($"The collection '{nameof(target)}' has '{target.GetArrayLength()}' elements instead of '{source.GetArrayLength()}'."));
+                            exceptions.Add(new CollectionIterationException(string.Format(ExceptionsResources.CollectionIterationException, nameof(target), target.GetArrayLength(), source.GetArrayLength())));
                         }
                     }
                 }

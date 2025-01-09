@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CollectionIterationException" xml:space="preserve">
+    <value>The collection '{(0)}' has '{(1)}' elements instead of '{(2)}'.</value>
+  </data>
+  <data name="MissingEntryException" xml:space="preserve">
+    <value>The entry '{(0)}' in '{(1)}' is not supported.</value>
+  </data>
   <data name="TypeMismatchException_NotEqual_JsonTokenType" xml:space="preserve">
     <value>The reader '{(0)}' read a token type of '{(1)}' and it is not equal to the type '{(2)}' of the argument '{(3)}'.</value>
   </data>
