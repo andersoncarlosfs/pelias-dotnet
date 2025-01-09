@@ -1,6 +1,7 @@
 ﻿using Pelias.NET.Model.Exceptions;
 using Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems;
 using Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures;
+using Pelias.NET.Model.Resources;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -34,7 +35,7 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
 
             if (!current.Equals(type))
             {
-                throw new TypeMismatchException($"The reader '{nameof(reader)}' read a token type of '{current}' and it is not equal to the type '{type}' of the argument '{nameof(type)}'.");
+                throw new TypeMismatchException(string.Format(ExceptionsResources.TypeMismatchException_NotEqual_JsonTokenType, nameof(reader), current, type, nameof(type)));
             }
 
             if (limit != null && angles.Count > limit)
