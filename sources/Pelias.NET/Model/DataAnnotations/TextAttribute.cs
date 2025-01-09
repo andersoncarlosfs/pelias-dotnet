@@ -1,4 +1,4 @@
-﻿using Pelias.NET.Model.Objects.Pelias.Resources;
+﻿using Pelias.NET.Model.Resources;
 using System.ComponentModel.DataAnnotations;
 
 namespace Pelias.NET.Model.DataAnnotations
