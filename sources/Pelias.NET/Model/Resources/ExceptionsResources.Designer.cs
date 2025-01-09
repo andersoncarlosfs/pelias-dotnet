@@ -70,6 +70,15 @@ namespace Pelias.NET.Model.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The request to &apos;{(0)}&apos; with the parameters &apos;{(1)}&apos; returned a response from &apos;{(2)}&apos; with a status code &apos;{(3)}&apos; and the message from the servers is &apos;{(4)}&apos;..
+        /// </summary>
+        internal static string HttpRequestException {
+            get {
+                return ResourceManager.GetString("HttpRequestException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The entry &apos;{(0)}&apos; in &apos;{(1)}&apos; is not supported..
         /// </summary>
         internal static string MissingEntryException {

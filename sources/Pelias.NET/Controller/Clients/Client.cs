@@ -115,6 +115,7 @@ namespace Pelias.NET.Controller.Services
         /// <summary>
         /// Creates an HTTP request for the specified path and query.
         /// </summary>
+        [Obsolete]
         private HttpWebRequest CreateRequest(Model.Objects.Pelias.Enums.Path path, QueryBase query)
         {
             UriBuilder builder = new UriBuilder(Endpoint)
@@ -154,7 +155,7 @@ namespace Pelias.NET.Controller.Services
             else
             {
                 // Raising the exception
-                throw new HttpRequestException($"The resquest to '{request.RequestUri}' with the parameters '{JsonSerializer.Serialize(query)}' returned a response from '{response.ResponseUri}' with a status code '{response.StatusCode}' and the message from the servers is '{await new StreamReader(response.GetResponseStream()).ReadToEndAsync().ConfigureAwait(false)}'.");
+                throw new HttpRequestException(string.Format(ExceptionsResources.HttpRequestException, request.RequestUri, JsonSerializer.Serialize(query), response.ResponseUri, response.StatusCode, await new StreamReader(response.GetResponseStream()).ReadToEndAsync().ConfigureAwait(false)));
             }
         }
 

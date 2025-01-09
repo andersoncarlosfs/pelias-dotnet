@@ -120,6 +120,9 @@
   <data name="CollectionIterationException" xml:space="preserve">
     <value>The collection '{(0)}' has '{(1)}' elements instead of '{(2)}'.</value>
   </data>
+  <data name="HttpRequestException" xml:space="preserve">
+    <value>The request to '{(0)}' with the parameters '{(1)}' returned a response from '{(2)}' with a status code '{(3)}' and the message from the servers is '{(4)}'.</value>
+  </data>
   <data name="MissingEntryException" xml:space="preserve">
     <value>The entry '{(0)}' in '{(1)}' is not supported.</value>
   </data>
