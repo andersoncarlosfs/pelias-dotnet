@@ -6,6 +6,7 @@ using Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.
 using Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries;
 using Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding;
 using Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses;
+using Pelias.NET.Model.Resources;
 using System.Net;
 using System.Text.Json;
 
@@ -93,9 +94,7 @@ namespace Pelias.NET.Controller.Services
                         // Listing the missing entries                        
                         foreach (var entry in IEntity.GetMissingProperties(source, target, new List<JsonProperty>(), exceptions, false))
                         {
-                            var message = $"The entry '{entry.LastOrDefault()}' in '{{{subject.GetType().Name}: {{{string.Join(": {", entry.Select(value => value.Name))}{new string('}', entry.Count)}}}' is not supported.";
-
-                            exceptions.Add(new MissingEntryException(message));
+                            exceptions.Add(new MissingEntryException(string.Format(ExceptionsResources.MissingEntryException, entry.LastOrDefault(), $"'{{{subject.GetType().Name}: {{{string.Join(": {", entry.Select(value => value.Name))}{new string('}', entry.Count)}}}'")));
                         }
                     }
 
