@@ -54,7 +54,7 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
 
             if (limit != null && angles.Count > limit)
             {
-                throw new CollectionIterationException($"The collection bounding box has '{angles.Count}' elements instead of '{limit}'.");
+                throw new CollectionIterationException($"The collection '{nameof(angles)}' box has '{angles.Count}' elements instead of '{limit}'.");
             }
 
             // Getting the value of the token

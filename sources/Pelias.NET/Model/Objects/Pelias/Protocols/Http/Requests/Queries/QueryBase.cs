@@ -67,6 +67,7 @@ namespace Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
                 foreach (var attribute in (JsonConverterAttribute[])property.GetCustomAttributes(typeof(JsonConverterAttribute)))
                 {
                     var options = new JsonSerializerOptions();
+
                     options.Converters.Add((JsonConverter)Activator.CreateInstance(attribute.ConverterType));
 
                     nameValueCollection[name] = JsonSerializer.Serialize(value, options);
