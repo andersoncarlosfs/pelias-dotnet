@@ -49,7 +49,7 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
                 // Ensure the expected four coordinates are parsed
                 if (angles.Count != 4)
                 {
-                    throw new TypeMismatchException(string.Format(ExceptionsResources.TypeMismatchException_InvalidBoundingBoxCoordinates, angles.Count));
+                    throw new CollectionIterationException(string.Format(ExceptionsResources.CollectionIterationException, nameof(angles), angles.Count, limit));
                 }
 
                 return new BoundingBox
