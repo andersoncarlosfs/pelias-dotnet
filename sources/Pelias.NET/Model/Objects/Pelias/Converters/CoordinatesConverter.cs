@@ -49,6 +49,7 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
                         ExceptionsResources.TypeMismatchException_NotEqual_JsonTokenType,
                         nameof(reader),
                         reader.TokenType,
+                        reader.TokenStartIndex,
                         expectedTokenType,
                         nameof(expectedTokenType)
                     )

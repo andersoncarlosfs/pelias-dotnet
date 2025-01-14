@@ -70,7 +70,8 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
             // Ensure that the token is the expected type
             if (currentTokenType != expectedTokenType)
             {
-                throw new TypeMismatchException(string.Format(ExceptionsResources.TypeMismatchException_NotEqual_JsonTokenType, nameof(reader), currentTokenType, expectedTokenType, nameof(expectedTokenType)));
+                throw new TypeMismatchException(string.Format(ExceptionsResources.TypeMismatchException_NotEqual_JsonTokenType, nameof(reader), currentTokenType,
+                        reader.TokenStartIndex, expectedTokenType, nameof(expectedTokenType)));
             }
 
             // If a limit is set, ensure that the number of coordinates does not exceed it

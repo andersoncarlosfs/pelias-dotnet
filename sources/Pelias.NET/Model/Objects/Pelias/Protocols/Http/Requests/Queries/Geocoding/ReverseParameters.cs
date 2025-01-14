@@ -9,12 +9,12 @@ namespace Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocod
     public class ReverseParameters : GeocodingBase
     {
         [JsonRequired]
-        [JsonConverter(typeof(AngleConverter))]
+        [JsonConverter(typeof(DegreesConverter))]
         [JsonPropertyName("point.lon")]
         [Required]
         public required Angle Longitude { get; set; }
         [JsonRequired]
-        [JsonConverter(typeof(AngleConverter))]
+        [JsonConverter(typeof(DegreesConverter))]
         [JsonPropertyName("point.lat")]
         [Required]
         public required Angle Latitude { get; set; }

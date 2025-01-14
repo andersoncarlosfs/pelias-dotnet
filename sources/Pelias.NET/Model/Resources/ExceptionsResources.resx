@@ -133,7 +133,7 @@
     <value>The entry '{(0)}' in '{(1)}' is not supported.</value>
   </data>
   <data name="TypeMismatchException_NotEqual_JsonTokenType" xml:space="preserve">
-    <value>The reader '{(0)}' read a token type of '{(1)}' and it is not equal to the type '{(2)}' of the argument '{(3)}'.</value>
+    <value>The reader '{(0)}' read a token of type '{(1)}' at index '{(2)}' and it is not equal to the type '{(3)}' of the argument '{(4)}'.</value>
   </data>
   <data name="TypeMismatchException_NotEqual_JsonValueKind" xml:space="preserve">
     <value>The type '{(0)}' of the argument '{(1)}' is not the equal to the type '{(2)}' of the argument '{(3)}'.</value>

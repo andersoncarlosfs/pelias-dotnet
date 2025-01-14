@@ -106,7 +106,7 @@ namespace Pelias.NET.Model.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The reader &apos;{(0)}&apos; read a token type of &apos;{(1)}&apos; and it is not equal to the type &apos;{(2)}&apos; of the argument &apos;{(3)}&apos;..
+        ///   Looks up a localized string similar to The reader &apos;{(0)}&apos; read a token of type &apos;{(1)}&apos; at index &apos;{(2)}&apos; and it is not equal to the type &apos;{(3)}&apos; of the argument &apos;{(4)}&apos;..
         /// </summary>
         internal static string TypeMismatchException_NotEqual_JsonTokenType {
             get {
