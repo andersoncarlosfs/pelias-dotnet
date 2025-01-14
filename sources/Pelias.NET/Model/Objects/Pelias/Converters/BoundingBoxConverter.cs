@@ -98,9 +98,12 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
             writer.WriteStartArray();
 
             // Write each coordinate of the bounding box
-            foreach (var entry in value.ToArray())
+            foreach (var coordinates in value)
             {
-                writer.WriteNumberValue(entry);
+                foreach (var angle in coordinates)
+                {
+                    writer.WriteNumberValue(angle.Degrees);
+                }
             }
 
             // End the JSON array

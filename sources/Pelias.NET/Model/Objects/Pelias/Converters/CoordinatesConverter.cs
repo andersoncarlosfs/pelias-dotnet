@@ -99,9 +99,9 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
             writer.WriteStartArray(); // Begin the JSON array
 
             // Write each coordinate value (latitude and longitude)
-            foreach (var entry in value.ToArray())
+            foreach (var angle in value)
             {
-                writer.WriteNumberValue(entry); // Write each coordinate as a number
+                writer.WriteNumberValue(angle.Degrees); // Write each coordinate as a number
             }
 
             writer.WriteEndArray(); // End the JSON array

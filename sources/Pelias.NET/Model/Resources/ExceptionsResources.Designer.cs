@@ -61,6 +61,15 @@ namespace Pelias.NET.Model.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The collection &apos;{(0)}&apos; has &apos;{(1)}&apos; elements instead of at least &apos;{(2)}&apos;..
+        /// </summary>
+        internal static string ArgumentException_InsufficientNumberOfElements {
+            get {
+                return ResourceManager.GetString("ArgumentException_InsufficientNumberOfElements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The collection &apos;{(0)}&apos; has &apos;{(1)}&apos; elements instead of &apos;{(2)}&apos;..
         /// </summary>
         internal static string CollectionIterationException {
@@ -75,6 +84,15 @@ namespace Pelias.NET.Model.Resources {
         internal static string HttpRequestException {
             get {
                 return ResourceManager.GetString("HttpRequestException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The attribute &apos;{(0)}&apos; was not found for the object &apos;{(1)}&apos; of the type &apos;{(2)}&apos;..
+        /// </summary>
+        internal static string InvalidOperationException_MissingAttribute {
+            get {
+                return ResourceManager.GetString("InvalidOperationException_MissingAttribute", resourceCulture);
             }
         }
         
