@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class QueryBase | Pelias.NET ">
       
-      
+      <meta name="description" content="Represents the base class for a query in the Pelias API. This class provides the functionality to validate the object&#39;s properties and serialize them into a query string for HTTP requests.">
       <link rel="icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../public/docfx.min.css">
       <link rel="stylesheet" href="../../../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase" data-uid="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase" class="text-break">
-Class QueryBase  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class QueryBase  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,10 @@ Class QueryBase  <a class="header-action link-secondary" title="View source" hre
   <dl><dt>Assembly</dt><dd>Pelias.NET.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents the base class for a query in the Pelias API.
+This class provides the functionality to validate the object's properties and
+serialize them into a query string for HTTP requests.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -168,10 +171,11 @@ Class QueryBase  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_ToNameValueCollection" data-uid="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection">
   ToNameValueCollection()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Creates a collection of parameters with their respective values for URL encoding.</p>
+  <div class="markdown level1 summary"><p>Creates a collection of parameters with their respective values for URL encoding.
+Converts the properties of this object to a name-value collection for URL query string generation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -183,7 +187,8 @@ Class QueryBase  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection">NameValueCollection</a> containing the query string parameters.</p>
+</dd>
   </dl>
 
 
@@ -192,6 +197,55 @@ Class QueryBase  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <h4 class="section" id="Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_ToNameValueCollection_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method checks for the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonignoreattribute">JsonIgnoreAttribute</a> to exclude properties
+from the URL string when necessary. It also handles the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonpropertynameattribute">JsonPropertyNameAttribute</a>
+to map properties to the correct names and applies any custom converters through
+the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverterattribute">JsonConverterAttribute</a>.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.aggregateexception">AggregateException</a></dt>
+    <dd><p>Thrown if any validation errors occur during the validation of the object.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate_" data-uid="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate*"></a>
+
+  <h3 id="Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate" data-uid="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate">
+  Validate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Validates the necessary attributes for URL encoding, including required fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ValidationResult&gt; Validate()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationresult">ValidationResult</a>&gt;</dt>
+    <dd><p>A list of validation results.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method checks the object for any validation attributes and collects validation
+errors if any are present. It uses the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validator.tryvalidateobject#system-componentmodel-dataannotations-validator-tryvalidateobject(system-object-system-componentmodel-dataannotations-validationcontext-system-collections-generic-icollection((system-componentmodel-dataannotations-validationresult)))">TryValidateObject(object, ValidationContext, ICollection&lt;ValidationResult&gt;)</a> method.</p>
+</div>
 
 
 
@@ -200,7 +254,7 @@ Class QueryBase  <a class="header-action link-secondary" title="View source" hre
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs/#L17" class="edit-link">Edit this page</a>
         </div>
 
 

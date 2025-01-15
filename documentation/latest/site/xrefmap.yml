@@ -13,24 +13,24 @@ references:
   commentId: T:Pelias.NET.Controller.Services.Client
   fullName: Pelias.NET.Controller.Services.Client
   nameWithType: Client
-- uid: Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.WebProxy)
-  name: Client(string, WebProxy)
-  href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client__ctor_System_String_System_Net_WebProxy_
-  commentId: M:Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.WebProxy)
-  name.vb: New(String, WebProxy)
-  fullName: Pelias.NET.Controller.Services.Client.Client(string, System.Net.WebProxy)
-  fullName.vb: Pelias.NET.Controller.Services.Client.New(String, System.Net.WebProxy)
-  nameWithType: Client.Client(string, WebProxy)
-  nameWithType.vb: Client.New(String, WebProxy)
-- uid: Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.WebProxy)
-  name: Client(Uri, WebProxy)
-  href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client__ctor_System_Uri_System_Net_WebProxy_
-  commentId: M:Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.WebProxy)
-  name.vb: New(Uri, WebProxy)
-  fullName: Pelias.NET.Controller.Services.Client.Client(System.Uri, System.Net.WebProxy)
-  fullName.vb: Pelias.NET.Controller.Services.Client.New(System.Uri, System.Net.WebProxy)
-  nameWithType: Client.Client(Uri, WebProxy)
-  nameWithType.vb: Client.New(Uri, WebProxy)
+- uid: Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.Http.HttpClient)
+  name: Client(string, HttpClient)
+  href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client__ctor_System_String_System_Net_Http_HttpClient_
+  commentId: M:Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.Http.HttpClient)
+  name.vb: New(String, HttpClient)
+  fullName: Pelias.NET.Controller.Services.Client.Client(string, System.Net.Http.HttpClient)
+  fullName.vb: Pelias.NET.Controller.Services.Client.New(String, System.Net.Http.HttpClient)
+  nameWithType: Client.Client(string, HttpClient)
+  nameWithType.vb: Client.New(String, HttpClient)
+- uid: Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.Http.HttpClient)
+  name: Client(Uri, HttpClient)
+  href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client__ctor_System_Uri_System_Net_Http_HttpClient_
+  commentId: M:Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.Http.HttpClient)
+  name.vb: New(Uri, HttpClient)
+  fullName: Pelias.NET.Controller.Services.Client.Client(System.Uri, System.Net.Http.HttpClient)
+  fullName.vb: Pelias.NET.Controller.Services.Client.New(System.Uri, System.Net.Http.HttpClient)
+  nameWithType: Client.Client(Uri, HttpClient)
+  nameWithType.vb: Client.New(Uri, HttpClient)
 - uid: Pelias.NET.Controller.Services.Client.#ctor*
   name: Client
   href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client__ctor_
@@ -54,34 +54,12 @@ references:
   isSpec: "True"
   fullName: Pelias.NET.Controller.Services.Client.Endpoint
   nameWithType: Client.Endpoint
-- uid: Pelias.NET.Controller.Services.Client.Proxy
-  name: Proxy
-  href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Proxy
-  commentId: P:Pelias.NET.Controller.Services.Client.Proxy
-  fullName: Pelias.NET.Controller.Services.Client.Proxy
-  nameWithType: Client.Proxy
-- uid: Pelias.NET.Controller.Services.Client.Proxy*
-  name: Proxy
-  href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Proxy_
-  commentId: Overload:Pelias.NET.Controller.Services.Client.Proxy
-  isSpec: "True"
-  fullName: Pelias.NET.Controller.Services.Client.Proxy
-  nameWithType: Client.Proxy
 - uid: Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters)
   name: Reverse(ReverseParameters)
   href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Reverse_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_ReverseParameters_
   commentId: M:Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters)
   fullName: Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters)
   nameWithType: Client.Reverse(ReverseParameters)
-- uid: Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters,System.Boolean)
-  name: Reverse(ReverseParameters, bool)
-  href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Reverse_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_ReverseParameters_System_Boolean_
-  commentId: M:Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters,System.Boolean)
-  name.vb: Reverse(ReverseParameters, Boolean)
-  fullName: Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters, bool)
-  fullName.vb: Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters, Boolean)
-  nameWithType: Client.Reverse(ReverseParameters, bool)
-  nameWithType.vb: Client.Reverse(ReverseParameters, Boolean)
 - uid: Pelias.NET.Controller.Services.Client.Reverse*
   name: Reverse
   href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Reverse_
@@ -95,30 +73,12 @@ references:
   commentId: M:Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters)
   fullName: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters)
   nameWithType: Client.Search(SearchParameters)
-- uid: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters,System.Boolean)
-  name: Search(SearchParameters, bool)
-  href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Search_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_SearchParameters_System_Boolean_
-  commentId: M:Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters,System.Boolean)
-  name.vb: Search(SearchParameters, Boolean)
-  fullName: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters, bool)
-  fullName.vb: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters, Boolean)
-  nameWithType: Client.Search(SearchParameters, bool)
-  nameWithType.vb: Client.Search(SearchParameters, Boolean)
 - uid: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters)
   name: Search(StructuredSearchParameters)
   href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Search_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_StructuredSearchParameters_
   commentId: M:Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters)
   fullName: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters)
   nameWithType: Client.Search(StructuredSearchParameters)
-- uid: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters,System.Boolean)
-  name: Search(StructuredSearchParameters, bool)
-  href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Search_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_StructuredSearchParameters_System_Boolean_
-  commentId: M:Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters,System.Boolean)
-  name.vb: Search(StructuredSearchParameters, Boolean)
-  fullName: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters, bool)
-  fullName.vb: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters, Boolean)
-  nameWithType: Client.Search(StructuredSearchParameters, bool)
-  nameWithType.vb: Client.Search(StructuredSearchParameters, Boolean)
 - uid: Pelias.NET.Controller.Services.Client.Search*
   name: Search
   href: documentation/latest/api/Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Search_
@@ -126,6 +86,66 @@ references:
   isSpec: "True"
   fullName: Pelias.NET.Controller.Services.Client.Search
   nameWithType: Client.Search
+- uid: Pelias.NET.Model.DataAnnotations
+  name: Pelias.NET.Model.DataAnnotations
+  href: documentation/latest/api/Pelias.NET.Model.DataAnnotations.html
+  commentId: N:Pelias.NET.Model.DataAnnotations
+  fullName: Pelias.NET.Model.DataAnnotations
+  nameWithType: Pelias.NET.Model.DataAnnotations
+- uid: Pelias.NET.Model.DataAnnotations.TextAttribute
+  name: TextAttribute
+  href: documentation/latest/api/Pelias.NET.Model.DataAnnotations.TextAttribute.html
+  commentId: T:Pelias.NET.Model.DataAnnotations.TextAttribute
+  fullName: Pelias.NET.Model.DataAnnotations.TextAttribute
+  nameWithType: TextAttribute
+- uid: Pelias.NET.Model.DataAnnotations.TextAttribute.#ctor(System.Boolean,System.Int32)
+  name: TextAttribute(bool, int)
+  href: documentation/latest/api/Pelias.NET.Model.DataAnnotations.TextAttribute.html#Pelias_NET_Model_DataAnnotations_TextAttribute__ctor_System_Boolean_System_Int32_
+  commentId: M:Pelias.NET.Model.DataAnnotations.TextAttribute.#ctor(System.Boolean,System.Int32)
+  name.vb: New(Boolean, Integer)
+  fullName: Pelias.NET.Model.DataAnnotations.TextAttribute.TextAttribute(bool, int)
+  fullName.vb: Pelias.NET.Model.DataAnnotations.TextAttribute.New(Boolean, Integer)
+  nameWithType: TextAttribute.TextAttribute(bool, int)
+  nameWithType.vb: TextAttribute.New(Boolean, Integer)
+- uid: Pelias.NET.Model.DataAnnotations.TextAttribute.#ctor*
+  name: TextAttribute
+  href: documentation/latest/api/Pelias.NET.Model.DataAnnotations.TextAttribute.html#Pelias_NET_Model_DataAnnotations_TextAttribute__ctor_
+  commentId: Overload:Pelias.NET.Model.DataAnnotations.TextAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Pelias.NET.Model.DataAnnotations.TextAttribute.TextAttribute
+  fullName.vb: Pelias.NET.Model.DataAnnotations.TextAttribute.New
+  nameWithType: TextAttribute.TextAttribute
+  nameWithType.vb: TextAttribute.New
+- uid: Pelias.NET.Model.DataAnnotations.TextAttribute.AllowWhitespace
+  name: AllowWhitespace
+  href: documentation/latest/api/Pelias.NET.Model.DataAnnotations.TextAttribute.html#Pelias_NET_Model_DataAnnotations_TextAttribute_AllowWhitespace
+  commentId: P:Pelias.NET.Model.DataAnnotations.TextAttribute.AllowWhitespace
+  fullName: Pelias.NET.Model.DataAnnotations.TextAttribute.AllowWhitespace
+  nameWithType: TextAttribute.AllowWhitespace
+- uid: Pelias.NET.Model.DataAnnotations.TextAttribute.AllowWhitespace*
+  name: AllowWhitespace
+  href: documentation/latest/api/Pelias.NET.Model.DataAnnotations.TextAttribute.html#Pelias_NET_Model_DataAnnotations_TextAttribute_AllowWhitespace_
+  commentId: Overload:Pelias.NET.Model.DataAnnotations.TextAttribute.AllowWhitespace
+  isSpec: "True"
+  fullName: Pelias.NET.Model.DataAnnotations.TextAttribute.AllowWhitespace
+  nameWithType: TextAttribute.AllowWhitespace
+- uid: Pelias.NET.Model.DataAnnotations.TextAttribute.IsValid(System.Object)
+  name: IsValid(object?)
+  href: documentation/latest/api/Pelias.NET.Model.DataAnnotations.TextAttribute.html#Pelias_NET_Model_DataAnnotations_TextAttribute_IsValid_System_Object_
+  commentId: M:Pelias.NET.Model.DataAnnotations.TextAttribute.IsValid(System.Object)
+  name.vb: IsValid(Object)
+  fullName: Pelias.NET.Model.DataAnnotations.TextAttribute.IsValid(object?)
+  fullName.vb: Pelias.NET.Model.DataAnnotations.TextAttribute.IsValid(Object)
+  nameWithType: TextAttribute.IsValid(object?)
+  nameWithType.vb: TextAttribute.IsValid(Object)
+- uid: Pelias.NET.Model.DataAnnotations.TextAttribute.IsValid*
+  name: IsValid
+  href: documentation/latest/api/Pelias.NET.Model.DataAnnotations.TextAttribute.html#Pelias_NET_Model_DataAnnotations_TextAttribute_IsValid_
+  commentId: Overload:Pelias.NET.Model.DataAnnotations.TextAttribute.IsValid
+  isSpec: "True"
+  fullName: Pelias.NET.Model.DataAnnotations.TextAttribute.IsValid
+  nameWithType: TextAttribute.IsValid
 - uid: Pelias.NET.Model.Exceptions
   name: Pelias.NET.Model.Exceptions
   href: documentation/latest/api/Pelias.NET.Model.Exceptions.html
@@ -952,12 +972,201 @@ references:
   isSpec: "True"
   fullName: Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter.Write
   nameWithType: CoordinatesConverter.Write
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter
+  name: DegreesConverter
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.html
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter
+  nameWithType: DegreesConverter
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.#ctor
+  name: DegreesConverter()
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.html#Pelias_NET_Model_Objects_Pelias_Converters_DegreesConverter__ctor
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.#ctor
+  name.vb: New()
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.DegreesConverter()
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.New()
+  nameWithType: DegreesConverter.DegreesConverter()
+  nameWithType.vb: DegreesConverter.New()
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.#ctor*
+  name: DegreesConverter
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.html#Pelias_NET_Model_Objects_Pelias_Converters_DegreesConverter__ctor_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.DegreesConverter
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.New
+  nameWithType: DegreesConverter.DegreesConverter
+  nameWithType.vb: DegreesConverter.New
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.html#Pelias_NET_Model_Objects_Pelias_Converters_DegreesConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DegreesConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: DegreesConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Read*
+  name: Read
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.html#Pelias_NET_Model_Objects_Pelias_Converters_DegreesConverter_Read_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Read
+  isSpec: "True"
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Read
+  nameWithType: DegreesConverter.Read
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Write(System.Text.Json.Utf8JsonWriter,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, Angle, JsonSerializerOptions)
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.html#Pelias_NET_Model_Objects_Pelias_Converters_DegreesConverter_Write_System_Text_Json_Utf8JsonWriter_Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Measurements_Measures_Angle_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Write(System.Text.Json.Utf8JsonWriter,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle,System.Text.Json.JsonSerializerOptions)
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Write(System.Text.Json.Utf8JsonWriter, Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle, System.Text.Json.JsonSerializerOptions)
+  nameWithType: DegreesConverter.Write(Utf8JsonWriter, Angle, JsonSerializerOptions)
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Write*
+  name: Write
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.html#Pelias_NET_Model_Objects_Pelias_Converters_DegreesConverter_Write_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Write
+  isSpec: "True"
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.Write
+  nameWithType: DegreesConverter.Write
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1
+  name: EnumsConverter<T>
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter-1.html
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1
+  name.vb: EnumsConverter(Of T)
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter<T>
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter(Of T)
+  nameWithType: EnumsConverter<T>
+  nameWithType.vb: EnumsConverter(Of T)
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter-1.html#Pelias_NET_Model_Objects_Pelias_Converters_EnumsConverter_1_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter<T>.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter(Of T).Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: EnumsConverter<T>.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: EnumsConverter(Of T).Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1.Read*
+  name: Read
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter-1.html#Pelias_NET_Model_Objects_Pelias_Converters_EnumsConverter_1_Read_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1.Read
+  isSpec: "True"
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter<T>.Read
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter(Of T).Read
+  nameWithType: EnumsConverter<T>.Read
+  nameWithType.vb: EnumsConverter(Of T).Read
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1.Write(System.Text.Json.Utf8JsonWriter,System.Collections.Generic.HashSet{`0},System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, HashSet<T>, JsonSerializerOptions)
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter-1.html#Pelias_NET_Model_Objects_Pelias_Converters_EnumsConverter_1_Write_System_Text_Json_Utf8JsonWriter_System_Collections_Generic_HashSet__0__System_Text_Json_JsonSerializerOptions_
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1.Write(System.Text.Json.Utf8JsonWriter,System.Collections.Generic.HashSet{`0},System.Text.Json.JsonSerializerOptions)
+  name.vb: Write(Utf8JsonWriter, HashSet(Of T), JsonSerializerOptions)
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter<T>.Write(System.Text.Json.Utf8JsonWriter, System.Collections.Generic.HashSet<T>, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter(Of T).Write(System.Text.Json.Utf8JsonWriter, System.Collections.Generic.HashSet(Of T), System.Text.Json.JsonSerializerOptions)
+  nameWithType: EnumsConverter<T>.Write(Utf8JsonWriter, HashSet<T>, JsonSerializerOptions)
+  nameWithType.vb: EnumsConverter(Of T).Write(Utf8JsonWriter, HashSet(Of T), JsonSerializerOptions)
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1.Write*
+  name: Write
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter-1.html#Pelias_NET_Model_Objects_Pelias_Converters_EnumsConverter_1_Write_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1.Write
+  isSpec: "True"
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter<T>.Write
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter(Of T).Write
+  nameWithType: EnumsConverter<T>.Write
+  nameWithType.vb: EnumsConverter(Of T).Write
 - uid: Pelias.NET.Model.Objects.Pelias.Enums
   name: Pelias.NET.Model.Objects.Pelias.Enums
   href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.html
   commentId: N:Pelias.NET.Model.Objects.Pelias.Enums
   fullName: Pelias.NET.Model.Objects.Pelias.Enums
   nameWithType: Pelias.NET.Model.Objects.Pelias.Enums
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  name: Layer
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  nameWithType: Layer
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Address
+  name: Address
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_Address
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Address
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Address
+  nameWithType: Layer.Address
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Borough
+  name: Borough
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_Borough
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Borough
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Borough
+  nameWithType: Layer.Borough
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Coarse
+  name: Coarse
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_Coarse
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Coarse
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Coarse
+  nameWithType: Layer.Coarse
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Country
+  name: Country
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_Country
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Country
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Country
+  nameWithType: Layer.Country
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.County
+  name: County
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_County
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.County
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.County
+  nameWithType: Layer.County
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.LocalAdmin
+  name: LocalAdmin
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_LocalAdmin
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.LocalAdmin
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.LocalAdmin
+  nameWithType: Layer.LocalAdmin
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Locality
+  name: Locality
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_Locality
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Locality
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Locality
+  nameWithType: Layer.Locality
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroCounty
+  name: MacroCounty
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_MacroCounty
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroCounty
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroCounty
+  nameWithType: Layer.MacroCounty
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroRegion
+  name: MacroRegion
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_MacroRegion
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroRegion
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroRegion
+  nameWithType: Layer.MacroRegion
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Neighbourhood
+  name: Neighbourhood
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_Neighbourhood
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Neighbourhood
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Neighbourhood
+  nameWithType: Layer.Neighbourhood
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.PostalCode
+  name: PostalCode
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_PostalCode
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.PostalCode
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.PostalCode
+  nameWithType: Layer.PostalCode
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Region
+  name: Region
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_Region
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Region
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Region
+  nameWithType: Layer.Region
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Street
+  name: Street
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_Street
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Street
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Street
+  nameWithType: Layer.Street
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Venue
+  name: Venue
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html#Pelias_NET_Model_Objects_Pelias_Enums_Layer_Venue
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Venue
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Venue
+  nameWithType: Layer.Venue
 - uid: Pelias.NET.Model.Objects.Pelias.Enums.MatchType
   name: MatchType
   href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.MatchType.html
@@ -1093,19 +1302,19 @@ references:
   isSpec: "True"
   fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.BottomLeftCoordinates
   nameWithType: BoundingBox.BottomLeftCoordinates
-- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.ToArray
-  name: ToArray()
-  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_BoundingBox_ToArray
-  commentId: M:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.ToArray
-  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.ToArray()
-  nameWithType: BoundingBox.ToArray()
-- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.ToArray*
-  name: ToArray
-  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_BoundingBox_ToArray_
-  commentId: Overload:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.ToArray
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.GetEnumerator
+  name: GetEnumerator()
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_BoundingBox_GetEnumerator
+  commentId: M:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.GetEnumerator
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.GetEnumerator()
+  nameWithType: BoundingBox.GetEnumerator()
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.GetEnumerator*
+  name: GetEnumerator
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_BoundingBox_GetEnumerator_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.GetEnumerator
   isSpec: "True"
-  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.ToArray
-  nameWithType: BoundingBox.ToArray
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.GetEnumerator
+  nameWithType: BoundingBox.GetEnumerator
 - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.TopRightCoordinates
   name: TopRightCoordinates
   href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_BoundingBox_TopRightCoordinates
@@ -1125,6 +1334,19 @@ references:
   commentId: T:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
   fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
   nameWithType: Coordinates
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.GetEnumerator
+  name: GetEnumerator()
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_GetEnumerator
+  commentId: M:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.GetEnumerator
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.GetEnumerator()
+  nameWithType: Coordinates.GetEnumerator()
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.GetEnumerator*
+  name: GetEnumerator
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_GetEnumerator_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.GetEnumerator
+  isSpec: "True"
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.GetEnumerator
+  nameWithType: Coordinates.GetEnumerator
 - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Latitude
   name: Latitude
   href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_Latitude
@@ -1994,6 +2216,58 @@ references:
   commentId: T:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
   fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
   nameWithType: GeocodingBase
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  name: BoundaryCircleRadius
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCircleRadius
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  nameWithType: GeocodingBase.BoundaryCircleRadius
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius*
+  name: BoundaryCircleRadius
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCircleRadius_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  isSpec: "True"
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  nameWithType: GeocodingBase.BoundaryCircleRadius
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  name: BoundaryCountries
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCountries
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  nameWithType: GeocodingBase.BoundaryCountries
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries*
+  name: BoundaryCountries
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCountries_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  isSpec: "True"
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  nameWithType: GeocodingBase.BoundaryCountries
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  name: BoundaryPeliasGlobalIdentifier
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryPeliasGlobalIdentifier
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  nameWithType: GeocodingBase.BoundaryPeliasGlobalIdentifier
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier*
+  name: BoundaryPeliasGlobalIdentifier
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryPeliasGlobalIdentifier_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  isSpec: "True"
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  nameWithType: GeocodingBase.BoundaryPeliasGlobalIdentifier
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  name: Layers
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Layers
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  nameWithType: GeocodingBase.Layers
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers*
+  name: Layers
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Layers_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  isSpec: "True"
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  nameWithType: GeocodingBase.Layers
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Size
   name: Size
   href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Size
@@ -2007,6 +2281,19 @@ references:
   isSpec: "True"
   fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Size
   nameWithType: GeocodingBase.Size
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  name: Sources
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Sources
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  nameWithType: GeocodingBase.Sources
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources*
+  name: Sources
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Sources_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  isSpec: "True"
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  nameWithType: GeocodingBase.Sources
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters
   name: ReverseParameters
   href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters.html
@@ -2187,6 +2474,19 @@ references:
   isSpec: "True"
   fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   nameWithType: QueryBase.ToNameValueCollection
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  name: Validate()
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate()
+  nameWithType: QueryBase.Validate()
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate*
+  name: Validate
+  href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate_
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  isSpec: "True"
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  nameWithType: QueryBase.Validate
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
   name: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
   href: documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.html

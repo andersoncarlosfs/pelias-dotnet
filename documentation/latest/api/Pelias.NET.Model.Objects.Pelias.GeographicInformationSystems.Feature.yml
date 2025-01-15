@@ -20,10 +20,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Feature.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Feature
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Feature.cs
-    startLine: 7
+    startLine: 9
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
@@ -58,10 +58,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Feature.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Type
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Feature.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
@@ -73,6 +73,8 @@ items:
 
       [JsonPropertyName("type")]
 
+      [Required]
+
       public required string Type { get; set; }
     parameters: []
     return:
@@ -81,6 +83,8 @@ items:
       <JsonRequired>
 
       <JsonPropertyName("type")>
+
+      <Required>
 
       Public Property Type As String
   overload: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature.Type*
@@ -95,6 +99,9 @@ items:
     arguments:
     - type: System.String
       value: type
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
 - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature.Properties
   commentId: P:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature.Properties
   id: Properties
@@ -110,10 +117,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Feature.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Properties
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Feature.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
@@ -125,6 +132,8 @@ items:
 
       [JsonPropertyName("properties")]
 
+      [Required]
+
       public required Properties Properties { get; set; }
     parameters: []
     return:
@@ -133,6 +142,8 @@ items:
       <JsonRequired>
 
       <JsonPropertyName("properties")>
+
+      <Required>
 
       Public Property Properties As Properties
   overload: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature.Properties*
@@ -147,6 +158,9 @@ items:
     arguments:
     - type: System.String
       value: properties
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
 - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature.Geometry
   commentId: P:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature.Geometry
   id: Geometry
@@ -162,10 +176,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Feature.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Geometry
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Feature.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
@@ -177,6 +191,8 @@ items:
 
       [JsonPropertyName("geometry")]
 
+      [Required]
+
       public required Geometry Geometry { get; set; }
     parameters: []
     return:
@@ -185,6 +201,8 @@ items:
       <JsonRequired>
 
       <JsonPropertyName("geometry")>
+
+      <Required>
 
       Public Property Geometry As Geometry
   overload: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature.Geometry*
@@ -199,6 +217,9 @@ items:
     arguments:
     - type: System.String
       value: geometry
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
 - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature.BoundingBox
   commentId: P:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature.BoundingBox
   id: BoundingBox
@@ -214,10 +235,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Feature.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: BoundingBox
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Feature.cs
-    startLine: 18
+    startLine: 23
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
@@ -225,19 +246,15 @@ items:
   example: []
   syntax:
     content: >-
-      [JsonRequired]
-
       [JsonConverter(typeof(BoundingBoxConverter))]
 
       [JsonPropertyName("bbox")]
 
-      public required BoundingBox BoundingBox { get; set; }
+      public BoundingBox BoundingBox { get; set; }
     parameters: []
     return:
       type: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox
     content.vb: >-
-      <JsonRequired>
-
       <JsonConverter(GetType(BoundingBoxConverter))>
 
       <JsonPropertyName("bbox")>
@@ -247,9 +264,6 @@ items:
   implements:
   - Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Properties,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Geometry,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle}.BoundingBox
   attributes:
-  - type: System.Text.Json.Serialization.JsonRequiredAttribute
-    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
-    arguments: []
   - type: System.Text.Json.Serialization.JsonConverterAttribute
     ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
     arguments:

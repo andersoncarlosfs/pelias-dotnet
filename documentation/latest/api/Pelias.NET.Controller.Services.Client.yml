@@ -5,16 +5,12 @@ items:
   id: Client
   parent: Pelias.NET.Controller.Services
   children:
-  - Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.WebProxy)
-  - Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.WebProxy)
+  - Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.Http.HttpClient)
+  - Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.Http.HttpClient)
   - Pelias.NET.Controller.Services.Client.Endpoint
-  - Pelias.NET.Controller.Services.Client.Proxy
   - Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters)
-  - Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters,System.Boolean)
   - Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters)
-  - Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters,System.Boolean)
   - Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters)
-  - Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters,System.Boolean)
   langs:
   - csharp
   - vb
@@ -26,14 +22,17 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Client
     path: sources/Pelias.NET/Controller/Clients/Client.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Controller.Services
-  summary: A service to interact with Pelias APIs, enabling the conversion of addresses to geographic coordinates and vice versa.
+  summary: >-
+    Service to interact with Pelias APIs, enabling geocoding and reverse geocoding operations.
+
+    It provides methods for retrieving geographic data based on query parameters.
   example: []
   syntax:
     content: 'public class Client : IClient<Response, Geocoding, Feature, Properties, Geometry, BoundingBox, Coordinates, Angle>'
@@ -65,14 +64,14 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Endpoint
     path: sources/Pelias.NET/Controller/Clients/Client.cs
-    startLine: 23
+    startLine: 27
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Controller.Services
-  summary: Gets or sets the endpoint URI for the Pelias API.
+  summary: Gets or sets the base URI for the Pelias API.
   example: []
   syntax:
     content: public Uri Endpoint { get; set; }
@@ -81,113 +80,82 @@ items:
       type: System.Uri
     content.vb: Public Property Endpoint As Uri
   overload: Pelias.NET.Controller.Services.Client.Endpoint*
-- uid: Pelias.NET.Controller.Services.Client.Proxy
-  commentId: P:Pelias.NET.Controller.Services.Client.Proxy
-  id: Proxy
+- uid: Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.Http.HttpClient)
+  commentId: M:Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.Http.HttpClient)
+  id: '#ctor(System.String,System.Net.Http.HttpClient)'
   parent: Pelias.NET.Controller.Services.Client
   langs:
   - csharp
   - vb
-  name: Proxy
-  nameWithType: Client.Proxy
-  fullName: Pelias.NET.Controller.Services.Client.Proxy
-  type: Property
-  source:
-    remote:
-      path: sources/Pelias.NET/Controller/Clients/Client.cs
-      branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
-    id: Proxy
-    path: sources/Pelias.NET/Controller/Clients/Client.cs
-    startLine: 28
-  assemblies:
-  - Pelias.NET
-  namespace: Pelias.NET.Controller.Services
-  summary: Gets or sets the web proxy to be used for the requests (optional).
-  example: []
-  syntax:
-    content: public WebProxy Proxy { get; set; }
-    parameters: []
-    return:
-      type: System.Net.WebProxy
-    content.vb: Public Property Proxy As WebProxy
-  overload: Pelias.NET.Controller.Services.Client.Proxy*
-- uid: Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.WebProxy)
-  commentId: M:Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.WebProxy)
-  id: '#ctor(System.String,System.Net.WebProxy)'
-  parent: Pelias.NET.Controller.Services.Client
-  langs:
-  - csharp
-  - vb
-  name: Client(string, WebProxy)
-  nameWithType: Client.Client(string, WebProxy)
-  fullName: Pelias.NET.Controller.Services.Client.Client(string, System.Net.WebProxy)
+  name: Client(string, HttpClient)
+  nameWithType: Client.Client(string, HttpClient)
+  fullName: Pelias.NET.Controller.Services.Client.Client(string, System.Net.Http.HttpClient)
   type: Constructor
   source:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: .ctor
     path: sources/Pelias.NET/Controller/Clients/Client.cs
-    startLine: 35
+    startLine: 34
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Controller.Services
-  summary: Initializes a new instance of the <xref href="Pelias.NET.Controller.Services.Client" data-throw-if-not-resolved="false"></xref> class with the specified endpoint and an optional proxy.
+  summary: Initializes a new instance of the <xref href="Pelias.NET.Controller.Services.Client" data-throw-if-not-resolved="false"></xref> class with a specified API endpoint and HTTP client.
   example: []
   syntax:
-    content: public Client(string endpoint, WebProxy proxy = null)
+    content: public Client(string endpoint, HttpClient client)
     parameters:
     - id: endpoint
       type: System.String
-      description: The URI of the Pelias API endpoint.
-    - id: proxy
-      type: System.Net.WebProxy
-      description: The web proxy to be used for requests (optional).
-    content.vb: Public Sub New(endpoint As String, proxy As WebProxy = Nothing)
+      description: The base URI of the Pelias API.
+    - id: client
+      type: System.Net.Http.HttpClient
+      description: The HTTP client used for making requests.
+    content.vb: Public Sub New(endpoint As String, client As HttpClient)
   overload: Pelias.NET.Controller.Services.Client.#ctor*
-  nameWithType.vb: Client.New(String, WebProxy)
-  fullName.vb: Pelias.NET.Controller.Services.Client.New(String, System.Net.WebProxy)
-  name.vb: New(String, WebProxy)
-- uid: Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.WebProxy)
-  commentId: M:Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.WebProxy)
-  id: '#ctor(System.Uri,System.Net.WebProxy)'
+  nameWithType.vb: Client.New(String, HttpClient)
+  fullName.vb: Pelias.NET.Controller.Services.Client.New(String, System.Net.Http.HttpClient)
+  name.vb: New(String, HttpClient)
+- uid: Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.Http.HttpClient)
+  commentId: M:Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.Http.HttpClient)
+  id: '#ctor(System.Uri,System.Net.Http.HttpClient)'
   parent: Pelias.NET.Controller.Services.Client
   langs:
   - csharp
   - vb
-  name: Client(Uri, WebProxy)
-  nameWithType: Client.Client(Uri, WebProxy)
-  fullName: Pelias.NET.Controller.Services.Client.Client(System.Uri, System.Net.WebProxy)
+  name: Client(Uri, HttpClient)
+  nameWithType: Client.Client(Uri, HttpClient)
+  fullName: Pelias.NET.Controller.Services.Client.Client(System.Uri, System.Net.Http.HttpClient)
   type: Constructor
   source:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: .ctor
     path: sources/Pelias.NET/Controller/Clients/Client.cs
-    startLine: 44
+    startLine: 43
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Controller.Services
-  summary: Initializes a new instance of the <xref href="Pelias.NET.Controller.Services.Client" data-throw-if-not-resolved="false"></xref> class with the specified endpoint and an optional proxy.
+  summary: Initializes a new instance of the <xref href="Pelias.NET.Controller.Services.Client" data-throw-if-not-resolved="false"></xref> class with a specified API endpoint and HTTP client.
   example: []
   syntax:
-    content: public Client(Uri endpoint, WebProxy proxy = null)
+    content: public Client(Uri endpoint, HttpClient client)
     parameters:
     - id: endpoint
       type: System.Uri
-      description: The URI of the Pelias API endpoint.
-    - id: proxy
-      type: System.Net.WebProxy
-      description: The web proxy to be used for requests (optional).
-    content.vb: Public Sub New(endpoint As Uri, proxy As WebProxy = Nothing)
+      description: The base URI of the Pelias API.
+    - id: client
+      type: System.Net.Http.HttpClient
+      description: The HTTP client used for making requests.
+    content.vb: Public Sub New(endpoint As Uri, client As HttpClient)
   overload: Pelias.NET.Controller.Services.Client.#ctor*
-  nameWithType.vb: Client.New(Uri, WebProxy)
-  fullName.vb: Pelias.NET.Controller.Services.Client.New(System.Uri, System.Net.WebProxy)
-  name.vb: New(Uri, WebProxy)
+  nameWithType.vb: Client.New(Uri, HttpClient)
+  fullName.vb: Pelias.NET.Controller.Services.Client.New(System.Uri, System.Net.Http.HttpClient)
+  name.vb: New(Uri, HttpClient)
 - uid: Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters)
   commentId: M:Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters)
   id: Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters)
@@ -203,62 +171,26 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Reverse
     path: sources/Pelias.NET/Controller/Clients/Client.cs
-    startLine: 171
+    startLine: 154
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Controller.Services
   summary: Retrieves a stream asynchronously for the reverse geocoding query.
   example: []
   syntax:
-    content: public Task<Stream> Reverse(ReverseParameters query)
+    content: public Task<Response?> Reverse(ReverseParameters query)
     parameters:
     - id: query
       type: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters
-    return:
-      type: System.Threading.Tasks.Task{System.IO.Stream}
-    content.vb: Public Function Reverse(query As ReverseParameters) As Task(Of Stream)
-  overload: Pelias.NET.Controller.Services.Client.Reverse*
-- uid: Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters,System.Boolean)
-  commentId: M:Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters,System.Boolean)
-  id: Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters,System.Boolean)
-  parent: Pelias.NET.Controller.Services.Client
-  langs:
-  - csharp
-  - vb
-  name: Reverse(ReverseParameters, bool)
-  nameWithType: Client.Reverse(ReverseParameters, bool)
-  fullName: Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters, bool)
-  type: Method
-  source:
-    remote:
-      path: sources/Pelias.NET/Controller/Clients/Client.cs
-      branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
-    id: Reverse
-    path: sources/Pelias.NET/Controller/Clients/Client.cs
-    startLine: 177
-  assemblies:
-  - Pelias.NET
-  namespace: Pelias.NET.Controller.Services
-  summary: Retrieves a response asynchronously for the reverse geocoding query.
-  example: []
-  syntax:
-    content: public Task<Response> Reverse(ReverseParameters query, bool debug = false)
-    parameters:
-    - id: query
-      type: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters
-    - id: debug
-      type: System.Boolean
+      description: The query parameters for the reverse geocoding request.
     return:
       type: System.Threading.Tasks.Task{Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response}
-    content.vb: Public Function Reverse(query As ReverseParameters, debug As Boolean = False) As Task(Of Response)
+      description: A stream containing the reverse geocoding data.
+    content.vb: Public Function Reverse(query As ReverseParameters) As Task(Of Response)
   overload: Pelias.NET.Controller.Services.Client.Reverse*
-  nameWithType.vb: Client.Reverse(ReverseParameters, Boolean)
-  fullName.vb: Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters, Boolean)
-  name.vb: Reverse(ReverseParameters, Boolean)
 - uid: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters)
   commentId: M:Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters)
   id: Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters)
@@ -274,62 +206,26 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Search
     path: sources/Pelias.NET/Controller/Clients/Client.cs
-    startLine: 183
+    startLine: 162
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Controller.Services
   summary: Retrieves a stream asynchronously for the search query.
   example: []
   syntax:
-    content: public Task<Stream> Search(SearchParameters query)
+    content: public Task<Response?> Search(SearchParameters query)
     parameters:
     - id: query
       type: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters
-    return:
-      type: System.Threading.Tasks.Task{System.IO.Stream}
-    content.vb: Public Function Search(query As SearchParameters) As Task(Of Stream)
-  overload: Pelias.NET.Controller.Services.Client.Search*
-- uid: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters,System.Boolean)
-  commentId: M:Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters,System.Boolean)
-  id: Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters,System.Boolean)
-  parent: Pelias.NET.Controller.Services.Client
-  langs:
-  - csharp
-  - vb
-  name: Search(SearchParameters, bool)
-  nameWithType: Client.Search(SearchParameters, bool)
-  fullName: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters, bool)
-  type: Method
-  source:
-    remote:
-      path: sources/Pelias.NET/Controller/Clients/Client.cs
-      branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
-    id: Search
-    path: sources/Pelias.NET/Controller/Clients/Client.cs
-    startLine: 189
-  assemblies:
-  - Pelias.NET
-  namespace: Pelias.NET.Controller.Services
-  summary: Retrieves a response asynchronously for the search query.
-  example: []
-  syntax:
-    content: public Task<Response> Search(SearchParameters query, bool debug = false)
-    parameters:
-    - id: query
-      type: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters
-    - id: debug
-      type: System.Boolean
+      description: The query parameters for the search request.
     return:
       type: System.Threading.Tasks.Task{Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response}
-    content.vb: Public Function Search(query As SearchParameters, debug As Boolean = False) As Task(Of Response)
+      description: A stream containing the search data.
+    content.vb: Public Function Search(query As SearchParameters) As Task(Of Response)
   overload: Pelias.NET.Controller.Services.Client.Search*
-  nameWithType.vb: Client.Search(SearchParameters, Boolean)
-  fullName.vb: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters, Boolean)
-  name.vb: Search(SearchParameters, Boolean)
 - uid: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters)
   commentId: M:Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters)
   id: Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters)
@@ -345,62 +241,26 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Search
     path: sources/Pelias.NET/Controller/Clients/Client.cs
-    startLine: 195
+    startLine: 170
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Controller.Services
   summary: Retrieves a stream asynchronously for the structured search query.
   example: []
   syntax:
-    content: public Task<Stream> Search(StructuredSearchParameters query)
+    content: public Task<Response?> Search(StructuredSearchParameters query)
     parameters:
     - id: query
       type: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters
-    return:
-      type: System.Threading.Tasks.Task{System.IO.Stream}
-    content.vb: Public Function Search(query As StructuredSearchParameters) As Task(Of Stream)
-  overload: Pelias.NET.Controller.Services.Client.Search*
-- uid: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters,System.Boolean)
-  commentId: M:Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters,System.Boolean)
-  id: Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters,System.Boolean)
-  parent: Pelias.NET.Controller.Services.Client
-  langs:
-  - csharp
-  - vb
-  name: Search(StructuredSearchParameters, bool)
-  nameWithType: Client.Search(StructuredSearchParameters, bool)
-  fullName: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters, bool)
-  type: Method
-  source:
-    remote:
-      path: sources/Pelias.NET/Controller/Clients/Client.cs
-      branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
-    id: Search
-    path: sources/Pelias.NET/Controller/Clients/Client.cs
-    startLine: 201
-  assemblies:
-  - Pelias.NET
-  namespace: Pelias.NET.Controller.Services
-  summary: Retrieves a response asynchronously for the structured search query.
-  example: []
-  syntax:
-    content: public Task<Response> Search(StructuredSearchParameters query, bool debug = false)
-    parameters:
-    - id: query
-      type: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters
-    - id: debug
-      type: System.Boolean
+      description: The query parameters for the structured search request.
     return:
       type: System.Threading.Tasks.Task{Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response}
-    content.vb: Public Function Search(query As StructuredSearchParameters, debug As Boolean = False) As Task(Of Response)
+      description: A stream containing the structured search data.
+    content.vb: Public Function Search(query As StructuredSearchParameters) As Task(Of Response)
   overload: Pelias.NET.Controller.Services.Client.Search*
-  nameWithType.vb: Client.Search(StructuredSearchParameters, Boolean)
-  fullName.vb: Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters, Boolean)
-  name.vb: Search(StructuredSearchParameters, Boolean)
 references:
 - uid: Pelias.NET.Controller.Services
   commentId: N:Pelias.NET.Controller.Services
@@ -897,47 +757,6 @@ references:
   name: Uri
   nameWithType: Uri
   fullName: System.Uri
-- uid: Pelias.NET.Controller.Services.Client.Proxy*
-  commentId: Overload:Pelias.NET.Controller.Services.Client.Proxy
-  href: Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Proxy
-  name: Proxy
-  nameWithType: Client.Proxy
-  fullName: Pelias.NET.Controller.Services.Client.Proxy
-- uid: System.Net.WebProxy
-  commentId: T:System.Net.WebProxy
-  parent: System.Net
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.net.webproxy
-  name: WebProxy
-  nameWithType: WebProxy
-  fullName: System.Net.WebProxy
-- uid: System.Net
-  commentId: N:System.Net
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Net
-  nameWithType: System.Net
-  fullName: System.Net
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Net
-    name: Net
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.net
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Net
-    name: Net
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.net
 - uid: Pelias.NET.Controller.Services.Client
   commentId: T:Pelias.NET.Controller.Services.Client
   href: Pelias.NET.Controller.Services.Client.html
@@ -946,7 +765,7 @@ references:
   fullName: Pelias.NET.Controller.Services.Client
 - uid: Pelias.NET.Controller.Services.Client.#ctor*
   commentId: Overload:Pelias.NET.Controller.Services.Client.#ctor
-  href: Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client__ctor_System_String_System_Net_WebProxy_
+  href: Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client__ctor_System_String_System_Net_Http_HttpClient_
   name: Client
   nameWithType: Client.Client
   fullName: Pelias.NET.Controller.Services.Client.Client
@@ -964,6 +783,51 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpclient
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
 - uid: Pelias.NET.Controller.Services.Client.Reverse*
   commentId: Overload:Pelias.NET.Controller.Services.Client.Reverse
   href: Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Reverse_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_ReverseParameters_
@@ -977,27 +841,26 @@ references:
   name: ReverseParameters
   nameWithType: ReverseParameters
   fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters
-- uid: System.Threading.Tasks.Task{System.IO.Stream}
-  commentId: T:System.Threading.Tasks.Task{System.IO.Stream}
+- uid: System.Threading.Tasks.Task{Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response}
+  commentId: T:System.Threading.Tasks.Task{Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<Stream>
-  nameWithType: Task<Stream>
-  fullName: System.Threading.Tasks.Task<System.IO.Stream>
-  nameWithType.vb: Task(Of Stream)
-  fullName.vb: System.Threading.Tasks.Task(Of System.IO.Stream)
-  name.vb: Task(Of Stream)
+  name: Task<Response>
+  nameWithType: Task<Response>
+  fullName: System.Threading.Tasks.Task<Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response>
+  nameWithType.vb: Task(Of Response)
+  fullName.vb: System.Threading.Tasks.Task(Of Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response)
+  name.vb: Task(Of Response)
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
     name: Task
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
-  - uid: System.IO.Stream
-    name: Stream
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response
+    name: Response
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response.html
   - name: '>'
   spec.vb:
   - uid: System.Threading.Tasks.Task`1
@@ -1007,10 +870,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: System.IO.Stream
-    name: Stream
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response
+    name: Response
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response.html
   - name: )
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
   commentId: N:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
@@ -1163,50 +1025,6 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: System.Threading.Tasks.Task{Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response}
-  commentId: T:System.Threading.Tasks.Task{Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response}
-  parent: System.Threading.Tasks
-  definition: System.Threading.Tasks.Task`1
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<Response>
-  nameWithType: Task<Response>
-  fullName: System.Threading.Tasks.Task<Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response>
-  nameWithType.vb: Task(Of Response)
-  fullName.vb: System.Threading.Tasks.Task(Of Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response)
-  name.vb: Task(Of Response)
-  spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: <
-  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response
-    name: Response
-    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response
-    name: Response
-    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response.html
-  - name: )
 - uid: Pelias.NET.Controller.Services.Client.Search*
   commentId: Overload:Pelias.NET.Controller.Services.Client.Search
   href: Pelias.NET.Controller.Services.Client.html#Pelias_NET_Controller_Services_Client_Search_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_SearchParameters_

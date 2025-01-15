@@ -1,5 +1,5 @@
 {
-  "source_base_path": "/home/runner/work/pelias-dotnet/pelias-dotnet",
+  "source_base_path": "C:/Users/anderson.carlos/Downloads/pelias-dotnet",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -56,6 +56,26 @@
       "output": {
         ".html": {
           "relative_path": "documentation/latest/api/Pelias.NET.Controller.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.DataAnnotations.TextAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.DataAnnotations.TextAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.DataAnnotations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.DataAnnotations.html"
         }
       },
       "version": ""
@@ -332,10 +352,40 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.yml",
       "output": {
         ".html": {
           "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Converters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "documentation/latest/api/Pelias.NET.Model.Objects.Pelias.Enums.Layer.html"
         }
       },
       "version": ""

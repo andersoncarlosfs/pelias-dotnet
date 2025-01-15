@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class BoundingBoxConverter | Pelias.NET ">
       
-      <meta name="description" content="Custom JSON converter for converting BoundingBox to and from JSON.">
+      <meta name="description" content="Custom JSON converter for , handling the serialization and deserialization of a bounding box.">
       <link rel="icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../public/docfx.min.css">
       <link rel="stylesheet" href="../../../public/main.css">
@@ -97,7 +97,7 @@ Class BoundingBoxConverter  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>Pelias.NET.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Custom JSON converter for converting BoundingBox to and from JSON.</p>
+  <div class="markdown summary"><p>Custom JSON converter for <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html">BoundingBox</a>, handling the serialization and deserialization of a bounding box.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -174,10 +174,10 @@ Class BoundingBoxConverter  <a class="header-action link-secondary" title="View 
 
   <h3 id="Pelias_NET_Model_Objects_Pelias_Converters_BoundingBoxConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_" data-uid="Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
   Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Reads JSON and converts it to a BoundingBox object.</p>
+  <div class="markdown level1 summary"><p>Reads a JSON value and converts it into a <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html">BoundingBox</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -188,17 +188,21 @@ Class BoundingBoxConverter  <a class="header-action link-secondary" title="View 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>reader</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonreader">Utf8JsonReader</a></dt>
-    <dd></dd>
+    <dd><p>The JSON reader to read the value from.</p>
+</dd>
     <dt><code>typeToConvert</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
-    <dd></dd>
+    <dd><p>The target type to convert to (<a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html">BoundingBox</a>).</p>
+</dd>
     <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></dt>
-    <dd></dd>
+    <dd><p>The serializer options to use for deserialization.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html">BoundingBox</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html">BoundingBox</a> object representing the deserialized bounding box.</p>
+</dd>
   </dl>
 
 
@@ -215,10 +219,10 @@ Class BoundingBoxConverter  <a class="header-action link-secondary" title="View 
 
   <h3 id="Pelias_NET_Model_Objects_Pelias_Converters_BoundingBoxConverter_Write_System_Text_Json_Utf8JsonWriter_Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_BoundingBox_System_Text_Json_JsonSerializerOptions_" data-uid="Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter.Write(System.Text.Json.Utf8JsonWriter,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox,System.Text.Json.JsonSerializerOptions)">
   Write(Utf8JsonWriter, BoundingBox, JsonSerializerOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Writes a BoundingBox object to JSON.</p>
+  <div class="markdown level1 summary"><p>Writes a <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html">BoundingBox</a> object to JSON.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -229,11 +233,14 @@ Class BoundingBoxConverter  <a class="header-action link-secondary" title="View 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter">Utf8JsonWriter</a></dt>
-    <dd></dd>
+    <dd><p>The JSON writer to write the value to.</p>
+</dd>
     <dt><code>value</code> <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html">BoundingBox</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html">BoundingBox</a> object to serialize.</p>
+</dd>
     <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></dt>
-    <dd></dd>
+    <dd><p>The serializer options to use for serialization.</p>
+</dd>
   </dl>
 
 

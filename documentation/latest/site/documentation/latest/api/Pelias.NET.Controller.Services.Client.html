@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Client | Pelias.NET ">
       
-      <meta name="description" content="A service to interact with Pelias APIs, enabling the conversion of addresses to geographic coordinates and vice versa.">
+      <meta name="description" content="Service to interact with Pelias APIs, enabling geocoding and reverse geocoding operations. It provides methods for retrieving geographic data based on query parameters.">
       <link rel="icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../public/docfx.min.css">
       <link rel="stylesheet" href="../../../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Pelias_NET_Controller_Services_Client" data-uid="Pelias.NET.Controller.Services.Client" class="text-break">
-Class Client  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L17"><i class="bi bi-code-slash"></i></a>
+Class Client  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
   <dl><dt>Assembly</dt><dd>Pelias.NET.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>A service to interact with Pelias APIs, enabling the conversion of addresses to geographic coordinates and vice versa.</p>
+  <div class="markdown summary"><p>Service to interact with Pelias APIs, enabling geocoding and reverse geocoding operations.
+It provides methods for retrieving geographic data based on query parameters.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -161,26 +162,26 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
 
   <a id="Pelias_NET_Controller_Services_Client__ctor_" data-uid="Pelias.NET.Controller.Services.Client.#ctor*"></a>
 
-  <h3 id="Pelias_NET_Controller_Services_Client__ctor_System_String_System_Net_WebProxy_" data-uid="Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.WebProxy)">
-  Client(string, WebProxy)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Pelias_NET_Controller_Services_Client__ctor_System_String_System_Net_Http_HttpClient_" data-uid="Pelias.NET.Controller.Services.Client.#ctor(System.String,System.Net.Http.HttpClient)">
+  Client(string, HttpClient)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Pelias.NET.Controller.Services.Client.html">Client</a> class with the specified endpoint and an optional proxy.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Pelias.NET.Controller.Services.Client.html">Client</a> class with a specified API endpoint and HTTP client.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Client(string endpoint, WebProxy proxy = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Client(string endpoint, HttpClient client)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>endpoint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The URI of the Pelias API endpoint.</p>
+    <dd><p>The base URI of the Pelias API.</p>
 </dd>
-    <dt><code>proxy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.webproxy">WebProxy</a></dt>
-    <dd><p>The web proxy to be used for requests (optional).</p>
+    <dt><code>client</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a></dt>
+    <dd><p>The HTTP client used for making requests.</p>
 </dd>
   </dl>
 
@@ -197,26 +198,26 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
 
   <a id="Pelias_NET_Controller_Services_Client__ctor_" data-uid="Pelias.NET.Controller.Services.Client.#ctor*"></a>
 
-  <h3 id="Pelias_NET_Controller_Services_Client__ctor_System_Uri_System_Net_WebProxy_" data-uid="Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.WebProxy)">
-  Client(Uri, WebProxy)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Pelias_NET_Controller_Services_Client__ctor_System_Uri_System_Net_Http_HttpClient_" data-uid="Pelias.NET.Controller.Services.Client.#ctor(System.Uri,System.Net.Http.HttpClient)">
+  Client(Uri, HttpClient)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Pelias.NET.Controller.Services.Client.html">Client</a> class with the specified endpoint and an optional proxy.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Pelias.NET.Controller.Services.Client.html">Client</a> class with a specified API endpoint and HTTP client.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Client(Uri endpoint, WebProxy proxy = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Client(Uri endpoint, HttpClient client)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>endpoint</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uri">Uri</a></dt>
-    <dd><p>The URI of the Pelias API endpoint.</p>
+    <dd><p>The base URI of the Pelias API.</p>
 </dd>
-    <dt><code>proxy</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.webproxy">WebProxy</a></dt>
-    <dd><p>The web proxy to be used for requests (optional).</p>
+    <dt><code>client</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpclient">HttpClient</a></dt>
+    <dd><p>The HTTP client used for making requests.</p>
 </dd>
   </dl>
 
@@ -239,10 +240,10 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Pelias_NET_Controller_Services_Client_Endpoint" data-uid="Pelias.NET.Controller.Services.Client.Endpoint">
   Endpoint
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the endpoint URI for the Pelias API.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the base URI for the Pelias API.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -267,38 +268,6 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
 
 
 
-  <a id="Pelias_NET_Controller_Services_Client_Proxy_" data-uid="Pelias.NET.Controller.Services.Client.Proxy*"></a>
-
-  <h3 id="Pelias_NET_Controller_Services_Client_Proxy" data-uid="Pelias.NET.Controller.Services.Client.Proxy">
-  Proxy
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L29"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets the web proxy to be used for the requests (optional).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WebProxy Proxy { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.webproxy">WebProxy</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -307,7 +276,7 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Pelias_NET_Controller_Services_Client_Reverse_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_ReverseParameters_" data-uid="Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters)">
   Reverse(ReverseParameters)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retrieves a stream asynchronously for the reverse geocoding query.</p>
@@ -315,58 +284,21 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; Reverse(ReverseParameters query)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Response?&gt; Reverse(ReverseParameters query)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>query</code> <a class="xref" href="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters.html">ReverseParameters</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Pelias_NET_Controller_Services_Client_Reverse_" data-uid="Pelias.NET.Controller.Services.Client.Reverse*"></a>
-
-  <h3 id="Pelias_NET_Controller_Services_Client_Reverse_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_ReverseParameters_System_Boolean_" data-uid="Pelias.NET.Controller.Services.Client.Reverse(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters,System.Boolean)">
-  Reverse(ReverseParameters, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L178"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Retrieves a response asynchronously for the reverse geocoding query.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Response&gt; Reverse(ReverseParameters query, bool debug = false)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>query</code> <a class="xref" href="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters.html">ReverseParameters</a></dt>
-    <dd></dd>
-    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>The query parameters for the reverse geocoding request.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response.html">Response</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>A stream containing the reverse geocoding data.</p>
+</dd>
   </dl>
 
 
@@ -383,7 +315,7 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Pelias_NET_Controller_Services_Client_Search_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_SearchParameters_" data-uid="Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters)">
   Search(SearchParameters)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retrieves a stream asynchronously for the search query.</p>
@@ -391,58 +323,21 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; Search(SearchParameters query)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Response?&gt; Search(SearchParameters query)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>query</code> <a class="xref" href="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters.html">SearchParameters</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Pelias_NET_Controller_Services_Client_Search_" data-uid="Pelias.NET.Controller.Services.Client.Search*"></a>
-
-  <h3 id="Pelias_NET_Controller_Services_Client_Search_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_SearchParameters_System_Boolean_" data-uid="Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters,System.Boolean)">
-  Search(SearchParameters, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L190"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Retrieves a response asynchronously for the search query.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Response&gt; Search(SearchParameters query, bool debug = false)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>query</code> <a class="xref" href="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters.html">SearchParameters</a></dt>
-    <dd></dd>
-    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>The query parameters for the search request.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response.html">Response</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>A stream containing the search data.</p>
+</dd>
   </dl>
 
 
@@ -459,7 +354,7 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
 
   <h3 id="Pelias_NET_Controller_Services_Client_Search_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_StructuredSearchParameters_" data-uid="Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters)">
   Search(StructuredSearchParameters)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Retrieves a stream asynchronously for the structured search query.</p>
@@ -467,58 +362,21 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; Search(StructuredSearchParameters query)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;Response?&gt; Search(StructuredSearchParameters query)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>query</code> <a class="xref" href="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.html">StructuredSearchParameters</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Pelias_NET_Controller_Services_Client_Search_" data-uid="Pelias.NET.Controller.Services.Client.Search*"></a>
-
-  <h3 id="Pelias_NET_Controller_Services_Client_Search_Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_StructuredSearchParameters_System_Boolean_" data-uid="Pelias.NET.Controller.Services.Client.Search(Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters,System.Boolean)">
-  Search(StructuredSearchParameters, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L202"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Retrieves a response asynchronously for the structured search query.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Response&gt; Search(StructuredSearchParameters query, bool debug = false)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>query</code> <a class="xref" href="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.html">StructuredSearchParameters</a></dt>
-    <dd></dd>
-    <dt><code>debug</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>The query parameters for the structured search request.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response.html">Response</a>&gt;</dt>
-    <dd></dd>
+    <dd><p>A stream containing the structured search data.</p>
+</dd>
   </dl>
 
 
@@ -535,7 +393,7 @@ Class Client  <a class="header-action link-secondary" title="View source" href="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L17" class="edit-link">Edit this page</a>
+          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Controller/Clients/Client.cs/#L18" class="edit-link">Edit this page</a>
         </div>
 
 

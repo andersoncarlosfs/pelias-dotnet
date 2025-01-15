@@ -5,7 +5,12 @@ items:
   id: GeocodingBase
   parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
   children:
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
   - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Size
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
   langs:
   - csharp
   - vb
@@ -17,13 +22,20 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: GeocodingBase
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
-    startLine: 4
+    startLine: 13
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Represents the base class for geocoding query parameters in the Pelias API.
+
+    This class contains common query properties used for geocoding requests, including controls
+
+    for the response size, geographical boundaries, data layers, and sources.
+  example: []
   syntax:
     content: 'public abstract class GeocodingBase : QueryBase, IQuery'
     content.vb: Public MustInherit Class GeocodingBase Inherits QueryBase Implements IQuery
@@ -37,6 +49,7 @@ items:
   implements:
   - Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
   inheritedMembers:
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
   - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -60,25 +73,39 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Size
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
-    startLine: 6
+    startLine: 22
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the maximum number of results to return.
+
+    This parameter controls the size of the response.
+  remarks: The value must be greater than 0. If set to <code>null</code>, no size limitation is applied.
+  example: []
   syntax:
     content: >-
       [JsonPropertyName("size")]
 
-      public int Size { get; set; }
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+
+      [Range(1, 2147483647, ErrorMessage = "Size must be greater than 0.")]
+
+      public int? Size { get; set; }
     parameters: []
     return:
-      type: System.Int32
+      type: System.Nullable{System.Int32}
     content.vb: >-
       <JsonPropertyName("size")>
 
-      Public Property Size As Integer
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
+
+      <Range(1, 2147483647, ErrorMessage:="Size must be greater than 0.")>
+
+      Public Property Size As Integer?
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Size*
   attributes:
   - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
@@ -86,6 +113,350 @@ items:
     arguments:
     - type: System.String
       value: size
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 1
+    - type: System.Int32
+      value: 2147483647
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Size must be greater than 0.
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  id: Layers
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  langs:
+  - csharp
+  - vb
+  name: Layers
+  nameWithType: GeocodingBase.Layers
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
+      branch: main
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+    id: Layers
+    path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
+    startLine: 36
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the layers to query for, specifying which types of geographical data to include.
+
+    A comma-separated list of layer names can be provided.
+  remarks: >-
+    The value may be <code>null</code>, indicating no specific layers are requested.
+
+    If provided, it filters the results to the specified layers (e.g., "address", "neighbourhood").
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("layers")]
+
+      [JsonConverter(typeof(EnumsConverter<Layer>))]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+
+      public HashSet<Layer> Layers { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.HashSet{Pelias.NET.Model.Objects.Pelias.Enums.Layer}
+    content.vb: >-
+      <JsonPropertyName("layers")>
+
+      <JsonConverter(GetType(EnumsConverter(Of Layer)))>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
+
+      Public Property Layers As HashSet(Of Layer)
+  overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: layers
+  - type: System.Text.Json.Serialization.JsonConverterAttribute
+    ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter{Pelias.NET.Model.Objects.Pelias.Enums.Layer}
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  id: Sources
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  langs:
+  - csharp
+  - vb
+  name: Sources
+  nameWithType: GeocodingBase.Sources
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
+      branch: main
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+    id: Sources
+    path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
+    startLine: 50
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the sources to query from, specifying which data sources to include.
+
+    A comma-separated list of source names can be provided.
+  remarks: >-
+    The value may be <code>null</code>, indicating no specific sources are requested.
+
+    If provided, it filters the results to the specified sources (e.g., "osm", "wof").
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sources")]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+
+      public string? Sources { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("sources")>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
+
+      Public Property Sources As String
+  overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sources
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  id: BoundaryCircleRadius
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  langs:
+  - csharp
+  - vb
+  name: BoundaryCircleRadius
+  nameWithType: GeocodingBase.BoundaryCircleRadius
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
+      branch: main
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+    id: BoundaryCircleRadius
+    path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
+    startLine: 62
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the radius of the circular boundary within which the geocoding search will be performed.
+
+    This is specified in meters.
+  remarks: The value must be a positive number. If set to <code>null</code>, no boundary is applied.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("boundary.circle.radius")]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+
+      [Range(0, 3.4028234663852886E+38, ErrorMessage = "Boundary radius must be a positive number.")]
+
+      public float? BoundaryCircleRadius { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: >-
+      <JsonPropertyName("boundary.circle.radius")>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
+
+      <Range(0, 3.4028234663852886E+38, ErrorMessage:="Boundary radius must be a positive number.")>
+
+      Public Property BoundaryCircleRadius As Single?
+  overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: boundary.circle.radius
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 3.4028234663852886E+38
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Boundary radius must be a positive number.
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  id: BoundaryCountries
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  langs:
+  - csharp
+  - vb
+  name: BoundaryCountries
+  nameWithType: GeocodingBase.BoundaryCountries
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
+      branch: main
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+    id: BoundaryCountries
+    path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
+    startLine: 76
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the country boundaries within which to limit the geocoding search.
+
+    A comma-separated list of country codes (e.g., "US", "CA") can be provided.
+  remarks: >-
+    The value may be <code>null</code>, indicating no country boundaries are specified.
+
+    If provided, it restricts the search results to the specified countries.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("boundary.country")]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+
+      public string? BoundaryCountries { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("boundary.country")>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
+
+      Public Property BoundaryCountries As String
+  overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: boundary.country
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  id: BoundaryPeliasGlobalIdentifier
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  langs:
+  - csharp
+  - vb
+  name: BoundaryPeliasGlobalIdentifier
+  nameWithType: GeocodingBase.BoundaryPeliasGlobalIdentifier
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  type: Property
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
+      branch: main
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+    id: BoundaryPeliasGlobalIdentifier
+    path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
+    startLine: 89
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the Pelias Global Identifier (GID) for a boundary to limit the geocoding search.
+
+    This specifies a particular geographical area.
+  remarks: >-
+    The value may be <code>null</code>, indicating no specific boundary GID is provided.
+
+    If provided, it restricts the search results to the specified GID.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("boundary.gid")]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+
+      public string? BoundaryPeliasGlobalIdentifier { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("boundary.gid")>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
+
+      Public Property BoundaryPeliasGlobalIdentifier As String
+  overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: boundary.gid
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
 references:
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
   commentId: N:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
@@ -198,6 +569,25 @@ references:
   name: IQuery
   nameWithType: IQuery
   fullName: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  name: Validate()
+  nameWithType: QueryBase.Validate()
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate()
+  spec.csharp:
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+    name: Validate
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+    name: Validate
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  - name: (
+  - name: )
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   commentId: M:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
@@ -581,14 +971,216 @@ references:
   name: Size
   nameWithType: GeocodingBase.Size
   fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Size
-- uid: System.Int32
-  commentId: T:System.Int32
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers*
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Layers
+  name: Layers
+  nameWithType: GeocodingBase.Layers
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+- uid: System.Collections.Generic.HashSet{Pelias.NET.Model.Objects.Pelias.Enums.Layer}
+  commentId: T:System.Collections.Generic.HashSet{Pelias.NET.Model.Objects.Pelias.Enums.Layer}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<Layer>
+  nameWithType: HashSet<Layer>
+  fullName: System.Collections.Generic.HashSet<Pelias.NET.Model.Objects.Pelias.Enums.Layer>
+  nameWithType.vb: HashSet(Of Layer)
+  fullName.vb: System.Collections.Generic.HashSet(Of Pelias.NET.Model.Objects.Pelias.Enums.Layer)
+  name.vb: HashSet(Of Layer)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    name: Layer
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Layer.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    name: Layer
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Layer.html
+  - name: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources*
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Sources
+  name: Sources
+  nameWithType: GeocodingBase.Sources
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+- uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius*
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCircleRadius
+  name: BoundaryCircleRadius
+  nameWithType: GeocodingBase.BoundaryCircleRadius
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float?
+  nameWithType: float?
+  fullName: float?
+  nameWithType.vb: Single?
+  fullName.vb: Single?
+  name.vb: Single?
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries*
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCountries
+  name: BoundaryCountries
+  nameWithType: GeocodingBase.BoundaryCountries
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier*
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryPeliasGlobalIdentifier
+  name: BoundaryPeliasGlobalIdentifier
+  nameWithType: GeocodingBase.BoundaryPeliasGlobalIdentifier
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier

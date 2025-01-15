@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface ICoordinates&lt;TAngle&gt; | Pelias.NET ">
       
-      <meta name="description" content="Represents an interface for geographic coordinates defined by longitude and latitude, extending the general entity interface.">
+      <meta name="description" content="Represents an interface for geographic coordinates defined by longitude and latitude. This interface extends  and implements .">
       <link rel="icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../public/docfx.min.css">
       <link rel="stylesheet" href="../../../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Pelias_NET_Model_Interfaces_GeographicInformationSystems_ICoordinates_1" data-uid="Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1" class="text-break">
-Interface ICoordinates&lt;TAngle&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Interface ICoordinates&lt;TAngle&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,13 +97,13 @@ Interface ICoordinates&lt;TAngle&gt;  <a class="header-action link-secondary" ti
   <dl><dt>Assembly</dt><dd>Pelias.NET.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents an interface for geographic coordinates defined by longitude and latitude,
-extending the general entity interface.</p>
+  <div class="markdown summary"><p>Represents an interface for geographic coordinates defined by longitude and latitude.
+This interface extends <a class="xref" href="Pelias.NET.Model.Interfaces.IEntity.html">IEntity</a> and implements <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ICoordinates&lt;TAngle&gt; : IEntity where TAngle : IAngle</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ICoordinates&lt;TAngle&gt; : IEntity, IEnumerable&lt;TAngle&gt;, IEnumerable where TAngle : IAngle</code></pre>
   </div>
 
 
@@ -111,7 +111,7 @@ extending the general entity interface.</p>
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TAngle</code></dt>
-    <dd><p>The type representing an angle measurement.</p>
+    <dd><p>The type representing an angle measurement, which must implement <a class="xref" href="Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.IAngle.html">IAngle</a>.</p>
 </dd>
   </dl>
 
@@ -123,6 +123,9 @@ extending the general entity interface.</p>
     <dd>
     <div>
       <a class="xref" href="Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_">IEntity.GetMissingProperties(JsonElement, JsonElement, List&lt;JsonProperty&gt;, List&lt;Exception&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator">IEnumerable&lt;TAngle&gt;.GetEnumerator()</a>
     </div>
   </dd></dl>
 
@@ -139,10 +142,10 @@ extending the general entity interface.</p>
 
   <h3 id="Pelias_NET_Model_Interfaces_GeographicInformationSystems_ICoordinates_1_Latitude" data-uid="Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Latitude">
   Latitude
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the latitude of the coordinates.</p>
+  <div class="markdown level1 summary"><p>Gets the latitude of the geographic coordinates.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -157,7 +160,8 @@ extending the general entity interface.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">TAngle</span></dt>
-    <dd></dd>
+    <dd><p>The latitude as a <code class="typeparamref">TAngle</code> representing the angle of the latitude.</p>
+</dd>
   </dl>
 
 
@@ -171,10 +175,10 @@ extending the general entity interface.</p>
 
   <h3 id="Pelias_NET_Model_Interfaces_GeographicInformationSystems_ICoordinates_1_Longitude" data-uid="Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1.Longitude">
   Longitude
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the longitude of the coordinates.</p>
+  <div class="markdown level1 summary"><p>Gets the longitude of the geographic coordinates.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -189,7 +193,8 @@ extending the general entity interface.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">TAngle</span></dt>
-    <dd></dd>
+    <dd><p>The longitude as a <code class="typeparamref">TAngle</code> representing the angle of the longitude.</p>
+</dd>
   </dl>
 
 
@@ -203,7 +208,7 @@ extending the general entity interface.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

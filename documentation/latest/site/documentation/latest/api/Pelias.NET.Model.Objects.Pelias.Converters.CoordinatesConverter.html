@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class CoordinatesConverter | Pelias.NET ">
       
-      <meta name="description" content="Custom JSON converter for converting Coordinates to and from JSON.">
+      <meta name="description" content="Custom JSON converter for , handling the serialization and deserialization of geographic coordinates. This converter is responsible for converting a list of angles to a  object.">
       <link rel="icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../public/docfx.min.css">
       <link rel="stylesheet" href="../../../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Pelias_NET_Model_Objects_Pelias_Converters_CoordinatesConverter" data-uid="Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter" class="text-break">
-Class CoordinatesConverter  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class CoordinatesConverter  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class CoordinatesConverter  <a class="header-action link-secondary" title="View 
   <dl><dt>Assembly</dt><dd>Pelias.NET.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Custom JSON converter for converting Coordinates to and from JSON.</p>
+  <div class="markdown summary"><p>Custom JSON converter for <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a>, handling the serialization and deserialization of geographic coordinates.
+This converter is responsible for converting a list of angles to a <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a> object.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -174,10 +175,11 @@ Class CoordinatesConverter  <a class="header-action link-secondary" title="View 
 
   <h3 id="Pelias_NET_Model_Objects_Pelias_Converters_CoordinatesConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_" data-uid="Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
   Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Reads JSON and converts it to a Coordinates object.</p>
+  <div class="markdown level1 summary"><p>Reads a JSON value and converts it into a <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a> object.
+This method maps the first angle to longitude and the second angle to latitude.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -188,17 +190,21 @@ Class CoordinatesConverter  <a class="header-action link-secondary" title="View 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>reader</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonreader">Utf8JsonReader</a></dt>
-    <dd></dd>
+    <dd><p>The JSON reader to read the value from.</p>
+</dd>
     <dt><code>typeToConvert</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
-    <dd></dd>
+    <dd><p>The target type to convert to (<a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a>).</p>
+</dd>
     <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></dt>
-    <dd></dd>
+    <dd><p>The serializer options to use for deserialization.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a> object representing the deserialized geographic coordinates.</p>
+</dd>
   </dl>
 
 
@@ -207,6 +213,9 @@ Class CoordinatesConverter  <a class="header-action link-secondary" title="View 
 
 
 
+  <h4 class="section" id="Pelias_NET_Model_Objects_Pelias_Converters_CoordinatesConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The input JSON is expected to be an array with two values: the first being the longitude and the second being the latitude.</p>
+</div>
 
 
 
@@ -215,10 +224,11 @@ Class CoordinatesConverter  <a class="header-action link-secondary" title="View 
 
   <h3 id="Pelias_NET_Model_Objects_Pelias_Converters_CoordinatesConverter_Write_System_Text_Json_Utf8JsonWriter_Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_System_Text_Json_JsonSerializerOptions_" data-uid="Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter.Write(System.Text.Json.Utf8JsonWriter,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates,System.Text.Json.JsonSerializerOptions)">
   Write(Utf8JsonWriter, Coordinates, JsonSerializerOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Writes a Coordinates object to JSON.</p>
+  <div class="markdown level1 summary"><p>Writes a <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a> object to JSON.
+This method serializes the longitude and latitude as a list of angles.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -229,11 +239,14 @@ Class CoordinatesConverter  <a class="header-action link-secondary" title="View 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>writer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonwriter">Utf8JsonWriter</a></dt>
-    <dd></dd>
+    <dd><p>The JSON writer to write the value to.</p>
+</dd>
     <dt><code>value</code> <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a> object to serialize.</p>
+</dd>
     <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></dt>
-    <dd></dd>
+    <dd><p>The serializer options to use for serialization.</p>
+</dd>
   </dl>
 
 
@@ -251,7 +264,7 @@ Class CoordinatesConverter  <a class="header-action link-secondary" title="View 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Coordinates | Pelias.NET ">
       
-      
+      <meta name="description" content="Represents a geographical coordinate consisting of longitude and latitude, both expressed as  values. Implements  to enable iteration over the coordinate values.">
       <link rel="icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../public/docfx.min.css">
       <link rel="stylesheet" href="../../../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates" data-uid="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates" class="text-break">
-Class Coordinates  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class Coordinates  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,11 +97,13 @@ Class Coordinates  <a class="header-action link-secondary" title="View source" h
   <dl><dt>Assembly</dt><dd>Pelias.NET.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents a geographical coordinate consisting of longitude and latitude, both expressed as <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html">Angle</a> values.
+Implements <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> to enable iteration over the coordinate values.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Coordinates : ICoordinates&lt;Angle&gt;, IEntity</code></pre>
+    <pre><code class="lang-csharp hljs">public class Coordinates : ICoordinates&lt;Angle&gt;, IEntity, IEnumerable&lt;Angle&gt;, IEnumerable</code></pre>
   </div>
 
 
@@ -120,6 +122,8 @@ Class Coordinates  <a class="header-action link-secondary" title="View source" h
     <dd>
       <div><a class="xref" href="Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html">ICoordinates</a>&lt;<a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html">Angle</a>&gt;</div>
       <div><a class="xref" href="Pelias.NET.Model.Interfaces.IEntity.html">IEntity</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html">Angle</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
     </dd>
   </dl>
 
@@ -163,10 +167,11 @@ Class Coordinates  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_Latitude" data-uid="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Latitude">
   Latitude
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the latitude of the coordinates.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the latitude of the geographic location.
+Latitude is represented as an <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html">Angle</a> value, expressed in degrees.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -195,10 +200,11 @@ Class Coordinates  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_Longitude" data-uid="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.Longitude">
   Longitude
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the longitude of the coordinates.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the longitude of the geographic location.
+Longitude is represented as an <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html">Angle</a> value, expressed in degrees.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -227,25 +233,27 @@ Class Coordinates  <a class="header-action link-secondary" title="View source" h
 </h2>
 
 
-  <a id="Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_ToArray_" data-uid="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray*"></a>
+  <a id="Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_GetEnumerator_" data-uid="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.GetEnumerator*"></a>
 
-  <h3 id="Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_ToArray" data-uid="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray">
-  ToArray()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_GetEnumerator" data-uid="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.GetEnumerator">
+  GetEnumerator()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an enumerator that iterates through the geographic coordinates.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public double[] ToArray()</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;Angle&gt; GetEnumerator()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
-    <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1">IEnumerator</a>&lt;<a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html">Angle</a>&gt;</dt>
+    <dd><p>An enumerator for the <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_Longitude">Longitude</a> and <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_Latitude">Latitude</a> values.</p>
+</dd>
   </dl>
 
 
@@ -258,11 +266,49 @@ Class Coordinates  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <a id="Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_ToArray_" data-uid="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray*"></a>
+
+  <h3 id="Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_ToArray" data-uid="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.ToArray">
+  ToArray()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the geographic coordinates to an array of doubles, where the first element is the longitude
+and the second element is the latitude, both in degrees.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double[] ToArray()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>A double array containing the longitude and latitude values in degrees.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_ToArray_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method provides a simple conversion of the <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_Longitude">Longitude</a> and <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html#Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates_Latitude">Latitude</a>
+properties to an array of double values. The longitude is the first element, followed by latitude.</p>
+</div>
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

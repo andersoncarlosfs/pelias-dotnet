@@ -24,13 +24,18 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: StructuredSearchParameters
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
-    startLine: 4
+    startLine: 11
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Represents the parameters for structured search in geocoding requests.
+
+    Extends <xref href="Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase" data-throw-if-not-resolved="false"></xref> and provides properties for address and geographic components.
+  example: []
   syntax:
     content: 'public class StructuredSearchParameters : GeocodingBase, IQuery'
     content.vb: Public Class StructuredSearchParameters Inherits GeocodingBase Implements IQuery
@@ -42,6 +47,12 @@ items:
   - Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
   inheritedMembers:
   - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Size
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
   - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -65,27 +76,41 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Address
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
-    startLine: 6
+    startLine: 20
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the address to search for in the geocoding query.
+
+    This field is required for the structured search.
+  example: []
   syntax:
     content: >-
       [JsonRequired]
 
       [JsonPropertyName("address")]
 
+      [Required]
+
+      [Text(false, 2147483647)]
+
       public required string Address { get; set; }
     parameters: []
     return:
       type: System.String
+      description: A string representing the address to search for.
     content.vb: >-
       <JsonRequired>
 
       <JsonPropertyName("address")>
+
+      <Required>
+
+      <Text(False, 2147483647)>
 
       Public Property Address As String
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Address*
@@ -98,6 +123,16 @@ items:
     arguments:
     - type: System.String
       value: address
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: Pelias.NET.Model.DataAnnotations.TextAttribute
+    ctor: Pelias.NET.Model.DataAnnotations.TextAttribute.#ctor(System.Boolean,System.Int32)
+    arguments:
+    - type: System.Boolean
+      value: false
+    - type: System.Int32
+      value: 2147483647
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Neighbourhood
   commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Neighbourhood
   id: Neighbourhood
@@ -113,23 +148,33 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Neighbourhood
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
-    startLine: 9
+    startLine: 33
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the neighbourhood to narrow down the geocoding search.
+
+    This field is optional and will be ignored if set to <code>null</code>.
+  example: []
   syntax:
     content: >-
       [JsonPropertyName("neighbourhood")]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 
       public string? Neighbourhood { get; set; }
     parameters: []
     return:
       type: System.String
+      description: A string representing the neighbourhood.
     content.vb: >-
       <JsonPropertyName("neighbourhood")>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
 
       Public Property Neighbourhood As String
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Neighbourhood*
@@ -139,6 +184,13 @@ items:
     arguments:
     - type: System.String
       value: neighbourhood
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Borough
   commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Borough
   id: Borough
@@ -154,23 +206,33 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Borough
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
-    startLine: 11
+    startLine: 45
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the borough to narrow down the geocoding search.
+
+    This field is optional and will be ignored if set to <code>null</code>.
+  example: []
   syntax:
     content: >-
       [JsonPropertyName("borough")]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 
       public string? Borough { get; set; }
     parameters: []
     return:
       type: System.String
+      description: A string representing the borough.
     content.vb: >-
       <JsonPropertyName("borough")>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
 
       Public Property Borough As String
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Borough*
@@ -180,6 +242,13 @@ items:
     arguments:
     - type: System.String
       value: borough
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Locality
   commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Locality
   id: Locality
@@ -195,23 +264,33 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Locality
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
-    startLine: 13
+    startLine: 57
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the locality to narrow down the geocoding search.
+
+    This field is optional and will be ignored if set to <code>null</code>.
+  example: []
   syntax:
     content: >-
       [JsonPropertyName("locality")]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 
       public string? Locality { get; set; }
     parameters: []
     return:
       type: System.String
+      description: A string representing the locality.
     content.vb: >-
       <JsonPropertyName("locality")>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
 
       Public Property Locality As String
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Locality*
@@ -221,6 +300,13 @@ items:
     arguments:
     - type: System.String
       value: locality
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.County
   commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.County
   id: County
@@ -236,23 +322,33 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: County
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
-    startLine: 15
+    startLine: 69
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the county to narrow down the geocoding search.
+
+    This field is optional and will be ignored if set to <code>null</code>.
+  example: []
   syntax:
     content: >-
       [JsonPropertyName("county")]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 
       public string? County { get; set; }
     parameters: []
     return:
       type: System.String
+      description: A string representing the county.
     content.vb: >-
       <JsonPropertyName("county")>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
 
       Public Property County As String
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.County*
@@ -262,6 +358,13 @@ items:
     arguments:
     - type: System.String
       value: county
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Region
   commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Region
   id: Region
@@ -277,23 +380,33 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Region
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
-    startLine: 17
+    startLine: 81
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the region to narrow down the geocoding search.
+
+    This field is optional and will be ignored if set to <code>null</code>.
+  example: []
   syntax:
     content: >-
       [JsonPropertyName("region")]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 
       public string? Region { get; set; }
     parameters: []
     return:
       type: System.String
+      description: A string representing the region.
     content.vb: >-
       <JsonPropertyName("region")>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
 
       Public Property Region As String
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Region*
@@ -303,6 +416,13 @@ items:
     arguments:
     - type: System.String
       value: region
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Postalcode
   commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Postalcode
   id: Postalcode
@@ -318,23 +438,33 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Postalcode
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
-    startLine: 19
+    startLine: 93
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the postal code to narrow down the geocoding search.
+
+    This field is optional and will be ignored if set to <code>null</code>.
+  example: []
   syntax:
     content: >-
       [JsonPropertyName("postalcode")]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 
       public string? Postalcode { get; set; }
     parameters: []
     return:
       type: System.String
+      description: A string representing the postal code.
     content.vb: >-
       <JsonPropertyName("postalcode")>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
 
       Public Property Postalcode As String
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Postalcode*
@@ -344,6 +474,13 @@ items:
     arguments:
     - type: System.String
       value: postalcode
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Country
   commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Country
   id: Country
@@ -359,23 +496,33 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Country
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
-    startLine: 21
+    startLine: 105
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  summary: >-
+    Gets or sets the country to narrow down the geocoding search.
+
+    This field is optional and will be ignored if set to <code>null</code>.
+  example: []
   syntax:
     content: >-
       [JsonPropertyName("country")]
+
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 
       public string? Country { get; set; }
     parameters: []
     return:
       type: System.String
+      description: A string representing the country.
     content.vb: >-
       <JsonPropertyName("country")>
+
+      <JsonIgnore(Condition:=JsonIgnoreCondition.WhenWritingNull)>
 
       Public Property Country As String
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters.Country*
@@ -385,7 +532,21 @@ items:
     arguments:
     - type: System.String
       value: country
+  - type: System.Text.Json.Serialization.JsonIgnoreAttribute
+    ctor: System.Text.Json.Serialization.JsonIgnoreAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Condition
+      type: System.Text.Json.Serialization.JsonIgnoreCondition
+      value: 3
 references:
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html
+  name: GeocodingBase
+  nameWithType: GeocodingBase
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
   commentId: N:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
   href: Pelias.html
@@ -490,13 +651,6 @@ references:
   name: QueryBase
   nameWithType: QueryBase
   fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
-- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
-  commentId: T:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
-  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
-  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html
-  name: GeocodingBase
-  nameWithType: GeocodingBase
-  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
 - uid: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
   commentId: T:Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
   parent: Pelias.NET.Model.Interfaces.Protocols.Http
@@ -511,6 +665,60 @@ references:
   name: Size
   nameWithType: GeocodingBase.Size
   fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Size
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Layers
+  name: Layers
+  nameWithType: GeocodingBase.Layers
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Sources
+  name: Sources
+  nameWithType: GeocodingBase.Sources
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCircleRadius
+  name: BoundaryCircleRadius
+  nameWithType: GeocodingBase.BoundaryCircleRadius
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCountries
+  name: BoundaryCountries
+  nameWithType: GeocodingBase.BoundaryCountries
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryPeliasGlobalIdentifier
+  name: BoundaryPeliasGlobalIdentifier
+  nameWithType: GeocodingBase.BoundaryPeliasGlobalIdentifier
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  name: Validate()
+  nameWithType: QueryBase.Validate()
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate()
+  spec.csharp:
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+    name: Validate
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+    name: Validate
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  - name: (
+  - name: )
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   commentId: M:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase

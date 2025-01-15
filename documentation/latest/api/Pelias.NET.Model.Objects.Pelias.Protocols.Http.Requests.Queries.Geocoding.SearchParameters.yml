@@ -17,10 +17,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/SearchParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: SearchParameters
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/SearchParameters.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
@@ -35,6 +35,12 @@ items:
   - Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
   inheritedMembers:
   - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Size
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
   - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -58,10 +64,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/SearchParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Text
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/SearchParameters.cs
-    startLine: 6
+    startLine: 8
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
@@ -71,6 +77,10 @@ items:
 
       [JsonPropertyName("text")]
 
+      [Required]
+
+      [Text(false, 2147483647)]
+
       public required string Text { get; set; }
     parameters: []
     return:
@@ -79,6 +89,10 @@ items:
       <JsonRequired>
 
       <JsonPropertyName("text")>
+
+      <Required>
+
+      <Text(False, 2147483647)>
 
       Public Property Text As String
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters.Text*
@@ -91,6 +105,16 @@ items:
     arguments:
     - type: System.String
       value: text
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: Pelias.NET.Model.DataAnnotations.TextAttribute
+    ctor: Pelias.NET.Model.DataAnnotations.TextAttribute.#ctor(System.Boolean,System.Int32)
+    arguments:
+    - type: System.Boolean
+      value: false
+    - type: System.Int32
+      value: 2147483647
 references:
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
   commentId: N:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
@@ -217,6 +241,60 @@ references:
   name: Size
   nameWithType: GeocodingBase.Size
   fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Size
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Layers
+  name: Layers
+  nameWithType: GeocodingBase.Layers
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Sources
+  name: Sources
+  nameWithType: GeocodingBase.Sources
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCircleRadius
+  name: BoundaryCircleRadius
+  nameWithType: GeocodingBase.BoundaryCircleRadius
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCountries
+  name: BoundaryCountries
+  nameWithType: GeocodingBase.BoundaryCountries
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryPeliasGlobalIdentifier
+  name: BoundaryPeliasGlobalIdentifier
+  nameWithType: GeocodingBase.BoundaryPeliasGlobalIdentifier
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  name: Validate()
+  nameWithType: QueryBase.Validate()
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate()
+  spec.csharp:
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+    name: Validate
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+    name: Validate
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  - name: (
+  - name: )
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   commentId: M:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase

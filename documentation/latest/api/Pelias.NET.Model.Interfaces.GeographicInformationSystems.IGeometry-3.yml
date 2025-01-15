@@ -17,7 +17,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IGeometry.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: IGeometry
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IGeometry.cs
     startLine: 11
@@ -59,7 +59,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IGeometry.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Coordinates
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IGeometry.cs
     startLine: 19

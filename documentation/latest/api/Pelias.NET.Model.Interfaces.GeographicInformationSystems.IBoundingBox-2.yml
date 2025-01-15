@@ -19,28 +19,29 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: IBoundingBox
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
-    startLine: 10
+    startLine: 15
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
   summary: >-
-    Represents an interface for a bounding box defined by top-right and bottom-left coordinates,
+    Represents an interface for a bounding box defined by top-right and bottom-left coordinates.
 
-    extending the general entity interface.
+    This interface extends the <xref href="Pelias.NET.Model.Interfaces.IEntity" data-throw-if-not-resolved="false"></xref> interface and implements <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
-    content: 'public interface IBoundingBox<TCoordinates, TAngle> : IEntity where TCoordinates : ICoordinates<TAngle> where TAngle : IAngle'
+    content: 'public interface IBoundingBox<TCoordinates, TAngle> : IEntity, IEnumerable<TCoordinates>, IEnumerable where TCoordinates : ICoordinates<TAngle> where TAngle : IAngle'
     typeParameters:
     - id: TCoordinates
-      description: The type representing the coordinates of the bounding box.
+      description: The type representing the coordinates of the bounding box, which must implement <xref href="Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates%601" data-throw-if-not-resolved="false"></xref>.
     - id: TAngle
-      description: The type representing an angle measurement.
-    content.vb: Public Interface IBoundingBox(Of TCoordinates As ICoordinates(Of TAngle), TAngle As IAngle) Inherits IEntity
+      description: The type representing an angle measurement, which must implement <xref href="Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.IAngle" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Interface IBoundingBox(Of TCoordinates As ICoordinates(Of TAngle), TAngle As IAngle) Inherits IEntity, IEnumerable(Of TCoordinates), IEnumerable
   inheritedMembers:
   - Pelias.NET.Model.Interfaces.IEntity.GetMissingProperties(System.Text.Json.JsonElement,System.Text.Json.JsonElement,System.Collections.Generic.List{System.Text.Json.JsonProperty},System.Collections.Generic.List{System.Exception},System.Boolean)
+  - System.Collections.Generic.IEnumerable{{TCoordinates}}.GetEnumerator
   nameWithType.vb: IBoundingBox(Of TCoordinates, TAngle)
   fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox(Of TCoordinates, TAngle)
   name.vb: IBoundingBox(Of TCoordinates, TAngle)
@@ -59,10 +60,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: TopRightCoordinates
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
-    startLine: 17
+    startLine: 25
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
@@ -73,6 +74,7 @@ items:
     parameters: []
     return:
       type: '{TCoordinates}'
+      description: The top-right coordinates as a <code class="typeparamref">TCoordinates</code> instance.
     content.vb: ReadOnly Property TopRightCoordinates As TCoordinates
   overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.TopRightCoordinates*
   nameWithType.vb: IBoundingBox(Of TCoordinates, TAngle).TopRightCoordinates
@@ -92,10 +94,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: BottomLeftCoordinates
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
-    startLine: 22
+    startLine: 33
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
@@ -106,6 +108,7 @@ items:
     parameters: []
     return:
       type: '{TCoordinates}'
+      description: The bottom-left coordinates as a <code class="typeparamref">TCoordinates</code> instance.
     content.vb: ReadOnly Property BottomLeftCoordinates As TCoordinates
   overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.BottomLeftCoordinates*
   nameWithType.vb: IBoundingBox(Of TCoordinates, TAngle).BottomLeftCoordinates
@@ -125,29 +128,100 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Contains
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
-    startLine: 29
+    startLine: 60
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Interfaces.GeographicInformationSystems
   summary: Checks whether the specified coordinates are within the bounding box.
+  remarks: >-
+    This method checks if both the latitude and longitude of the specified coordinates 
+
+    are within the ranges defined by the top-right and bottom-left coordinates of the bounding box.
   example: []
   syntax:
     content: bool Contains(TCoordinates coordinates)
     parameters:
     - id: coordinates
       type: '{TCoordinates}'
-      description: The coordinates to check.
+      description: The coordinates to check, represented as a <code class="typeparamref">TCoordinates</code> instance.
     return:
       type: System.Boolean
-      description: True if the coordinates are within the bounding box, otherwise false.
+      description: <code>true</code> if the coordinates are within the bounds of the bounding box, otherwise <code>false</code>.
     content.vb: Function Contains(coordinates As TCoordinates) As Boolean
   overload: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.Contains*
   nameWithType.vb: IBoundingBox(Of TCoordinates, TAngle).Contains(TCoordinates)
   fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox(Of TCoordinates, TAngle).Contains(TCoordinates)
 references:
+- uid: Pelias.NET.Model.Interfaces.IEntity
+  commentId: T:Pelias.NET.Model.Interfaces.IEntity
+  parent: Pelias.NET.Model.Interfaces
+  href: Pelias.NET.Model.Interfaces.IEntity.html
+  name: IEntity
+  nameWithType: IEntity
+  fullName: Pelias.NET.Model.Interfaces.IEntity
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html
+  name: ICoordinates<TAngle>
+  nameWithType: ICoordinates<TAngle>
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates<TAngle>
+  nameWithType.vb: ICoordinates(Of TAngle)
+  fullName.vb: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates(Of TAngle)
+  name.vb: ICoordinates(Of TAngle)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+    name: ICoordinates
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html
+  - name: <
+  - name: TAngle
+  - name: '>'
+  spec.vb:
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
+    name: ICoordinates
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TAngle
+  - name: )
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.IAngle
+  commentId: T:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.IAngle
+  parent: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.IAngle.html
+  name: IAngle
+  nameWithType: IAngle
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.IAngle
 - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
   commentId: N:Pelias.NET.Model.Interfaces.GeographicInformationSystems
   href: Pelias.html
@@ -301,13 +375,30 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
-- uid: Pelias.NET.Model.Interfaces.IEntity
-  commentId: T:Pelias.NET.Model.Interfaces.IEntity
-  parent: Pelias.NET.Model.Interfaces
-  href: Pelias.NET.Model.Interfaces.IEntity.html
-  name: IEntity
-  nameWithType: IEntity
-  fullName: Pelias.NET.Model.Interfaces.IEntity
+- uid: System.Collections.Generic.IEnumerable{{TCoordinates}}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{`0}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{{TCoordinates}}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<TCoordinates>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<TCoordinates>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of TCoordinates).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TCoordinates).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable{`0}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable{`0}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
 - uid: Pelias.NET.Model.Interfaces
   commentId: N:Pelias.NET.Model.Interfaces
   href: Pelias.html
@@ -346,6 +437,157 @@ references:
   - uid: Pelias.NET.Model.Interfaces
     name: Interfaces
     href: Pelias.NET.Model.Interfaces.html
+- uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  commentId: N:Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  href: Pelias.html
+  name: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  nameWithType: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  fullName: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+    name: Measures
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces
+    name: Interfaces
+    href: Pelias.NET.Model.Interfaces.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+    name: Measurements
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.html
+  - name: .
+  - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+    name: Measures
+    href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.html
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{{TCoordinates}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<TCoordinates>
+  nameWithType: IEnumerable<TCoordinates>
+  fullName: System.Collections.Generic.IEnumerable<TCoordinates>
+  nameWithType.vb: IEnumerable(Of TCoordinates)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TCoordinates)
+  name.vb: IEnumerable(Of TCoordinates)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TCoordinates
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCoordinates
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.TopRightCoordinates*
   commentId: Overload:Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.TopRightCoordinates
   href: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox-2.html#Pelias_NET_Model_Interfaces_GeographicInformationSystems_IBoundingBox_2_TopRightCoordinates

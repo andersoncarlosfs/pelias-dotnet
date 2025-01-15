@@ -4,9 +4,10 @@ items:
   commentId: N:Pelias.NET.Model.Objects.Pelias.Converters
   id: Pelias.NET.Model.Objects.Pelias.Converters
   children:
-  - Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter
   - Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter
   - Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter
+  - Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter
+  - Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1
   langs:
   - csharp
   - vb
@@ -17,13 +18,6 @@ items:
   assemblies:
   - Pelias.NET
 references:
-- uid: Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter
-  commentId: T:Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter
-  parent: Pelias.NET.Model.Objects.Pelias.Converters
-  href: Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter.html
-  name: AngleConverter
-  nameWithType: AngleConverter
-  fullName: Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter
 - uid: Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter
   commentId: T:Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter
   parent: Pelias.NET.Model.Objects.Pelias.Converters
@@ -38,6 +32,38 @@ references:
   name: CoordinatesConverter
   nameWithType: CoordinatesConverter
   fullName: Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter
+  parent: Pelias.NET.Model.Objects.Pelias.Converters
+  href: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.html
+  name: DegreesConverter
+  nameWithType: DegreesConverter
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter
+- uid: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1
+  href: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter-1.html
+  name: EnumsConverter<T>
+  nameWithType: EnumsConverter<T>
+  fullName: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter<T>
+  nameWithType.vb: EnumsConverter(Of T)
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter(Of T)
+  name.vb: EnumsConverter(Of T)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1
+    name: EnumsConverter
+    href: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1
+    name: EnumsConverter
+    href: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: Pelias.NET.Model.Objects.Pelias.Converters
   commentId: N:Pelias.NET.Model.Objects.Pelias.Converters
   href: Pelias.html

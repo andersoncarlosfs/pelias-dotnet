@@ -4,6 +4,7 @@ items:
   commentId: N:Pelias.NET.Model.Objects.Pelias.Enums
   id: Pelias.NET.Model.Objects.Pelias.Enums
   children:
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer
   - Pelias.NET.Model.Objects.Pelias.Enums.MatchType
   - Pelias.NET.Model.Objects.Pelias.Enums.Path
   - Pelias.NET.Model.Objects.Pelias.Enums.Version
@@ -17,6 +18,13 @@ items:
   assemblies:
   - Pelias.NET
 references:
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  parent: Pelias.NET.Model.Objects.Pelias.Enums
+  href: Pelias.NET.Model.Objects.Pelias.Enums.Layer.html
+  name: Layer
+  nameWithType: Layer
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer
 - uid: Pelias.NET.Model.Objects.Pelias.Enums.MatchType
   commentId: T:Pelias.NET.Model.Objects.Pelias.Enums.MatchType
   parent: Pelias.NET.Model.Objects.Pelias.Enums

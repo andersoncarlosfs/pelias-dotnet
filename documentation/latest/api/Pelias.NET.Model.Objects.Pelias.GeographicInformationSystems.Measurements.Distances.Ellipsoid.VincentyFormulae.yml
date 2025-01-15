@@ -21,7 +21,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: VincentyFormulae
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
     startLine: 5
@@ -62,7 +62,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: EARTH_EQUATORIAL_RADIUS
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
     startLine: 10
@@ -91,7 +91,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: ITERATIONS
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
     startLine: 21
@@ -118,7 +118,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: TOLERANCE
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
     startLine: 22
@@ -145,7 +145,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Compute
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
     startLine: 25
@@ -185,7 +185,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Compute
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Ellipsoid/VincentyFormulae.cs
     startLine: 33

@@ -5,13 +5,14 @@ items:
   items:
   - uid: Pelias.NET.Controller.Services.Client
     name: Client
+- uid: Pelias.NET.Model.DataAnnotations
+  name: Pelias.NET.Model.DataAnnotations
+  items:
+  - uid: Pelias.NET.Model.DataAnnotations.TextAttribute
+    name: TextAttribute
 - uid: Pelias.NET.Model.Exceptions
   name: Pelias.NET.Model.Exceptions
   items:
-  - uid: Pelias.NET.Model.Exceptions.CollectionIterationException
-    name: CollectionIterationException
-  - uid: Pelias.NET.Model.Exceptions.MissingEntryException
-    name: MissingEntryException
   - uid: Pelias.NET.Model.Exceptions.TypeMismatchException
     name: TypeMismatchException
 - uid: Pelias.NET.Model.Interfaces
@@ -62,15 +63,19 @@ items:
 - uid: Pelias.NET.Model.Objects.Pelias.Converters
   name: Pelias.NET.Model.Objects.Pelias.Converters
   items:
-  - uid: Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter
-    name: AngleConverter
   - uid: Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter
     name: BoundingBoxConverter
   - uid: Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter
     name: CoordinatesConverter
+  - uid: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter
+    name: DegreesConverter
+  - uid: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1
+    name: EnumsConverter<T>
 - uid: Pelias.NET.Model.Objects.Pelias.Enums
   name: Pelias.NET.Model.Objects.Pelias.Enums
   items:
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    name: Layer
   - uid: Pelias.NET.Model.Objects.Pelias.Enums.MatchType
     name: MatchType
   - uid: Pelias.NET.Model.Objects.Pelias.Enums.Path

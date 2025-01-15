@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class IDistanceExtensions | Pelias.NET ">
       
-      
+      <meta name="description" content="Provides extension methods for computing distances using the  interface.">
       <link rel="icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../public/docfx.min.css">
       <link rel="stylesheet" href="../../../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Pelias_NET_Model_Objects_Pelias_Extensions_IDistanceExtensions" data-uid="Pelias.NET.Model.Objects.Pelias.Extensions.IDistanceExtensions" class="text-break">
-Class IDistanceExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/IDistanceExtensions.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Class IDistanceExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/IDistanceExtensions.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class IDistanceExtensions  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>Pelias.NET.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Provides extension methods for computing distances using the <a class="xref" href="Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance-3.html">IDistance&lt;TCoordinates, TAngle, TLength&gt;</a> interface.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -156,10 +157,12 @@ Class IDistanceExtensions  <a class="header-action link-secondary" title="View s
 
   <h3 id="Pelias_NET_Model_Objects_Pelias_Extensions_IDistanceExtensions_Compute__1___0_Pelias_NET_Model_Objects_Pelias_GeographicInformationSystems_Coordinates___" data-uid="Pelias.NET.Model.Objects.Pelias.Extensions.IDistanceExtensions.Compute``1(``0,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates[])">
   Compute&lt;T&gt;(T, params Coordinates[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/IDistanceExtensions.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/IDistanceExtensions.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Computes the total distance between a series of coordinates.
+This method calculates the distance between each consecutive pair of coordinates and sums the results.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -169,21 +172,25 @@ Class IDistanceExtensions  <a class="header-action link-secondary" title="View s
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>value</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The instance that provides the distance computation logic.</p>
+</dd>
     <dt><code>coordinates</code> <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a>[]</dt>
-    <dd></dd>
+    <dd><p>An array of coordinates between which the distance is to be computed.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Length.html">Length</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Length.html">Length</a> representing the total computed distance in meters.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The type that implements the <a class="xref" href="Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance-3.html">IDistance&lt;TCoordinates, TAngle, TLength&gt;</a> interface.</p>
+</dd>
   </dl>
 
 
@@ -192,6 +199,12 @@ Class IDistanceExtensions  <a class="header-action link-secondary" title="View s
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when fewer than two coordinates are provided.</p>
+</dd>
+  </dl>
 
 
 
@@ -199,7 +212,7 @@ Class IDistanceExtensions  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/IDistanceExtensions.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/IDistanceExtensions.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 
