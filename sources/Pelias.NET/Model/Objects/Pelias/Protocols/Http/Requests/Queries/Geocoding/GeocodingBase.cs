@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Pelias.NET.Model.Objects.Pelias.Converters;
+using Pelias.NET.Model.Objects.Pelias.Enums;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 
@@ -33,9 +35,10 @@ namespace Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocod
         /// If provided, it filters the results to the specified layers (e.g., "address", "neighbourhood").
         /// </remarks>
         [JsonPropertyName("layers")]
+        [JsonConverter(typeof(EnumsConverter<Layer>))]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [AllowNull]
-        public string? Layers { get; set; }
+        public HashSet<Layer> Layers { get; set; }
 
         /// <summary>
         /// Gets or sets the sources to query from, specifying which data sources to include.

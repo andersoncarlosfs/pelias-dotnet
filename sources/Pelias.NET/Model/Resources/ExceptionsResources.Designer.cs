@@ -97,6 +97,15 @@ namespace Pelias.NET.Model.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The value &apos;{0}&apos; for the attribute &apos;{1}&apos; is not supported for any property of the type &apos;{2}&apos;..
+        /// </summary>
+        internal static string NotImplementedException_MissingAttribute {
+            get {
+                return ResourceManager.GetString("NotImplementedException_MissingAttribute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The entry &apos;{0}&apos; in &apos;{1}&apos; is not supported..
         /// </summary>
         internal static string NotImplementedException_MissingEntry {

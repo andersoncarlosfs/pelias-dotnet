@@ -103,7 +103,7 @@ namespace Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
                 }
 
                 // Serialize the property value and add it to the nameValueCollection
-                nameValueCollection[name] = JsonSerializer.Serialize(value, options);
+                nameValueCollection[name] = JsonSerializer.Deserialize<string>(JsonSerializer.Serialize(value, options));
             }
 
             return nameValueCollection;

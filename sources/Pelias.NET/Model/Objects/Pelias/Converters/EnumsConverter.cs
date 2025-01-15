@@ -1,4 +1,7 @@
-﻿using System.Text.Json;
+﻿using Pelias.NET.Model.Objects.Pelias.Extensions;
+using Pelias.NET.Model.Resources;
+using System.Runtime.Serialization;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace Pelias.NET.Model.Objects.Pelias.Converters
@@ -27,7 +30,20 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
             return reader.GetString()
                 .Split(',') // Split the string by commas into individual values
                 .Select(entry => entry.Trim()) // Trim any leading or trailing spaces
-                .Select(entry => (T)Enum.Parse(type, entry, ignoreCase: true)) // Parse each entry as an enum, case-insensitive
+                .Select(entry => {
+                    foreach (var property in typeof(T).GetProperties())
+                    {
+                        foreach(EnumMemberAttribute attribute in Attribute.GetCustomAttributes(property, typeof(EnumMemberAttribute)))
+                        { 
+                            if (entry == attribute.Value)
+                            {
+                                return (T)property.GetValue(null);
+                            }
+                        }
+                    }
+
+                    throw new InvalidOperationException(string.Format(ExceptionsResources.NotImplementedException_MissingEntry, entry, nameof(EnumMemberAttribute), type));
+                }) // Parse each entry as an enum, case-insensitive
                 .ToHashSet(); // Convert the collection into a HashSet to ensure uniqueness
         }
 
@@ -40,7 +56,7 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
         public override void Write(Utf8JsonWriter writer, HashSet<T> value, JsonSerializerOptions options)
         {
             // Join the enum values into a comma-separated string and write it as lowercased values
-            writer.WriteStringValue(string.Join(",", value.Select(v => v.ToString().ToLower()))); // Serialize the enum values as lowercase strings
+            writer.WriteStringValue(string.Join(",", value.Select(v => v.GetEnumMemberValue()))); // Serialize the enum values as lowercase strings
         }
     }
 }

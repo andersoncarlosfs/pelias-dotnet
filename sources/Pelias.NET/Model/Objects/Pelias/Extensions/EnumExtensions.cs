@@ -23,19 +23,13 @@ namespace Pelias.NET.Model.Objects.Pelias.Extensions
         {
             foreach (var member in typeof(T).GetMember(value.ToString()))
             {
-                var attribute = (EnumMemberAttribute)Attribute.GetCustomAttribute(member, typeof(EnumMemberAttribute));
-
-                if (attribute != null)
+                foreach(EnumMemberAttribute attribute in Attribute.GetCustomAttributes(member, typeof(EnumMemberAttribute)))
                 {
                     return attribute.Value;
                 }
             }
 
-            throw new InvalidOperationException(
-                string.Format(ExceptionsResources.InvalidOperationException_MissingAttribute, 
-                    nameof(EnumMemberAttribute), 
-                    value, 
-                    typeof(T)));
+            throw new InvalidOperationException(string.Format(ExceptionsResources.InvalidOperationException_MissingAttribute, nameof(EnumMemberAttribute), value, typeof(T)));
         }
     }
 }
