@@ -20,7 +20,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Measures/Angle.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Angle
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Measures/Angle.cs
     startLine: 4
@@ -59,7 +59,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Measures/Angle.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: RADIAN
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Measures/Angle.cs
     startLine: 9
@@ -88,7 +88,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Measures/Angle.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Degrees
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Measures/Angle.cs
     startLine: 11
@@ -121,7 +121,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Measures/Angle.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Radians
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Measures/Angle.cs
     startLine: 12
@@ -150,7 +150,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Measures/Angle.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: .ctor
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Measures/Angle.cs
     startLine: 18

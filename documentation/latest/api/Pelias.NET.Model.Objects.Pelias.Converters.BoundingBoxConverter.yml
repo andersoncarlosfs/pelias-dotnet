@@ -18,7 +18,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: BoundingBoxConverter
     path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
     startLine: 11
@@ -62,7 +62,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Read
     path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
     startLine: 22
@@ -107,7 +107,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Write
     path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
     startLine: 60

@@ -16,7 +16,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/IMeasure.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: IMeasure
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/Measurements/IMeasure.cs
     startLine: 5

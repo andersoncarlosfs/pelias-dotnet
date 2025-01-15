@@ -18,7 +18,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: ICoordinates
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
     startLine: 12
@@ -57,7 +57,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Longitude
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
     startLine: 21
@@ -91,7 +91,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Latitude
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/ICoordinates.cs
     startLine: 29

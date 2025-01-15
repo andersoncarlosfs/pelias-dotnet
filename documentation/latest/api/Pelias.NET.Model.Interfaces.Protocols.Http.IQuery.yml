@@ -17,7 +17,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IQuery.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: IQuery
     path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IQuery.cs
     startLine: 7
@@ -44,7 +44,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IQuery.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: ToNameValueCollection
     path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IQuery.cs
     startLine: 13

@@ -17,7 +17,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/IEntity.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: IEntity
     path: sources/Pelias.NET/Model/Interfaces/IEntity.cs
     startLine: 9
@@ -44,7 +44,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/IEntity.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: GetMissingProperties
     path: sources/Pelias.NET/Model/Interfaces/IEntity.cs
     startLine: 20

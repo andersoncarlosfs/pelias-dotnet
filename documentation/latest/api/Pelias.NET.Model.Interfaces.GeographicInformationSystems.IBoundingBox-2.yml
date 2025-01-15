@@ -19,7 +19,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: IBoundingBox
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
     startLine: 15
@@ -60,7 +60,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: TopRightCoordinates
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
     startLine: 25
@@ -94,7 +94,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: BottomLeftCoordinates
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
     startLine: 33
@@ -128,7 +128,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Contains
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs
     startLine: 60

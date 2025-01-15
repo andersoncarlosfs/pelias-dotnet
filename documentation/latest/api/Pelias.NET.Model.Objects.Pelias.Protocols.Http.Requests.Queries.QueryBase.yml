@@ -18,7 +18,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: QueryBase
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
     startLine: 16
@@ -64,7 +64,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Validate
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
     startLine: 26
@@ -99,7 +99,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: ToNameValueCollection
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
     startLine: 50

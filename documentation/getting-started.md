@@ -6,7 +6,7 @@ Add a dependency in your project file using the following syntax:
 ```xml
 <ItemGroup>
     <!-- ... -->
-	<PackageReference Include="Pelias.NET" Version="1.0.0" />
+	<PackageReference Include="Pelias.NET" Version="2.0.0" />
     <!-- ... -->
 </ItemGroup>
 ```
@@ -14,25 +14,27 @@ Add a dependency in your project file using the following syntax:
 ## Adding a main class
 Add the following statements to a main class:
 ```csharp
-class Program
+using (HttpClient http = new HttpClient())
 {
-	static async Task Main(string[] args)
+	var address = "3229 NW Pittock Dr, Portland, OR 97210, United States";
+	
+	Console.WriteLine($"Query: {address}\n");
+
+	// Assuming 'pelias' is the correct Client class
+	var pelias = new Client("http://localhost:4000/", http);
+
+	// Initialize search parameters
+	var request = new SearchParameters()
 	{
-		var address = "3229 NW Pittock Dr, Portland, OR 97210, United States";
+		Text = address,
+		Layers = new HashSet<Layer>() { Layer.Locality, Layer.Address }
+	};
 
-		Console.WriteLine($"Query: {address}\n");
+	// Serialize the result
+	var options = new JsonSerializerOptions();
+	var document = JsonSerializer.Serialize(await pelias.Search(request), options);
 
-		var client = new Client("http://localhost:4000/");
-
-		var request = new SearchParameters() { Text = address };
-
-		var response = await client.Search(request);
-
-		using (StreamReader reader = new StreamReader(response))
-		{
-			Console.WriteLine(reader.ReadToEnd());
-		}
-	}
+	Console.WriteLine(document);
 }
 ```
 
@@ -46,6 +48,11 @@ The complete file is shown below:
 ```csharp
 using Pelias.NET.Controller.Services;
 using Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace Pelias.NET
 {
@@ -53,19 +60,27 @@ namespace Pelias.NET
     {
         static async Task Main(string[] args)
         {
-            var address = "3229 NW Pittock Dr, Portland, OR 97210, United States";
-
-            Console.WriteLine($"Query: {address}\n");
-
-            var client = new Client("http://localhost:4000/");
-
-            var request = new SearchParameters() { Text = address };
-
-            var response = await client.Search(request);
-
-            using (StreamReader reader = new StreamReader(response))
+            using (HttpClient http = new HttpClient())
             {
-                Console.WriteLine(reader.ReadToEnd());
+                var address = "3229 NW Pittock Dr, Portland, OR 97210, United States";
+                
+                Console.WriteLine($"Query: {address}\n");
+
+                // Assuming 'pelias' is the correct Client class
+                var pelias = new Client("http://localhost:4000/", http);
+
+                // Initialize search parameters
+                var request = new SearchParameters()
+                {
+                    Text = address,
+                    Layers = new HashSet<Layer>() { Layer.Locality, Layer.Address }
+                };
+
+                // Serialize the result
+                var options = new JsonSerializerOptions();
+                var document = JsonSerializer.Serialize(await pelias.Search(request), options);
+
+                Console.WriteLine(document);
             }
         }
     }

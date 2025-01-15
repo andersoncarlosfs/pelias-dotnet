@@ -2,146 +2,209 @@
 items:
 - uid: Pelias.NET.Controller.Services
   name: Pelias.NET.Controller.Services
+  type: Namespace
   items:
   - uid: Pelias.NET.Controller.Services.Client
     name: Client
+    type: Class
 - uid: Pelias.NET.Model.DataAnnotations
   name: Pelias.NET.Model.DataAnnotations
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.DataAnnotations.TextAttribute
     name: TextAttribute
+    type: Class
 - uid: Pelias.NET.Model.Exceptions
   name: Pelias.NET.Model.Exceptions
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Exceptions.TypeMismatchException
     name: TypeMismatchException
+    type: Class
 - uid: Pelias.NET.Model.Interfaces
   name: Pelias.NET.Model.Interfaces
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Interfaces.IClient`8
     name: IClient<TResponse, TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+    type: Interface
   - uid: Pelias.NET.Model.Interfaces.IEntity
     name: IEntity
+    type: Interface
 - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems
   name: Pelias.NET.Model.Interfaces.GeographicInformationSystems
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2
     name: IBoundingBox<TCoordinates, TAngle>
+    type: Interface
   - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates`1
     name: ICoordinates<TAngle>
+    type: Interface
   - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IFeature`5
     name: IFeature<TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+    type: Interface
   - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IGeocoding
     name: IGeocoding
+    type: Interface
   - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IGeometry`3
     name: IGeometry<TBoundingBox, TCoordinates, TAngle>
+    type: Interface
   - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IMeasurement
     name: IMeasurement
+    type: Interface
   - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.IProperties
     name: IProperties
+    type: Interface
 - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
   name: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IDistance`3
     name: IDistance<TCoordinates, TAngle, TLength>
+    type: Interface
   - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.IMeasure
     name: IMeasure
+    type: Interface
 - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
   name: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.IAngle
     name: IAngle
+    type: Interface
   - uid: Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.ILength
     name: ILength
+    type: Interface
 - uid: Pelias.NET.Model.Interfaces.Protocols.Http
   name: Pelias.NET.Model.Interfaces.Protocols.Http
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
     name: IQuery
+    type: Interface
   - uid: Pelias.NET.Model.Interfaces.Protocols.Http.IResponse`7
     name: IResponse<TGeocoding, TFeature, TProperties, TGeometry, TBoundingBox, TCoordinates, TAngle>
+    type: Interface
 - uid: Pelias.NET.Model.Objects.Pelias.Converters
   name: Pelias.NET.Model.Objects.Pelias.Converters
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter
     name: BoundingBoxConverter
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter
     name: CoordinatesConverter
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter
     name: DegreesConverter
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter`1
     name: EnumsConverter<T>
+    type: Class
 - uid: Pelias.NET.Model.Objects.Pelias.Enums
   name: Pelias.NET.Model.Objects.Pelias.Enums
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
     name: Layer
+    type: Enum
   - uid: Pelias.NET.Model.Objects.Pelias.Enums.MatchType
     name: MatchType
+    type: Enum
   - uid: Pelias.NET.Model.Objects.Pelias.Enums.Path
     name: Path
+    type: Enum
   - uid: Pelias.NET.Model.Objects.Pelias.Enums.Version
     name: Version
+    type: Enum
 - uid: Pelias.NET.Model.Objects.Pelias.Extensions
   name: Pelias.NET.Model.Objects.Pelias.Extensions
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
     name: EnumExtensions
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.Extensions.IDistanceExtensions
     name: IDistanceExtensions
+    type: Class
 - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
   name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox
     name: BoundingBox
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
     name: Coordinates
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Feature
     name: Feature
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Geocoding
     name: Geocoding
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Geometry
     name: Geometry
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Properties
     name: Properties
+    type: Class
 - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid
   name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Ellipsoid.VincentyFormulae
     name: VincentyFormulae
+    type: Class
 - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere
   name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere.HaversineFormula
     name: HaversineFormula
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Distances.Sphere.SphericalLawOfCosines
     name: SphericalLawOfCosines
+    type: Class
 - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
   name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle
     name: Angle
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Length
     name: Length
+    type: Class
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
   name: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
     name: QueryBase
+    type: Class
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
   name: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
     name: GeocodingBase
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters
     name: ReverseParameters
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.SearchParameters
     name: SearchParameters
+    type: Class
   - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.StructuredSearchParameters
     name: StructuredSearchParameters
+    type: Class
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
   name: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses
+  type: Namespace
   items:
   - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses.Response
     name: Response
+    type: Class
 memberLayout: SamePage

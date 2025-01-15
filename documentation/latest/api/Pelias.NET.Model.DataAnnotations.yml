@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.DataAnnotations
+  commentId: N:Pelias.NET.Model.DataAnnotations
+  id: Pelias.NET.Model.DataAnnotations
+  children:
+  - Pelias.NET.Model.DataAnnotations.TextAttribute
+  langs:
+  - csharp
+  - vb
+  name: Pelias.NET.Model.DataAnnotations
+  nameWithType: Pelias.NET.Model.DataAnnotations
+  fullName: Pelias.NET.Model.DataAnnotations
+  type: Namespace
+  assemblies:
+  - Pelias.NET
+references:
+- uid: Pelias.NET.Model.DataAnnotations.TextAttribute
+  commentId: T:Pelias.NET.Model.DataAnnotations.TextAttribute
+  parent: Pelias.NET.Model.DataAnnotations
+  href: Pelias.NET.Model.DataAnnotations.TextAttribute.html
+  name: TextAttribute
+  nameWithType: TextAttribute
+  fullName: Pelias.NET.Model.DataAnnotations.TextAttribute
+- uid: Pelias.NET.Model.DataAnnotations
+  commentId: N:Pelias.NET.Model.DataAnnotations
+  href: Pelias.html
+  name: Pelias.NET.Model.DataAnnotations
+  nameWithType: Pelias.NET.Model.DataAnnotations
+  fullName: Pelias.NET.Model.DataAnnotations
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.DataAnnotations
+    name: DataAnnotations
+    href: Pelias.NET.Model.DataAnnotations.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.DataAnnotations
+    name: DataAnnotations
+    href: Pelias.NET.Model.DataAnnotations.html

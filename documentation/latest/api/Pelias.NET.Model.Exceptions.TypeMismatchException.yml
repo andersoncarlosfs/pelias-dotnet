@@ -17,7 +17,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Exceptions/TypeMismatchException.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: TypeMismatchException
     path: sources/Pelias.NET/Model/Exceptions/TypeMismatchException.cs
     startLine: 5
@@ -77,7 +77,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Exceptions/TypeMismatchException.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: .ctor
     path: sources/Pelias.NET/Model/Exceptions/TypeMismatchException.cs
     startLine: 12

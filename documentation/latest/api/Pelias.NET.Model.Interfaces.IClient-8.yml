@@ -16,7 +16,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/IClient.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: IClient
     path: sources/Pelias.NET/Model/Interfaces/IClient.cs
     startLine: 17

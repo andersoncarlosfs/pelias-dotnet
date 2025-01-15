@@ -24,7 +24,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: StructuredSearchParameters
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
     startLine: 11
@@ -76,7 +76,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Address
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
     startLine: 20
@@ -148,7 +148,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Neighbourhood
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
     startLine: 33
@@ -206,7 +206,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Borough
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
     startLine: 45
@@ -264,7 +264,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Locality
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
     startLine: 57
@@ -322,7 +322,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: County
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
     startLine: 69
@@ -380,7 +380,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Region
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
     startLine: 81
@@ -438,7 +438,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Postalcode
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
     startLine: 93
@@ -496,7 +496,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Country
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/StructuredSearchParameters.cs
     startLine: 105

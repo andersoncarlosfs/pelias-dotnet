@@ -22,7 +22,7 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Client
     path: sources/Pelias.NET/Controller/Clients/Client.cs
     startLine: 17
@@ -64,7 +64,7 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Endpoint
     path: sources/Pelias.NET/Controller/Clients/Client.cs
     startLine: 27
@@ -95,7 +95,7 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: .ctor
     path: sources/Pelias.NET/Controller/Clients/Client.cs
     startLine: 34
@@ -133,7 +133,7 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: .ctor
     path: sources/Pelias.NET/Controller/Clients/Client.cs
     startLine: 43
@@ -171,7 +171,7 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Reverse
     path: sources/Pelias.NET/Controller/Clients/Client.cs
     startLine: 154
@@ -206,7 +206,7 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Search
     path: sources/Pelias.NET/Controller/Clients/Client.cs
     startLine: 162
@@ -241,7 +241,7 @@ items:
     remote:
       path: sources/Pelias.NET/Controller/Clients/Client.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Search
     path: sources/Pelias.NET/Controller/Clients/Client.cs
     startLine: 170

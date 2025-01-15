@@ -20,7 +20,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Coordinates
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
     startLine: 10
@@ -65,7 +65,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Longitude
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
     startLine: 16
@@ -101,7 +101,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Latitude
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
     startLine: 22
@@ -137,7 +137,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: ToArray
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
     startLine: 33
@@ -175,7 +175,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: GetEnumerator
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Coordinates.cs
     startLine: 43

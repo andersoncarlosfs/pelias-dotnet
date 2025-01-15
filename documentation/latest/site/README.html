@@ -91,6 +91,11 @@
 <h2 id="example">Example</h2>
 <pre><code class="lang-csharp">using Pelias.NET.Controller.Services;
 using Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace Pelias.NET
 {
@@ -98,19 +103,28 @@ namespace Pelias.NET
     {
         static async Task Main(string[] args)
         {
-            var address = &quot;3229 NW Pittock Dr, Portland, OR 97210, United States&quot;;
+            using (HttpClient http = new HttpClient())
+            {
+                var address = &quot;3229 NW Pittock Dr, Portland, OR 97210, United States&quot;;
+                
+                Console.WriteLine($&quot;Query: {address}\n&quot;);
 
-            Console.WriteLine($&quot;Query: {address}\n&quot;);
+                // Assuming 'pelias' is the correct Client class
+                var pelias = new Client(&quot;http://localhost:4000/&quot;, http);
 
-            var client = new Client(&quot;http://localhost:4000/&quot;);
+                // Initialize search parameters
+                var request = new SearchParameters()
+                {
+                    Text = address,
+                    Layers = new HashSet&lt;Layer&gt;() { Layer.Locality, Layer.Address }
+                };
 
-            var request = new SearchParameters() { Text = address, Layers = new HashSet&lt;Layer&gt;() { Layer.Locality, Layer.Address } };
+                // Serialize the result
+                var options = new JsonSerializerOptions();
+                var document = JsonSerializer.Serialize(await pelias.Search(request), options);
 
-            var options = new JsonSerializerOptions();
-
-            var document = JsonSerializer.Serialize(await client.Search(request), options);
-
-            Console.WriteLine(document);
+                Console.WriteLine(document);
+            }
         }
     }
 }

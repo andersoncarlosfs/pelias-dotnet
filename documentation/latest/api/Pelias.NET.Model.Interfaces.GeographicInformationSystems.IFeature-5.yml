@@ -20,7 +20,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: IFeature
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
     startLine: 13
@@ -66,7 +66,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Type
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
     startLine: 23
@@ -99,7 +99,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Properties
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
     startLine: 28
@@ -132,7 +132,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Geometry
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
     startLine: 33
@@ -165,7 +165,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: BoundingBox
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IFeature.cs
     startLine: 38

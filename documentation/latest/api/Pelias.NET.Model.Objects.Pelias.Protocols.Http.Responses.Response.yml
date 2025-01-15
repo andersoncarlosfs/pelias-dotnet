@@ -20,7 +20,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Responses/Response.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Response
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Responses/Response.cs
     startLine: 9
@@ -58,7 +58,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Responses/Response.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Geocoding
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Responses/Response.cs
     startLine: 11
@@ -117,7 +117,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Responses/Response.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Features
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Responses/Response.cs
     startLine: 15
@@ -176,7 +176,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Responses/Response.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Type
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Responses/Response.cs
     startLine: 19
@@ -235,7 +235,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Responses/Response.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: BoundingBox
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Responses/Response.cs
     startLine: 23

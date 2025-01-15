@@ -17,7 +17,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Extensions/IDistanceExtensions.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: IDistanceExtensions
     path: sources/Pelias.NET/Model/Objects/Pelias/Extensions/IDistanceExtensions.cs
     startLine: 10
@@ -55,7 +55,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Extensions/IDistanceExtensions.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Compute
     path: sources/Pelias.NET/Model/Objects/Pelias/Extensions/IDistanceExtensions.cs
     startLine: 21

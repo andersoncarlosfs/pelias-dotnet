@@ -20,7 +20,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: IResponse
     path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
     startLine: 16
@@ -70,7 +70,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Geocoding
     path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
     startLine: 28
@@ -103,7 +103,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Type
     path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
     startLine: 33
@@ -136,7 +136,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Features
     path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
     startLine: 38
@@ -169,7 +169,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: BoundingBox
     path: sources/Pelias.NET/Model/Interfaces/Protocols/Http/IResponse.cs
     startLine: 43

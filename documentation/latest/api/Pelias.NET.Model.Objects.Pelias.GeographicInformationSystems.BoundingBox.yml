@@ -19,7 +19,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/BoundingBox.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: BoundingBox
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/BoundingBox.cs
     startLine: 10
@@ -64,7 +64,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/BoundingBox.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: TopRightCoordinates
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/BoundingBox.cs
     startLine: 18
@@ -110,7 +110,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/BoundingBox.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: BottomLeftCoordinates
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/BoundingBox.cs
     startLine: 27
@@ -156,7 +156,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/BoundingBox.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: GetEnumerator
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/BoundingBox.cs
     startLine: 40

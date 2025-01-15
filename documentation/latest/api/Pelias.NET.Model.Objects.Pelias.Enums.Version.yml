@@ -17,7 +17,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Version.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Version
     path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Version.cs
     startLine: 5
@@ -63,7 +63,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Version.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: V1
     path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Version.cs
     startLine: 9

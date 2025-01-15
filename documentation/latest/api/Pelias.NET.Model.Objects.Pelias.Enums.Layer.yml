@@ -1,0 +1,865 @@
+### YamlMime:ManagedReference
+items:
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  id: Layer
+  parent: Pelias.NET.Model.Objects.Pelias.Enums
+  children:
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.Address
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.Borough
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.Coarse
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.Country
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.County
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.LocalAdmin
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.Locality
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroCounty
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroRegion
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.Neighbourhood
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.PostalCode
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.Region
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.Street
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.Venue
+  langs:
+  - csharp
+  - vb
+  name: Layer
+  nameWithType: Layer
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  type: Enum
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Layer
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 10
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: >-
+    Represents different layers of geographical or administrative features, typically used in geospatial applications.
+
+    Each layer corresponds to a specific level or type of geographical entity, allowing for fine-grained categorization of locations.
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      [JsonConverter(typeof(JsonStringEnumConverter))]
+
+      public enum Layer
+    content.vb: >-
+      <Flags>
+
+      <JsonConverter(GetType(JsonStringEnumConverter))>
+
+      Public Enum Layer
+  extensionMethods:
+  - Pelias.NET.Model.Objects.Pelias.Enums.Layer.Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  - type: System.Text.Json.Serialization.JsonConverterAttribute
+    ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.Text.Json.Serialization.JsonStringEnumConverter
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Venue
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Venue
+  id: Venue
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: Venue
+  nameWithType: Layer.Venue
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Venue
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Venue
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 17
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: Points of interest such as businesses, buildings, or structures (typically entities with physical boundaries).
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "venue")]
+
+      Venue = 0
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="venue")>
+
+      Venue = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: venue
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Address
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Address
+  id: Address
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: Layer.Address
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Address
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Address
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 24
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: Locations associated with a street address (e.g., residences or office buildings).
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "address")]
+
+      Address = 1
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="address")>
+
+      Address = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: address
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Street
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Street
+  id: Street
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: Street
+  nameWithType: Layer.Street
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Street
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Street
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 31
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: Streets, roads, highways, and other thoroughfares used for transportation.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "street")]
+
+      Street = 2
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="street")>
+
+      Street = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: street
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Neighbourhood
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Neighbourhood
+  id: Neighbourhood
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: Neighbourhood
+  nameWithType: Layer.Neighbourhood
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Neighbourhood
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Neighbourhood
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 38
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: Social communities or neighborhoods, often used to define districts or smaller local areas.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "neighbourhood")]
+
+      Neighbourhood = Address | Street
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="neighbourhood")>
+
+      Neighbourhood = Address Or Street
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: neighbourhood
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Borough
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Borough
+  id: Borough
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: Borough
+  nameWithType: Layer.Borough
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Borough
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Borough
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 45
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: Local administrative boundaries, primarily referring to areas within New York City.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "borough")]
+
+      Borough = 4
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="borough")>
+
+      Borough = 4
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: borough
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.LocalAdmin
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.LocalAdmin
+  id: LocalAdmin
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: LocalAdmin
+  nameWithType: Layer.LocalAdmin
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.LocalAdmin
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: LocalAdmin
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 52
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: Local administrative divisions such as municipalities, districts, or smaller jurisdictions.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "localadmin")]
+
+      LocalAdmin = Address | Borough
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="localadmin")>
+
+      LocalAdmin = Address Or Borough
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: localadmin
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Locality
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Locality
+  id: Locality
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: Locality
+  nameWithType: Layer.Locality
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Locality
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Locality
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 59
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: Localized areas such as towns, hamlets, or cities within a country.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "locality")]
+
+      Locality = Street | Borough
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="locality")>
+
+      Locality = Street Or Borough
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: locality
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.County
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.County
+  id: County
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: County
+  nameWithType: Layer.County
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.County
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: County
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 66
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: Larger official governmental areas, such as counties, that serve as primary subdivisions of a country.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "county")]
+
+      County = Address | Locality
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="county")>
+
+      County = Address Or Locality
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: county
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroCounty
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroCounty
+  id: MacroCounty
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: MacroCounty
+  nameWithType: Layer.MacroCounty
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroCounty
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: MacroCounty
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 73
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: A collection of counties, typically used in European contexts to represent related administrative areas.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "macrocounty")]
+
+      MacroCounty = 8
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="macrocounty")>
+
+      MacroCounty = 8
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: macrocounty
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Region
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Region
+  id: Region
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: Region
+  nameWithType: Layer.Region
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Region
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Region
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 80
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: States or provinces, which are major subdivisions within a country.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "region")]
+
+      Region = Address | MacroCounty
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="region")>
+
+      Region = Address Or MacroCounty
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: region
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroRegion
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroRegion
+  id: MacroRegion
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: MacroRegion
+  nameWithType: Layer.MacroRegion
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.MacroRegion
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: MacroRegion
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 87
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: A collection of regions, often used to describe broader geographical areas, primarily in Europe.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "macroregion")]
+
+      MacroRegion = Street | MacroCounty
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="macroregion")>
+
+      MacroRegion = Street Or MacroCounty
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: macroregion
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Country
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Country
+  id: Country
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: Country
+  nameWithType: Layer.Country
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Country
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Country
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 94
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: Entire countries or nation-states, which are defined by international boundaries.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "country")]
+
+      Country = Address | MacroRegion
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="country")>
+
+      Country = Address Or MacroRegion
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: country
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Coarse
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.Coarse
+  id: Coarse
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: Coarse
+  nameWithType: Layer.Coarse
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Coarse
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: Coarse
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 101
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: A shorthand for selecting all administrative layers except for venue and address, typically used for broader location queries.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "coarse")]
+
+      Coarse = Borough | MacroCounty
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="coarse")>
+
+      Coarse = Borough Or MacroCounty
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: coarse
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.PostalCode
+  commentId: F:Pelias.NET.Model.Objects.Pelias.Enums.Layer.PostalCode
+  id: PostalCode
+  parent: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  langs:
+  - csharp
+  - vb
+  name: PostalCode
+  nameWithType: Layer.PostalCode
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer.PostalCode
+  type: Field
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+      branch: main
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+    id: PostalCode
+    path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Layer.cs
+    startLine: 108
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Enums
+  summary: Postal codes used by mail services to identify geographic areas for postal delivery.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "postalcode")]
+
+      PostalCode = Address | Coarse
+    return:
+      type: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    content.vb: >-
+      <EnumMember(Value:="postalcode")>
+
+      PostalCode = Address Or Coarse
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: postalcode
+references:
+- uid: Pelias.NET.Model.Objects.Pelias.Enums
+  commentId: N:Pelias.NET.Model.Objects.Pelias.Enums
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.Enums
+  nameWithType: Pelias.NET.Model.Objects.Pelias.Enums
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums
+    name: Enums
+    href: Pelias.NET.Model.Objects.Pelias.Enums.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums
+    name: Enums
+    href: Pelias.NET.Model.Objects.Pelias.Enums.html
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer.Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  parent: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+  definition: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  name: GetEnumMemberValue<Layer>(Layer)
+  nameWithType: EnumExtensions.GetEnumMemberValue<Layer>(Layer)
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue<Pelias.NET.Model.Objects.Pelias.Enums.Layer>(Pelias.NET.Model.Objects.Pelias.Enums.Layer)
+  nameWithType.vb: EnumExtensions.GetEnumMemberValue(Of Layer)(Layer)
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue(Of Pelias.NET.Model.Objects.Pelias.Enums.Layer)(Pelias.NET.Model.Objects.Pelias.Enums.Layer)
+  name.vb: GetEnumMemberValue(Of Layer)(Layer)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(Pelias.NET.Model.Objects.Pelias.Enums.Layer)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: <
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    name: Layer
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Layer.html
+  - name: '>'
+  - name: (
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    name: Layer
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Layer.html
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(Pelias.NET.Model.Objects.Pelias.Enums.Layer)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    name: Layer
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Layer.html
+  - name: )
+  - name: (
+  - uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+    name: Layer
+    href: Pelias.NET.Model.Objects.Pelias.Enums.Layer.html
+  - name: )
+- uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+  href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  name: GetEnumMemberValue<T>(T)
+  nameWithType: EnumExtensions.GetEnumMemberValue<T>(T)
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue<T>(T)
+  nameWithType.vb: EnumExtensions.GetEnumMemberValue(Of T)(T)
+  fullName.vb: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue(Of T)(T)
+  name.vb: GetEnumMemberValue(Of T)(T)
+  spec.csharp:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)
+    name: GetEnumMemberValue
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+  parent: Pelias.NET.Model.Objects.Pelias.Extensions
+  href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html
+  name: EnumExtensions
+  nameWithType: EnumExtensions
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions
+- uid: Pelias.NET.Model.Objects.Pelias.Extensions
+  commentId: N:Pelias.NET.Model.Objects.Pelias.Extensions
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.Extensions
+  nameWithType: Pelias.NET.Model.Objects.Pelias.Extensions
+  fullName: Pelias.NET.Model.Objects.Pelias.Extensions
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions
+    name: Extensions
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.Extensions
+    name: Extensions
+    href: Pelias.NET.Model.Objects.Pelias.Extensions.html
+- uid: Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  commentId: T:Pelias.NET.Model.Objects.Pelias.Enums.Layer
+  parent: Pelias.NET.Model.Objects.Pelias.Enums
+  href: Pelias.NET.Model.Objects.Pelias.Enums.Layer.html
+  name: Layer
+  nameWithType: Layer
+  fullName: Pelias.NET.Model.Objects.Pelias.Enums.Layer

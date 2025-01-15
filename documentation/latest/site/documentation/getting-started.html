@@ -92,31 +92,33 @@
 <p>Add a dependency in your project file using the following syntax:</p>
 <pre><code class="lang-xml">&lt;ItemGroup&gt;
     &lt;!-- ... --&gt;
-	&lt;PackageReference Include=&quot;Pelias.NET&quot; Version=&quot;1.0.0&quot; /&gt;
+	&lt;PackageReference Include=&quot;Pelias.NET&quot; Version=&quot;2.0.0&quot; /&gt;
     &lt;!-- ... --&gt;
 &lt;/ItemGroup&gt;
 </code></pre>
 <h2 id="adding-a-main-class">Adding a main class</h2>
 <p>Add the following statements to a main class:</p>
-<pre><code class="lang-csharp">class Program
+<pre><code class="lang-csharp">using (HttpClient http = new HttpClient())
 {
-	static async Task Main(string[] args)
+	var address = &quot;3229 NW Pittock Dr, Portland, OR 97210, United States&quot;;
+	
+	Console.WriteLine($&quot;Query: {address}\n&quot;);
+
+	// Assuming 'pelias' is the correct Client class
+	var pelias = new Client(&quot;http://localhost:4000/&quot;, http);
+
+	// Initialize search parameters
+	var request = new SearchParameters()
 	{
-		var address = &quot;3229 NW Pittock Dr, Portland, OR 97210, United States&quot;;
+		Text = address,
+		Layers = new HashSet&lt;Layer&gt;() { Layer.Locality, Layer.Address }
+	};
 
-		Console.WriteLine($&quot;Query: {address}\n&quot;);
+	// Serialize the result
+	var options = new JsonSerializerOptions();
+	var document = JsonSerializer.Serialize(await pelias.Search(request), options);
 
-		var client = new Client(&quot;http://localhost:4000/&quot;);
-
-		var request = new SearchParameters() { Text = address };
-
-		var response = await client.Search(request);
-
-		using (StreamReader reader = new StreamReader(response))
-		{
-			Console.WriteLine(reader.ReadToEnd());
-		}
-	}
+	Console.WriteLine(document);
 }
 </code></pre>
 <p>In order to be able to reference Pelias.NET, it is necessary to add the following using statement at the top of the file:</p>
@@ -126,6 +128,11 @@ using Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding;
 <p>The complete file is shown below:</p>
 <pre><code class="lang-csharp">using Pelias.NET.Controller.Services;
 using Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace Pelias.NET
 {
@@ -133,19 +140,27 @@ namespace Pelias.NET
     {
         static async Task Main(string[] args)
         {
-            var address = &quot;3229 NW Pittock Dr, Portland, OR 97210, United States&quot;;
-
-            Console.WriteLine($&quot;Query: {address}\n&quot;);
-
-            var client = new Client(&quot;http://localhost:4000/&quot;);
-
-            var request = new SearchParameters() { Text = address };
-
-            var response = await client.Search(request);
-
-            using (StreamReader reader = new StreamReader(response))
+            using (HttpClient http = new HttpClient())
             {
-                Console.WriteLine(reader.ReadToEnd());
+                var address = &quot;3229 NW Pittock Dr, Portland, OR 97210, United States&quot;;
+                
+                Console.WriteLine($&quot;Query: {address}\n&quot;);
+
+                // Assuming 'pelias' is the correct Client class
+                var pelias = new Client(&quot;http://localhost:4000/&quot;, http);
+
+                // Initialize search parameters
+                var request = new SearchParameters()
+                {
+                    Text = address,
+                    Layers = new HashSet&lt;Layer&gt;() { Layer.Locality, Layer.Address }
+                };
+
+                // Serialize the result
+                var options = new JsonSerializerOptions();
+                var document = JsonSerializer.Serialize(await pelias.Search(request), options);
+
+                Console.WriteLine(document);
             }
         }
     }

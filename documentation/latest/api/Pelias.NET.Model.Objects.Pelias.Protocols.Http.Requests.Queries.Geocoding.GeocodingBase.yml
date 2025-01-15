@@ -22,7 +22,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: GeocodingBase
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
     startLine: 13
@@ -73,7 +73,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Size
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
     startLine: 22
@@ -146,7 +146,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Layers
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
     startLine: 36
@@ -216,7 +216,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Sources
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
     startLine: 50
@@ -277,7 +277,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: BoundaryCircleRadius
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
     startLine: 62
@@ -350,7 +350,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: BoundaryCountries
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
     startLine: 76
@@ -411,7 +411,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: BoundaryPeliasGlobalIdentifier
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/GeocodingBase.cs
     startLine: 89

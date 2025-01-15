@@ -18,7 +18,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Geometry.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Geometry
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Geometry.cs
     startLine: 7
@@ -56,7 +56,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Geometry.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Type
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Geometry.cs
     startLine: 9
@@ -97,7 +97,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Geometry.cs
       branch: main
-      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+      repo: https://github.com/andersoncarlosfs/pelias-dotnet
     id: Coordinates
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Geometry.cs
     startLine: 11
