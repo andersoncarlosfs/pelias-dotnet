@@ -1,40 +1,42 @@
 ﻿using Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems;
+using Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures;
+using Pelias.NET.Model.Resources;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Pelias.NET.Model.Objects.Pelias.Converters
 {
     /// <summary>
     /// Custom JSON converter for <see cref="BoundingBox"/>, handling the serialization and deserialization of a bounding box.
-    /// This converter inherits from <see cref="AnglesConverter"/> and is responsible for converting a list of angles to a <see cref="BoundingBox"/> object.
     /// </summary>
-    public class BoundingBoxConverter : AnglesConverter
+    public class BoundingBoxConverter : JsonConverter<BoundingBox>
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BoundingBoxConverter"/> class.
-        /// </summary>
-        public BoundingBoxConverter() : base(4)
-        {
-        }
+        private static readonly int _length = new BoundingBox() { TopRightCoordinates = new Coordinates(), BottomLeftCoordinates = new Coordinates() }.SelectMany(coordinates => coordinates).Count();
 
         /// <summary>
         /// Reads a JSON value and converts it into a <see cref="BoundingBox"/> object.
-        /// This method overrides the base <see cref="AnglesConverter.Read"/> method to map the first two angles to the top-right coordinates
-        /// and the last two angles to the bottom-left coordinates.
         /// </summary>
         /// <param name="reader">The JSON reader to read the value from.</param>
         /// <param name="typeToConvert">The target type to convert to (<see cref="BoundingBox"/>).</param>
         /// <param name="options">The serializer options to use for deserialization.</param>
         /// <returns>A <see cref="BoundingBox"/> object representing the deserialized bounding box.</returns>
-        /// <remarks>
-        /// The input JSON is expected to be an array with four values: the first and second for the top-right coordinates (longitude, latitude),
-        /// and the third and fourth for the bottom-left coordinates (longitude, latitude).
-        /// </remarks>
-        public new BoundingBox Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override BoundingBox Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            // Deserialize the angles array from the JSON reader
-            var angles = base.Read(ref reader, typeToConvert, options);
+            var angles = new List<Angle>();
 
-            // Create and return a BoundingBox object with the corresponding coordinates
+            // Read the numbers from the JSON array
+            while (reader.Read() && reader.TokenType == JsonTokenType.Number)
+            {
+                angles.Add(new Angle(reader.GetDouble()));
+            }
+
+            // Ensure there are exactly 4 angles (top-right and bottom-left coordinates)
+            if (angles.Count != _length)
+            {
+                throw new ArgumentException(string.Format(ExceptionsResources.ArgumentException_InvalidNumberOfElements, nameof(angles), angles.Count, _length));
+            }
+
+            // Map the angles to the BoundingBox properties
             return new BoundingBox
             {
                 TopRightCoordinates = new Coordinates
@@ -52,19 +54,23 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
 
         /// <summary>
         /// Writes a <see cref="BoundingBox"/> object to JSON.
-        /// This method overrides the base <see cref="AnglesConverter.Write"/> method to serialize the bounding box as an array of four angles.
         /// </summary>
         /// <param name="writer">The JSON writer to write the value to.</param>
         /// <param name="value">The <see cref="BoundingBox"/> object to serialize.</param>
         /// <param name="options">The serializer options to use for serialization.</param>
-        /// <remarks>
-        /// The <see cref="BoundingBox"/> object will be serialized as an array of four values: 
-        /// the first two represent the top-right coordinates (longitude, latitude), and the last two represent the bottom-left coordinates (longitude, latitude).
-        /// </remarks>
-        public new void Write(Utf8JsonWriter writer, BoundingBox value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, BoundingBox value, JsonSerializerOptions options)
         {
-            // Serialize the BoundingBox object by flattening the coordinates into a list of angles and writing them as JSON
-            base.Write(writer, value.SelectMany(e => e.ToList()).ToList(), options);
+            writer.WriteStartArray();
+
+            foreach (var coordinates in value)
+            {
+                foreach (var angle in coordinates)
+                {
+                    writer.WriteNumberValue(angle.Degrees);
+                }
+            }
+
+            writer.WriteEndArray();
         }
     }
 }

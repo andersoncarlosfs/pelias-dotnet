@@ -61,7 +61,7 @@ namespace Pelias.NET.Model.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The collection &apos;{(0)}&apos; has &apos;{(1)}&apos; elements instead of at least &apos;{(2)}&apos;..
+        ///   Looks up a localized string similar to The collection &apos;{0}&apos; has &apos;{1}&apos; elements instead of at least &apos;{2}&apos;..
         /// </summary>
         internal static string ArgumentException_InsufficientNumberOfElements {
             get {
@@ -70,16 +70,16 @@ namespace Pelias.NET.Model.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The collection &apos;{(0)}&apos; has &apos;{(1)}&apos; elements instead of &apos;{(2)}&apos;..
+        ///   Looks up a localized string similar to The collection &apos;{0}&apos; has &apos;{1}&apos; elements instead of &apos;{2}&apos;..
         /// </summary>
-        internal static string CollectionIterationException {
+        internal static string ArgumentException_InvalidNumberOfElements {
             get {
-                return ResourceManager.GetString("CollectionIterationException", resourceCulture);
+                return ResourceManager.GetString("ArgumentException_InvalidNumberOfElements", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The request to &apos;{(0)}&apos; with the parameters &apos;{(1)}&apos; returned a response from &apos;{(2)}&apos; with a status code &apos;{(3)}&apos; and the message from the servers is &apos;{(4)}&apos;..
+        ///   Looks up a localized string similar to The request to &apos;{0}&apos; with the parameters &apos;{1}&apos; returned a response from &apos;{2}&apos; with a status code &apos;{3}&apos; and the message from the servers is &apos;{4}&apos;..
         /// </summary>
         internal static string HttpRequestException {
             get {
@@ -88,7 +88,7 @@ namespace Pelias.NET.Model.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The attribute &apos;{(0)}&apos; was not found for the object &apos;{(1)}&apos; of the type &apos;{(2)}&apos;..
+        ///   Looks up a localized string similar to The attribute &apos;{0}&apos; was not found for the object &apos;{1}&apos; of the type &apos;{2}&apos;..
         /// </summary>
         internal static string InvalidOperationException_MissingAttribute {
             get {
@@ -97,7 +97,7 @@ namespace Pelias.NET.Model.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The entry &apos;{(0)}&apos; in &apos;{(1)}&apos; is not supported..
+        ///   Looks up a localized string similar to The entry &apos;{0}&apos; in &apos;{1}&apos; is not supported..
         /// </summary>
         internal static string NotImplementedException_MissingEntry {
             get {
@@ -115,16 +115,7 @@ namespace Pelias.NET.Model.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The reader &apos;{(0)}&apos; read a token of type &apos;{(1)}&apos; at index &apos;{(2)}&apos; and it is not equal to the type &apos;{(3)}&apos; of the argument &apos;{(4)}&apos;..
-        /// </summary>
-        internal static string TypeMismatchException_NotEqual_JsonTokenType {
-            get {
-                return ResourceManager.GetString("TypeMismatchException_NotEqual_JsonTokenType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The type &apos;{(0)}&apos; of the argument &apos;{(1)}&apos; is not the equal to the type &apos;{(2)}&apos; of the argument &apos;{(3)}&apos;..
+        ///   Looks up a localized string similar to The type &apos;{0}&apos; of the argument &apos;{1}&apos; is not the equal to the type &apos;{2}&apos; of the argument &apos;{3}&apos;..
         /// </summary>
         internal static string TypeMismatchException_NotEqual_JsonValueKind {
             get {

@@ -51,7 +51,6 @@ namespace Pelias.NET.Model.Interfaces
                     {
                         // Yield the missing entries
                         yield return keys;
-
                     }
                 }
             }
@@ -79,7 +78,7 @@ namespace Pelias.NET.Model.Interfaces
                         }
                         else
                         {
-                            exceptions.Add(new CollectionIterationException(string.Format(ExceptionsResources.CollectionIterationException, nameof(target), target.GetArrayLength(), source.GetArrayLength())));
+                            exceptions.Add(new ArgumentException(string.Format(ExceptionsResources.ArgumentException_InvalidNumberOfElements, nameof(target), target.GetArrayLength(), source.GetArrayLength())));
                         }
                     }
                 }
