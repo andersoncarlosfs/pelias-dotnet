@@ -1,4 +1,3 @@
-using Pelias.NET.Model.Exceptions;
 using Pelias.NET.Model.Interfaces;
 using Pelias.NET.Model.Objects.Pelias.Extensions;
 using Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems;
@@ -7,6 +6,7 @@ using Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries;
 using Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding;
 using Pelias.NET.Model.Objects.Pelias.Protocols.Http.Responses;
 using Pelias.NET.Model.Resources;
+using System.Diagnostics;
 using System.Text.Json;
 
 namespace Pelias.NET.Controller.Services
@@ -53,9 +53,8 @@ namespace Pelias.NET.Controller.Services
         /// </summary>
         /// <param name="path">The API path to retrieve data from.</param>
         /// <param name="query">The query parameters to use for the request.</param>
-        /// <param name="debug">Indicates whether debug information should be included in the process.</param>
         /// <returns>The deserialized response.</returns>
-        private async Task<Response?> TryGetObjectAsynchronous(Model.Objects.Pelias.Enums.Path path, QueryBase query, bool debug = false)
+        private async Task<Response?> TryGetObjectAsynchronous(Model.Objects.Pelias.Enums.Path path, QueryBase query)
         {
             var exceptions = new List<Exception>();
 
@@ -72,7 +71,8 @@ namespace Pelias.NET.Controller.Services
                     // Deserialize the response into a Response object
                     var subject = await JsonSerializer.DeserializeAsync<Response>(buffer).ConfigureAwait(false);
 
-                    if (debug)
+                    /*
+                    if (Debugger.IsAttached)
                     {
                         // Debugging logic: Deserialize the raw JSON to compare it with the internal structure.
                         buffer.Position = 0;
@@ -84,6 +84,9 @@ namespace Pelias.NET.Controller.Services
 
                         await JsonSerializer.SerializeAsync(buffer, subject).ConfigureAwait(false);
 
+                        // Rewind the buffer stream for deserialization
+                        buffer.Position = 0;
+
                         var traversed = await JsonSerializer.DeserializeAsync<JsonElement>(buffer).ConfigureAwait(false);
 
                         // Collect missing properties between the raw and internal structure
@@ -92,6 +95,7 @@ namespace Pelias.NET.Controller.Services
                             exceptions.Add(new NotImplementedException(string.Format(ExceptionsResources.NotImplementedException_MissingEntry, entry.LastOrDefault(), $"'{{{subject?.GetType().Name}: {{{string.Join(": {", entry.Select(value => value.Name))}{new string('}', entry.Count)}}}'")));
                         }
                     }
+                    */
 
                     if (!exceptions.Any())
                     {
@@ -103,7 +107,7 @@ namespace Pelias.NET.Controller.Services
                     exceptions.Add(exception);
                 }
 
-                throw new AggregateException(exceptions);
+                throw exceptions.Count > 1 ? new AggregateException(exceptions) : exceptions.Single();
             }
         }
 
@@ -144,65 +148,27 @@ namespace Pelias.NET.Controller.Services
         }
 
         /// <summary>
-        /// Retrieves a response asynchronously from the Pelias API based on the specified path and query.
-        /// Uses the internal method <see cref="TryGetObjectAsynchronous"/> to handle the response.
-        /// </summary>
-        /// <param name="path">The API path to retrieve data from.</param>
-        /// <param name="query">The query parameters to use for the request.</param>
-        /// <param name="debug">Indicates whether debug information should be included.</param>
-        /// <returns>The deserialized response object.</returns>
-        private async Task<Response> GetResponseAsynchronous(Model.Objects.Pelias.Enums.Path path, QueryBase query, bool debug = false)
-            => await TryGetObjectAsynchronous(path, query, debug).ConfigureAwait(false);
-
-        /// <summary>
         /// Retrieves a stream asynchronously for the reverse geocoding query.
         /// </summary>
         /// <param name="query">The query parameters for the reverse geocoding request.</param>
         /// <returns>A stream containing the reverse geocoding data.</returns>
-        public async Task<Stream> Reverse(ReverseParameters query)
-            => await GetStreamAsynchronous(Model.Objects.Pelias.Enums.Path.Reverse, query);
-
-        /// <summary>
-        /// Retrieves a response asynchronously for the reverse geocoding query.
-        /// </summary>
-        /// <param name="query">The query parameters for the reverse geocoding request.</param>
-        /// <param name="debug">Indicates whether debug information should be included.</param>
-        /// <returns>The deserialized response for the reverse geocoding query.</returns>
-        public async Task<Response> Reverse(ReverseParameters query, bool debug = false)
-            => await GetResponseAsynchronous(Model.Objects.Pelias.Enums.Path.Reverse, query, debug);
+        public async Task<Response?> Reverse(ReverseParameters query)
+            => await TryGetObjectAsynchronous(Model.Objects.Pelias.Enums.Path.Reverse, query);
 
         /// <summary>
         /// Retrieves a stream asynchronously for the search query.
         /// </summary>
         /// <param name="query">The query parameters for the search request.</param>
         /// <returns>A stream containing the search data.</returns>
-        public async Task<Stream> Search(SearchParameters query)
-            => await GetStreamAsynchronous(Model.Objects.Pelias.Enums.Path.Search, query);
-
-        /// <summary>
-        /// Retrieves a response asynchronously for the search query.
-        /// </summary>
-        /// <param name="query">The query parameters for the search request.</param>
-        /// <param name="debug">Indicates whether debug information should be included.</param>
-        /// <returns>The deserialized response for the search query.</returns>
-        public async Task<Response> Search(SearchParameters query, bool debug = false)
-            => await GetResponseAsynchronous(Model.Objects.Pelias.Enums.Path.Search, query, debug);
+        public async Task<Response?> Search(SearchParameters query)
+            => await TryGetObjectAsynchronous(Model.Objects.Pelias.Enums.Path.Search, query);
 
         /// <summary>
         /// Retrieves a stream asynchronously for the structured search query.
         /// </summary>
         /// <param name="query">The query parameters for the structured search request.</param>
         /// <returns>A stream containing the structured search data.</returns>
-        public async Task<Stream> Search(StructuredSearchParameters query)
-            => await GetStreamAsynchronous(Model.Objects.Pelias.Enums.Path.StructuredSearch, query);
-
-        /// <summary>
-        /// Retrieves a response asynchronously for the structured search query.
-        /// </summary>
-        /// <param name="query">The query parameters for the structured search request.</param>
-        /// <param name="debug">Indicates whether debug information should be included.</param>
-        /// <returns>The deserialized response for the structured search query.</returns>
-        public async Task<Response> Search(StructuredSearchParameters query, bool debug = false)
-            => await GetResponseAsynchronous(Model.Objects.Pelias.Enums.Path.StructuredSearch, query, debug);
+        public async Task<Response?> Search(StructuredSearchParameters query)
+            => await TryGetObjectAsynchronous(Model.Objects.Pelias.Enums.Path.StructuredSearch, query);
     }
 }
