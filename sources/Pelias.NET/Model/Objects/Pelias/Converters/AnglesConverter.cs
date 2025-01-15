@@ -19,42 +19,24 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
         {
             var angles = new List<Angle>();
 
-            do
+            while (reader.Read() && reader.TokenType == JsonTokenType.Number)
             {
-                reader.Read(); // Move to the next token
-
-                // Ensure the token type matches the expected one
-                if ((reader.TokenType != JsonTokenType.Number) && (!_limit.HasValue || (angles.Count != _limit.Value)))
-                {
-                    throw new TypeMismatchException(
-                        string.Format(
-                            ExceptionsResources.TypeMismatchException_NotEqual_JsonTokenType,
-                            nameof(reader),
-                            reader.TokenType,
-                            reader.TokenStartIndex,
-                            JsonTokenType.Number
-                        )
-                    );
-                }
-
-                // Check if the number of parsed angles exceeds the limit
-                if (_limit.HasValue && ((angles.Count >= _limit.Value) || ((reader.TokenType != JsonTokenType.Number) && (angles.Count != _limit.Value))))
-                {
-                    throw new CollectionIterationException(
-                        string.Format(
-                            ExceptionsResources.CollectionIterationException,
-                            nameof(angles),
-                            angles.Count,
-                            _limit.Value
-                        )
-                    );
-                }
-
                 // Add the current token value to the angles list
                 angles.Add(new Angle(reader.GetDouble()));
+            };
 
+            // Check if the number of parsed angles exceeds the limit
+            if (_limit.HasValue && (angles.Count != _limit.Value))
+            {
+                throw new CollectionIterationException(
+                    string.Format(
+                        ExceptionsResources.CollectionIterationException,
+                        nameof(angles),
+                        angles.Count,
+                        _limit.Value
+                    )
+                );
             }
-            while (reader.TokenType != JsonTokenType.EndArray);
 
             return angles;
         }

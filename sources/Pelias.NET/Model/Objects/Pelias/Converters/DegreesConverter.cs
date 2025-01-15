@@ -11,19 +11,11 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
     /// </summary>
     public class DegreesConverter : JsonConverter<Angle>
     {
-        private readonly bool _throwOnError;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="DegreesConverter"/> class.
         /// </summary>
-        /// <param name="throwOnError">
-        /// A flag indicating whether exceptions should be thrown when the conversion fails.
-        /// If set to <c>true</c>, an exception will be thrown in case of conversion failure.
-        /// If set to <c>false</c>, <see cref="null"/> will be returned on failure.
-        /// </param>
-        public DegreesConverter(bool throwOnError = false)
+        public DegreesConverter()
         {
-            _throwOnError = throwOnError;
         }
 
         /// <summary>
@@ -49,15 +41,7 @@ namespace Pelias.NET.Model.Objects.Pelias.Converters
         /// </exception>
         public override Angle Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            // Attempt to read a double value from the JSON, which represents the angle in degrees.
-            if (_throwOnError)
-            {
-                // If throwOnError is true, force conversion and throw if it fails.
-                return new Angle(reader.GetDouble());
-            }
-
-            // If reading the double fails, return null.
-            return reader.TryGetDouble(out var degrees) ? new Angle(degrees) : null;
+            return new Angle(reader.GetDouble());
         }
 
         /// <summary>
