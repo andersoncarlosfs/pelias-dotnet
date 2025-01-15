@@ -89,7 +89,7 @@ namespace Pelias.NET.Controller.Services
                         // Collect missing properties between the raw and internal structure
                         foreach (var entry in IEntity.GetMissingProperties(raw, traversed, new List<JsonProperty>(), exceptions, false))
                         {
-                            exceptions.Add(new MissingEntryException(string.Format(ExceptionsResources.MissingEntryException, entry.LastOrDefault(), $"'{{{subject?.GetType().Name}: {{{string.Join(": {", entry.Select(value => value.Name))}{new string('}', entry.Count)}}}'")));
+                            exceptions.Add(new NotImplementedException(string.Format(ExceptionsResources.NotImplementedException_MissingEntry, entry.LastOrDefault(), $"'{{{subject?.GetType().Name}: {{{string.Join(": {", entry.Select(value => value.Name))}{new string('}', entry.Count)}}}'")));
                         }
                     }
 
