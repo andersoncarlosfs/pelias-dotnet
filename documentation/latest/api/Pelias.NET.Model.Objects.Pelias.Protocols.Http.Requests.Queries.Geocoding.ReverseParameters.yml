@@ -18,10 +18,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/ReverseParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: ReverseParameters
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/ReverseParameters.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
@@ -36,6 +36,12 @@ items:
   - Pelias.NET.Model.Interfaces.Protocols.Http.IQuery
   inheritedMembers:
   - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Size
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
   - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -59,10 +65,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/ReverseParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Longitude
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/ReverseParameters.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
@@ -70,9 +76,11 @@ items:
     content: >-
       [JsonRequired]
 
-      [JsonConverter(typeof(AngleConverter))]
+      [JsonConverter(typeof(DegreesConverter))]
 
       [JsonPropertyName("point.lon")]
+
+      [Required]
 
       public required Angle Longitude { get; set; }
     parameters: []
@@ -81,9 +89,11 @@ items:
     content.vb: >-
       <JsonRequired>
 
-      <JsonConverter(GetType(AngleConverter))>
+      <JsonConverter(GetType(DegreesConverter))>
 
       <JsonPropertyName("point.lon")>
+
+      <Required>
 
       Public Property Longitude As Angle
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters.Longitude*
@@ -95,12 +105,15 @@ items:
     ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
     arguments:
     - type: System.Type
-      value: Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter
+      value: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter
   - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
     ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
     arguments:
     - type: System.String
       value: point.lon
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters.Latitude
   commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters.Latitude
   id: Latitude
@@ -116,10 +129,10 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/ReverseParameters.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Latitude
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/Geocoding/ReverseParameters.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
@@ -127,9 +140,11 @@ items:
     content: >-
       [JsonRequired]
 
-      [JsonConverter(typeof(AngleConverter))]
+      [JsonConverter(typeof(DegreesConverter))]
 
       [JsonPropertyName("point.lat")]
+
+      [Required]
 
       public required Angle Latitude { get; set; }
     parameters: []
@@ -138,9 +153,11 @@ items:
     content.vb: >-
       <JsonRequired>
 
-      <JsonConverter(GetType(AngleConverter))>
+      <JsonConverter(GetType(DegreesConverter))>
 
       <JsonPropertyName("point.lat")>
+
+      <Required>
 
       Public Property Latitude As Angle
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.ReverseParameters.Latitude*
@@ -152,12 +169,15 @@ items:
     ctor: System.Text.Json.Serialization.JsonConverterAttribute.#ctor(System.Type)
     arguments:
     - type: System.Type
-      value: Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter
+      value: Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter
   - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
     ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
     arguments:
     - type: System.String
       value: point.lat
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
 references:
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
   commentId: N:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding
@@ -284,6 +304,60 @@ references:
   name: Size
   nameWithType: GeocodingBase.Size
   fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Size
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Layers
+  name: Layers
+  nameWithType: GeocodingBase.Layers
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Layers
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_Sources
+  name: Sources
+  nameWithType: GeocodingBase.Sources
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.Sources
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCircleRadius
+  name: BoundaryCircleRadius
+  nameWithType: GeocodingBase.BoundaryCircleRadius
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCircleRadius
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryCountries
+  name: BoundaryCountries
+  nameWithType: GeocodingBase.BoundaryCountries
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryCountries
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  commentId: P:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_Geocoding_GeocodingBase_BoundaryPeliasGlobalIdentifier
+  name: BoundaryPeliasGlobalIdentifier
+  nameWithType: GeocodingBase.BoundaryPeliasGlobalIdentifier
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.Geocoding.GeocodingBase.BoundaryPeliasGlobalIdentifier
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  name: Validate()
+  nameWithType: QueryBase.Validate()
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate()
+  spec.csharp:
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+    name: Validate
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+    name: Validate
+    href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  - name: (
+  - name: )
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   commentId: M:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase

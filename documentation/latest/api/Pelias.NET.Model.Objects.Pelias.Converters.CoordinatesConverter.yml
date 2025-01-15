@@ -18,14 +18,17 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: CoordinatesConverter
     path: sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Converters
-  summary: Custom JSON converter for converting Coordinates to and from JSON.
+  summary: >-
+    Custom JSON converter for <xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates" data-throw-if-not-resolved="false"></xref>, handling the serialization and deserialization of geographic coordinates.
+
+    This converter is responsible for converting a list of angles to a <xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates" data-throw-if-not-resolved="false"></xref> object.
   example: []
   syntax:
     content: 'public class CoordinatesConverter : JsonConverter<Coordinates>'
@@ -62,26 +65,34 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Read
     path: sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs
-    startLine: 54
+    startLine: 27
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Converters
-  summary: Reads JSON and converts it to a Coordinates object.
+  summary: >-
+    Reads a JSON value and converts it into a <xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates" data-throw-if-not-resolved="false"></xref> object.
+
+    This method maps the first angle to longitude and the second angle to latitude.
+  remarks: 'The input JSON is expected to be an array with two values: the first being the longitude and the second being the latitude.'
   example: []
   syntax:
     content: public override Coordinates Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     parameters:
     - id: reader
       type: System.Text.Json.Utf8JsonReader
+      description: The JSON reader to read the value from.
     - id: typeToConvert
       type: System.Type
+      description: The target type to convert to (<xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates" data-throw-if-not-resolved="false"></xref>).
     - id: options
       type: System.Text.Json.JsonSerializerOptions
+      description: The serializer options to use for deserialization.
     return:
       type: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
+      description: A <xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates" data-throw-if-not-resolved="false"></xref> object representing the deserialized geographic coordinates.
     content.vb: Public Overrides Function Read(reader As Utf8JsonReader, typeToConvert As Type, options As JsonSerializerOptions) As Coordinates
   overridden: System.Text.Json.Serialization.JsonConverter{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates}.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   overload: Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter.Read*
@@ -103,28 +114,41 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Write
     path: sources/Pelias.NET/Model/Objects/Pelias/Converters/CoordinatesConverter.cs
-    startLine: 63
+    startLine: 58
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Converters
-  summary: Writes a Coordinates object to JSON.
+  summary: >-
+    Writes a <xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates" data-throw-if-not-resolved="false"></xref> object to JSON.
+
+    This method serializes the longitude and latitude as a list of angles.
   example: []
   syntax:
     content: public override void Write(Utf8JsonWriter writer, Coordinates value, JsonSerializerOptions options)
     parameters:
     - id: writer
       type: System.Text.Json.Utf8JsonWriter
+      description: The JSON writer to write the value to.
     - id: value
       type: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
+      description: The <xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates" data-throw-if-not-resolved="false"></xref> object to serialize.
     - id: options
       type: System.Text.Json.JsonSerializerOptions
+      description: The serializer options to use for serialization.
     content.vb: Public Overrides Sub Write(writer As Utf8JsonWriter, value As Coordinates, options As JsonSerializerOptions)
   overridden: System.Text.Json.Serialization.JsonConverter{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates}.Write(System.Text.Json.Utf8JsonWriter,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates,System.Text.Json.JsonSerializerOptions)
   overload: Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter.Write*
 references:
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
+  commentId: T:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
+  parent: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html
+  name: Coordinates
+  nameWithType: Coordinates
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
 - uid: Pelias.NET.Model.Objects.Pelias.Converters
   commentId: N:Pelias.NET.Model.Objects.Pelias.Converters
   href: Pelias.html
@@ -615,6 +639,60 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  commentId: N:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  nameWithType: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
 - uid: System
   commentId: N:System
   isExternal: true
@@ -942,13 +1020,6 @@ references:
   name: JsonSerializerOptions
   nameWithType: JsonSerializerOptions
   fullName: System.Text.Json.JsonSerializerOptions
-- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
-  commentId: T:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
-  parent: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html
-  name: Coordinates
-  nameWithType: Coordinates
-  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates
 - uid: System.Text.Json.Serialization.JsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   commentId: M:System.Text.Json.Serialization.JsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   isExternal: true
@@ -1044,60 +1115,6 @@ references:
     name: Json
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json
-- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  commentId: N:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  href: Pelias.html
-  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  nameWithType: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  spec.csharp:
-  - uid: Pelias
-    name: Pelias
-    href: Pelias.html
-  - name: .
-  - uid: Pelias.NET
-    name: NET
-    href: Pelias.NET.html
-  - name: .
-  - uid: Pelias.NET.Model
-    name: Model
-    href: Pelias.NET.Model.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects
-    name: Objects
-    href: Pelias.NET.Model.Objects.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects.Pelias
-    name: Pelias
-    href: Pelias.NET.Model.Objects.Pelias.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-    name: GeographicInformationSystems
-    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
-  spec.vb:
-  - uid: Pelias
-    name: Pelias
-    href: Pelias.html
-  - name: .
-  - uid: Pelias.NET
-    name: NET
-    href: Pelias.NET.html
-  - name: .
-  - uid: Pelias.NET.Model
-    name: Model
-    href: Pelias.NET.Model.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects
-    name: Objects
-    href: Pelias.NET.Model.Objects.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects.Pelias
-    name: Pelias
-    href: Pelias.NET.Model.Objects.Pelias.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-    name: GeographicInformationSystems
-    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
 - uid: System.Text.Json.Serialization.JsonConverter{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates}.Write(System.Text.Json.Utf8JsonWriter,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates,System.Text.Json.JsonSerializerOptions)
   commentId: M:System.Text.Json.Serialization.JsonConverter{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates}.Write(System.Text.Json.Utf8JsonWriter,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates,System.Text.Json.JsonSerializerOptions)
   parent: System.Text.Json.Serialization.JsonConverter{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates}

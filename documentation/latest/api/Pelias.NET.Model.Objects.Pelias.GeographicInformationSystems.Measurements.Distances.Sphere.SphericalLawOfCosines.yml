@@ -17,7 +17,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Sphere/SphericalLawOfCosines.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: SphericalLawOfCosines
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Sphere/SphericalLawOfCosines.cs
     startLine: 5
@@ -58,7 +58,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Sphere/SphericalLawOfCosines.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Compute
     path: sources/Pelias.NET/Model/Objects/Pelias/GeographicInformationSystems/Measurements/Distances/Sphere/SphericalLawOfCosines.cs
     startLine: 10

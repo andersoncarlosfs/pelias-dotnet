@@ -17,13 +17,15 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Extensions/EnumExtensions.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: EnumExtensions
     path: sources/Pelias.NET/Model/Objects/Pelias/Extensions/EnumExtensions.cs
-    startLine: 4
+    startLine: 8
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Extensions
+  summary: Provides extension methods for enums, specifically for retrieving the value of the <xref href="System.Runtime.Serialization.EnumMemberAttribute" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public static class EnumExtensions
     content.vb: Public Module EnumExtensions
@@ -53,28 +55,48 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Extensions/EnumExtensions.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: GetEnumMemberValue
     path: sources/Pelias.NET/Model/Objects/Pelias/Extensions/EnumExtensions.cs
-    startLine: 6
+    startLine: 20
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Extensions
+  summary: >-
+    Retrieves the string value of the <xref href="System.Runtime.Serialization.EnumMemberAttribute" data-throw-if-not-resolved="false"></xref> associated with the specified enum value.
+
+    If no <xref href="System.Runtime.Serialization.EnumMemberAttribute" data-throw-if-not-resolved="false"></xref> is found, an <xref href="System.InvalidOperationException" data-throw-if-not-resolved="false"></xref> is thrown.
+  example: []
   syntax:
     content: 'public static string GetEnumMemberValue<T>(this T value) where T : Enum'
     parameters:
     - id: value
       type: '{T}'
+      description: The enum value for which the <xref href="System.Runtime.Serialization.EnumMemberAttribute" data-throw-if-not-resolved="false"></xref> value should be retrieved.
     typeParameters:
     - id: T
+      description: The enum type.
     return:
       type: System.String
+      description: The string value of the <xref href="System.Runtime.Serialization.EnumMemberAttribute" data-throw-if-not-resolved="false"></xref> for the specified enum value.
     content.vb: Public Shared Function GetEnumMemberValue(Of T As [Enum])(value As T) As String
   overload: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if the <xref href="System.Runtime.Serialization.EnumMemberAttribute" data-throw-if-not-resolved="false"></xref> is not found for the specified enum value.
   nameWithType.vb: EnumExtensions.GetEnumMemberValue(Of T)(T)
   fullName.vb: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue(Of T)(T)
   name.vb: GetEnumMemberValue(Of T)(T)
 references:
+- uid: System.Runtime.Serialization.EnumMemberAttribute
+  commentId: T:System.Runtime.Serialization.EnumMemberAttribute
+  parent: System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.enummemberattribute
+  name: EnumMemberAttribute
+  nameWithType: EnumMemberAttribute
+  fullName: System.Runtime.Serialization.EnumMemberAttribute
 - uid: Pelias.NET.Model.Objects.Pelias.Extensions
   commentId: N:Pelias.NET.Model.Objects.Pelias.Extensions
   href: Pelias.html
@@ -359,6 +381,43 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
+  fullName: System.Runtime.Serialization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
 - uid: System
   commentId: N:System
   isExternal: true
@@ -366,6 +425,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
 - uid: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue*
   commentId: Overload:Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue
   href: Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.html#Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_

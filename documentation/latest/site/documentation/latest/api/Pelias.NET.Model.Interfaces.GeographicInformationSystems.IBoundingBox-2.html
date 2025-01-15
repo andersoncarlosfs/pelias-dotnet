@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IBoundingBox&lt;TCoordinates, TAngle&gt; | Pelias.NET ">
       
-      <meta name="description" content="Represents an interface for a bounding box defined by top-right and bottom-left coordinates, extending the general entity interface.">
+      <meta name="description" content="Represents an interface for a bounding box defined by top-right and bottom-left coordinates. This interface extends the  interface and implements .">
       <link rel="icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../public/docfx.min.css">
       <link rel="stylesheet" href="../../../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Pelias_NET_Model_Interfaces_GeographicInformationSystems_IBoundingBox_2" data-uid="Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2" class="text-break">
-Interface IBoundingBox&lt;TCoordinates, TAngle&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Interface IBoundingBox&lt;TCoordinates, TAngle&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,13 +97,13 @@ Interface IBoundingBox&lt;TCoordinates, TAngle&gt;  <a class="header-action link
   <dl><dt>Assembly</dt><dd>Pelias.NET.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents an interface for a bounding box defined by top-right and bottom-left coordinates,
-extending the general entity interface.</p>
+  <div class="markdown summary"><p>Represents an interface for a bounding box defined by top-right and bottom-left coordinates.
+This interface extends the <a class="xref" href="Pelias.NET.Model.Interfaces.IEntity.html">IEntity</a> interface and implements <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IBoundingBox&lt;TCoordinates, TAngle&gt; : IEntity where TCoordinates : ICoordinates&lt;TAngle&gt; where TAngle : IAngle</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IBoundingBox&lt;TCoordinates, TAngle&gt; : IEntity, IEnumerable&lt;TCoordinates&gt;, IEnumerable where TCoordinates : ICoordinates&lt;TAngle&gt; where TAngle : IAngle</code></pre>
   </div>
 
 
@@ -111,10 +111,10 @@ extending the general entity interface.</p>
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>TCoordinates</code></dt>
-    <dd><p>The type representing the coordinates of the bounding box.</p>
+    <dd><p>The type representing the coordinates of the bounding box, which must implement <a class="xref" href="Pelias.NET.Model.Interfaces.GeographicInformationSystems.ICoordinates-1.html">ICoordinates&lt;TAngle&gt;</a>.</p>
 </dd>
     <dt><code>TAngle</code></dt>
-    <dd><p>The type representing an angle measurement.</p>
+    <dd><p>The type representing an angle measurement, which must implement <a class="xref" href="Pelias.NET.Model.Interfaces.GeographicInformationSystems.Measurements.Measures.IAngle.html">IAngle</a>.</p>
 </dd>
   </dl>
 
@@ -126,6 +126,9 @@ extending the general entity interface.</p>
     <dd>
     <div>
       <a class="xref" href="Pelias.NET.Model.Interfaces.IEntity.html#Pelias_NET_Model_Interfaces_IEntity_GetMissingProperties_System_Text_Json_JsonElement_System_Text_Json_JsonElement_System_Collections_Generic_List_System_Text_Json_JsonProperty__System_Collections_Generic_List_System_Exception__System_Boolean_">IEntity.GetMissingProperties(JsonElement, JsonElement, List&lt;JsonProperty&gt;, List&lt;Exception&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator">IEnumerable&lt;TCoordinates&gt;.GetEnumerator()</a>
     </div>
   </dd></dl>
 
@@ -142,7 +145,7 @@ extending the general entity interface.</p>
 
   <h3 id="Pelias_NET_Model_Interfaces_GeographicInformationSystems_IBoundingBox_2_BottomLeftCoordinates" data-uid="Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.BottomLeftCoordinates">
   BottomLeftCoordinates
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the bottom-left coordinates of the bounding box.</p>
@@ -160,7 +163,8 @@ extending the general entity interface.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">TCoordinates</span></dt>
-    <dd></dd>
+    <dd><p>The bottom-left coordinates as a <code class="typeparamref">TCoordinates</code> instance.</p>
+</dd>
   </dl>
 
 
@@ -174,7 +178,7 @@ extending the general entity interface.</p>
 
   <h3 id="Pelias_NET_Model_Interfaces_GeographicInformationSystems_IBoundingBox_2_TopRightCoordinates" data-uid="Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.TopRightCoordinates">
   TopRightCoordinates
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the top-right coordinates of the bounding box.</p>
@@ -192,7 +196,8 @@ extending the general entity interface.</p>
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><span class="xref">TCoordinates</span></dt>
-    <dd></dd>
+    <dd><p>The top-right coordinates as a <code class="typeparamref">TCoordinates</code> instance.</p>
+</dd>
   </dl>
 
 
@@ -210,7 +215,7 @@ extending the general entity interface.</p>
 
   <h3 id="Pelias_NET_Model_Interfaces_GeographicInformationSystems_IBoundingBox_2_Contains__0_" data-uid="Pelias.NET.Model.Interfaces.GeographicInformationSystems.IBoundingBox`2.Contains(`0)">
   Contains(TCoordinates)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs/#L61"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks whether the specified coordinates are within the bounding box.</p>
@@ -224,14 +229,14 @@ extending the general entity interface.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>coordinates</code> <span class="xref">TCoordinates</span></dt>
-    <dd><p>The coordinates to check.</p>
+    <dd><p>The coordinates to check, represented as a <code class="typeparamref">TCoordinates</code> instance.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>True if the coordinates are within the bounding box, otherwise false.</p>
+    <dd><p><code>true</code> if the coordinates are within the bounds of the bounding box, otherwise <code>false</code>.</p>
 </dd>
   </dl>
 
@@ -241,6 +246,10 @@ extending the general entity interface.</p>
 
 
 
+  <h4 class="section" id="Pelias_NET_Model_Interfaces_GeographicInformationSystems_IBoundingBox_2_Contains__0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method checks if both the latitude and longitude of the specified coordinates
+are within the ranges defined by the top-right and bottom-left coordinates of the bounding box.</p>
+</div>
 
 
 
@@ -249,7 +258,7 @@ extending the general entity interface.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs/#L11" class="edit-link">Edit this page</a>
+          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IBoundingBox.cs/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

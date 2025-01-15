@@ -19,7 +19,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Path
     path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
     startLine: 5
@@ -65,7 +65,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Reverse
     path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
     startLine: 9
@@ -106,7 +106,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Search
     path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
     startLine: 11
@@ -147,7 +147,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: StructuredSearch
     path: sources/Pelias.NET/Model/Objects/Pelias/Enums/Path.cs
     startLine: 13

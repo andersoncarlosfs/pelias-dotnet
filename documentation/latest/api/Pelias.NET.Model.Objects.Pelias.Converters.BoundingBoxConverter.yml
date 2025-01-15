@@ -18,14 +18,14 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: BoundingBoxConverter
     path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
     startLine: 11
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Converters
-  summary: Custom JSON converter for converting BoundingBox to and from JSON.
+  summary: Custom JSON converter for <xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox" data-throw-if-not-resolved="false"></xref>, handling the serialization and deserialization of a bounding box.
   example: []
   syntax:
     content: 'public class BoundingBoxConverter : JsonConverter<BoundingBox>'
@@ -62,26 +62,30 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Read
     path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
-    startLine: 16
+    startLine: 22
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Converters
-  summary: Reads JSON and converts it to a BoundingBox object.
+  summary: Reads a JSON value and converts it into a <xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox" data-throw-if-not-resolved="false"></xref> object.
   example: []
   syntax:
     content: public override BoundingBox Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     parameters:
     - id: reader
       type: System.Text.Json.Utf8JsonReader
+      description: The JSON reader to read the value from.
     - id: typeToConvert
       type: System.Type
+      description: The target type to convert to (<xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox" data-throw-if-not-resolved="false"></xref>).
     - id: options
       type: System.Text.Json.JsonSerializerOptions
+      description: The serializer options to use for deserialization.
     return:
       type: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox
+      description: A <xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox" data-throw-if-not-resolved="false"></xref> object representing the deserialized bounding box.
     content.vb: Public Overrides Function Read(reader As Utf8JsonReader, typeToConvert As Type, options As JsonSerializerOptions) As BoundingBox
   overridden: System.Text.Json.Serialization.JsonConverter{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox}.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   overload: Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter.Read*
@@ -103,28 +107,38 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Write
     path: sources/Pelias.NET/Model/Objects/Pelias/Converters/BoundingBoxConverter.cs
-    startLine: 69
+    startLine: 60
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Converters
-  summary: Writes a BoundingBox object to JSON.
+  summary: Writes a <xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox" data-throw-if-not-resolved="false"></xref> object to JSON.
   example: []
   syntax:
     content: public override void Write(Utf8JsonWriter writer, BoundingBox value, JsonSerializerOptions options)
     parameters:
     - id: writer
       type: System.Text.Json.Utf8JsonWriter
+      description: The JSON writer to write the value to.
     - id: value
       type: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox
+      description: The <xref href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox" data-throw-if-not-resolved="false"></xref> object to serialize.
     - id: options
       type: System.Text.Json.JsonSerializerOptions
+      description: The serializer options to use for serialization.
     content.vb: Public Overrides Sub Write(writer As Utf8JsonWriter, value As BoundingBox, options As JsonSerializerOptions)
   overridden: System.Text.Json.Serialization.JsonConverter{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox}.Write(System.Text.Json.Utf8JsonWriter,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox,System.Text.Json.JsonSerializerOptions)
   overload: Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter.Write*
 references:
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox
+  commentId: T:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox
+  parent: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html
+  name: BoundingBox
+  nameWithType: BoundingBox
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox
 - uid: Pelias.NET.Model.Objects.Pelias.Converters
   commentId: N:Pelias.NET.Model.Objects.Pelias.Converters
   href: Pelias.html
@@ -615,6 +629,60 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  commentId: N:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  href: Pelias.html
+  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  nameWithType: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+  spec.csharp:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
+  spec.vb:
+  - uid: Pelias
+    name: Pelias
+    href: Pelias.html
+  - name: .
+  - uid: Pelias.NET
+    name: NET
+    href: Pelias.NET.html
+  - name: .
+  - uid: Pelias.NET.Model
+    name: Model
+    href: Pelias.NET.Model.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects
+    name: Objects
+    href: Pelias.NET.Model.Objects.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias
+    name: Pelias
+    href: Pelias.NET.Model.Objects.Pelias.html
+  - name: .
+  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
+    name: GeographicInformationSystems
+    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
 - uid: System
   commentId: N:System
   isExternal: true
@@ -942,13 +1010,6 @@ references:
   name: JsonSerializerOptions
   nameWithType: JsonSerializerOptions
   fullName: System.Text.Json.JsonSerializerOptions
-- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox
-  commentId: T:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox
-  parent: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html
-  name: BoundingBox
-  nameWithType: BoundingBox
-  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox
 - uid: System.Text.Json.Serialization.JsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   commentId: M:System.Text.Json.Serialization.JsonConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
   isExternal: true
@@ -1044,60 +1105,6 @@ references:
     name: Json
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.text.json
-- uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  commentId: N:Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  href: Pelias.html
-  name: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  nameWithType: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  fullName: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-  spec.csharp:
-  - uid: Pelias
-    name: Pelias
-    href: Pelias.html
-  - name: .
-  - uid: Pelias.NET
-    name: NET
-    href: Pelias.NET.html
-  - name: .
-  - uid: Pelias.NET.Model
-    name: Model
-    href: Pelias.NET.Model.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects
-    name: Objects
-    href: Pelias.NET.Model.Objects.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects.Pelias
-    name: Pelias
-    href: Pelias.NET.Model.Objects.Pelias.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-    name: GeographicInformationSystems
-    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
-  spec.vb:
-  - uid: Pelias
-    name: Pelias
-    href: Pelias.html
-  - name: .
-  - uid: Pelias.NET
-    name: NET
-    href: Pelias.NET.html
-  - name: .
-  - uid: Pelias.NET.Model
-    name: Model
-    href: Pelias.NET.Model.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects
-    name: Objects
-    href: Pelias.NET.Model.Objects.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects.Pelias
-    name: Pelias
-    href: Pelias.NET.Model.Objects.Pelias.html
-  - name: .
-  - uid: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems
-    name: GeographicInformationSystems
-    href: Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.html
 - uid: System.Text.Json.Serialization.JsonConverter{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox}.Write(System.Text.Json.Utf8JsonWriter,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox,System.Text.Json.JsonSerializerOptions)
   commentId: M:System.Text.Json.Serialization.JsonConverter{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox}.Write(System.Text.Json.Utf8JsonWriter,Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox,System.Text.Json.JsonSerializerOptions)
   parent: System.Text.Json.Serialization.JsonConverter{Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox}

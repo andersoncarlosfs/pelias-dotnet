@@ -95,18 +95,27 @@
 Classes
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="Pelias.NET.Model.Objects.Pelias.Converters.AngleConverter.html">AngleConverter</a></dt>
-      <dd><p>Custom JSON converter for the Angle class, facilitating JSON serialization and deserialization.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Pelias.NET.Model.Objects.Pelias.Converters.BoundingBoxConverter.html">BoundingBoxConverter</a></dt>
-      <dd><p>Custom JSON converter for converting BoundingBox to and from JSON.</p>
+      <dd><p>Custom JSON converter for <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.BoundingBox.html">BoundingBox</a>, handling the serialization and deserialization of a bounding box.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Pelias.NET.Model.Objects.Pelias.Converters.CoordinatesConverter.html">CoordinatesConverter</a></dt>
-      <dd><p>Custom JSON converter for converting Coordinates to and from JSON.</p>
+      <dd><p>Custom JSON converter for <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a>, handling the serialization and deserialization of geographic coordinates.
+This converter is responsible for converting a list of angles to a <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Coordinates.html">Coordinates</a> object.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Pelias.NET.Model.Objects.Pelias.Converters.DegreesConverter.html">DegreesConverter</a></dt>
+      <dd><p>Custom JSON converter for serializing and deserializing instances of the <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html">Angle</a> class.
+This converter handles the conversion of <a class="xref" href="Pelias.NET.Model.Objects.Pelias.GeographicInformationSystems.Measurements.Measures.Angle.html">Angle</a> objects to and from JSON format,
+specifically dealing with angle values represented as numeric degrees.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Pelias.NET.Model.Objects.Pelias.Converters.EnumsConverter-1.html">EnumsConverter&lt;T&gt;</a></dt>
+      <dd><p>A custom JSON converter for serializing and deserializing <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet&lt;T&gt;</a> of enum values.
+This converter works for both nullable and non-nullable enums.</p>
 </dd>
     </dl>
 

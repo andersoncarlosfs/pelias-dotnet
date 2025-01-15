@@ -6,6 +6,7 @@ items:
   parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
   children:
   - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
+  - Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
   langs:
   - csharp
   - vb
@@ -17,13 +18,20 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: QueryBase
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
-    startLine: 11
+    startLine: 16
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  summary: >-
+    Represents the base class for a query in the Pelias API.
+
+    This class provides the functionality to validate the object's properties and
+
+    serialize them into a query string for HTTP requests.
+  example: []
   syntax:
     content: 'public abstract class QueryBase : IQuery'
     content.vb: Public MustInherit Class QueryBase Implements IQuery
@@ -41,6 +49,41 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  commentId: M:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  id: Validate
+  parent: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase
+  langs:
+  - csharp
+  - vb
+  name: Validate()
+  nameWithType: QueryBase.Validate()
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate()
+  type: Method
+  source:
+    remote:
+      path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
+      branch: main
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
+    id: Validate
+    path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
+    startLine: 26
+  assemblies:
+  - Pelias.NET
+  namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
+  summary: Validates the necessary attributes for URL encoding, including required fields.
+  remarks: >-
+    This method checks the object for any validation attributes and collects validation
+
+    errors if any are present. It uses the <xref href="System.ComponentModel.DataAnnotations.Validator.TryValidateObject(System.Object%2cSystem.ComponentModel.DataAnnotations.ValidationContext%2cSystem.Collections.Generic.ICollection%7bSystem.ComponentModel.DataAnnotations.ValidationResult%7d)" data-throw-if-not-resolved="false"></xref> method.
+  example: []
+  syntax:
+    content: public List<ValidationResult> Validate()
+    return:
+      type: System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult}
+      description: A list of validation results.
+    content.vb: Public Function Validate() As List(Of ValidationResult)
+  overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate*
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   commentId: M:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   id: ToNameValueCollection
@@ -56,21 +99,37 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: ToNameValueCollection
     path: sources/Pelias.NET/Model/Objects/Pelias/Protocols/Http/Requests/Queries/QueryBase.cs
-    startLine: 42
+    startLine: 50
   assemblies:
   - Pelias.NET
   namespace: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries
-  summary: Creates a collection of parameters with their respective values for URL encoding.
+  summary: >-
+    Creates a collection of parameters with their respective values for URL encoding.
+
+    Converts the properties of this object to a name-value collection for URL query string generation.
+  remarks: >-
+    This method checks for the <xref href="System.Text.Json.Serialization.JsonIgnoreAttribute" data-throw-if-not-resolved="false"></xref> to exclude properties
+
+    from the URL string when necessary. It also handles the <xref href="System.Text.Json.Serialization.JsonPropertyNameAttribute" data-throw-if-not-resolved="false"></xref>
+
+    to map properties to the correct names and applies any custom converters through
+
+    the <xref href="System.Text.Json.Serialization.JsonConverterAttribute" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public NameValueCollection ToNameValueCollection()
     return:
       type: System.Collections.Specialized.NameValueCollection
+      description: A <xref href="System.Collections.Specialized.NameValueCollection" data-throw-if-not-resolved="false"></xref> containing the query string parameters.
     content.vb: Public Function ToNameValueCollection() As NameValueCollection
   overload: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection*
+  exceptions:
+  - type: System.AggregateException
+    commentId: T:System.AggregateException
+    description: Thrown if any validation errors occur during the validation of the object.
   implements:
   - Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.ToNameValueCollection
 references:
@@ -450,6 +509,221 @@ references:
   - uid: Pelias.NET.Model.Interfaces.Protocols.Http
     name: Http
     href: Pelias.NET.Model.Interfaces.Protocols.Http.html
+- uid: System.ComponentModel.DataAnnotations.Validator.TryValidateObject(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection{System.ComponentModel.DataAnnotations.ValidationResult})
+  commentId: M:System.ComponentModel.DataAnnotations.Validator.TryValidateObject(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection{System.ComponentModel.DataAnnotations.ValidationResult})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validator.tryvalidateobject#system-componentmodel-dataannotations-validator-tryvalidateobject(system-object-system-componentmodel-dataannotations-validationcontext-system-collections-generic-icollection((system-componentmodel-dataannotations-validationresult)))
+  name: TryValidateObject(object, ValidationContext, ICollection<ValidationResult>)
+  nameWithType: Validator.TryValidateObject(object, ValidationContext, ICollection<ValidationResult>)
+  fullName: System.ComponentModel.DataAnnotations.Validator.TryValidateObject(object, System.ComponentModel.DataAnnotations.ValidationContext, System.Collections.Generic.ICollection<System.ComponentModel.DataAnnotations.ValidationResult>)
+  nameWithType.vb: Validator.TryValidateObject(Object, ValidationContext, ICollection(Of ValidationResult))
+  fullName.vb: System.ComponentModel.DataAnnotations.Validator.TryValidateObject(Object, System.ComponentModel.DataAnnotations.ValidationContext, System.Collections.Generic.ICollection(Of System.ComponentModel.DataAnnotations.ValidationResult))
+  name.vb: TryValidateObject(Object, ValidationContext, ICollection(Of ValidationResult))
+  spec.csharp:
+  - uid: System.ComponentModel.DataAnnotations.Validator.TryValidateObject(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection{System.ComponentModel.DataAnnotations.ValidationResult})
+    name: TryValidateObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validator.tryvalidateobject#system-componentmodel-dataannotations-validator-tryvalidateobject(system-object-system-componentmodel-dataannotations-validationcontext-system-collections-generic-icollection((system-componentmodel-dataannotations-validationresult)))
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.ComponentModel.DataAnnotations.ValidationContext
+    name: ValidationContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationcontext
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: System.ComponentModel.DataAnnotations.ValidationResult
+    name: ValidationResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationresult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.ComponentModel.DataAnnotations.Validator.TryValidateObject(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection{System.ComponentModel.DataAnnotations.ValidationResult})
+    name: TryValidateObject
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validator.tryvalidateobject#system-componentmodel-dataannotations-validator-tryvalidateobject(system-object-system-componentmodel-dataannotations-validationcontext-system-collections-generic-icollection((system-componentmodel-dataannotations-validationresult)))
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.ComponentModel.DataAnnotations.ValidationContext
+    name: ValidationContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationcontext
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.ComponentModel.DataAnnotations.ValidationResult
+    name: ValidationResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationresult
+  - name: )
+  - name: )
+- uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate*
+  commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+  href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_Validate
+  name: Validate
+  nameWithType: QueryBase.Validate
+  fullName: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.Validate
+- uid: System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult}
+  commentId: T:System.Collections.Generic.List{System.ComponentModel.DataAnnotations.ValidationResult}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ValidationResult>
+  nameWithType: List<ValidationResult>
+  fullName: System.Collections.Generic.List<System.ComponentModel.DataAnnotations.ValidationResult>
+  nameWithType.vb: List(Of ValidationResult)
+  fullName.vb: System.Collections.Generic.List(Of System.ComponentModel.DataAnnotations.ValidationResult)
+  name.vb: List(Of ValidationResult)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.ComponentModel.DataAnnotations.ValidationResult
+    name: ValidationResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationresult
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.ComponentModel.DataAnnotations.ValidationResult
+    name: ValidationResult
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel.dataannotations.validationresult
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Specialized.NameValueCollection
+  commentId: T:System.Collections.Specialized.NameValueCollection
+  parent: System.Collections.Specialized
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection
+  name: NameValueCollection
+  nameWithType: NameValueCollection
+  fullName: System.Collections.Specialized.NameValueCollection
+- uid: System.Text.Json.Serialization.JsonIgnoreAttribute
+  commentId: T:System.Text.Json.Serialization.JsonIgnoreAttribute
+  parent: System.Text.Json.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonignoreattribute
+  name: JsonIgnoreAttribute
+  nameWithType: JsonIgnoreAttribute
+  fullName: System.Text.Json.Serialization.JsonIgnoreAttribute
+- uid: System.Text.Json.Serialization.JsonPropertyNameAttribute
+  commentId: T:System.Text.Json.Serialization.JsonPropertyNameAttribute
+  parent: System.Text.Json.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonpropertynameattribute
+  name: JsonPropertyNameAttribute
+  nameWithType: JsonPropertyNameAttribute
+  fullName: System.Text.Json.Serialization.JsonPropertyNameAttribute
+- uid: System.Text.Json.Serialization.JsonConverterAttribute
+  commentId: T:System.Text.Json.Serialization.JsonConverterAttribute
+  parent: System.Text.Json.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverterattribute
+  name: JsonConverterAttribute
+  nameWithType: JsonConverterAttribute
+  fullName: System.Text.Json.Serialization.JsonConverterAttribute
+- uid: System.AggregateException
+  commentId: T:System.AggregateException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.aggregateexception
+  name: AggregateException
+  nameWithType: AggregateException
+  fullName: System.AggregateException
 - uid: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection*
   commentId: Overload:Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.ToNameValueCollection
   href: Pelias.NET.Model.Objects.Pelias.Protocols.Http.Requests.Queries.QueryBase.html#Pelias_NET_Model_Objects_Pelias_Protocols_Http_Requests_Queries_QueryBase_ToNameValueCollection
@@ -475,14 +749,6 @@ references:
     href: Pelias.NET.Model.Interfaces.Protocols.Http.IQuery.html#Pelias_NET_Model_Interfaces_Protocols_Http_IQuery_ToNameValueCollection
   - name: (
   - name: )
-- uid: System.Collections.Specialized.NameValueCollection
-  commentId: T:System.Collections.Specialized.NameValueCollection
-  parent: System.Collections.Specialized
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.specialized.namevaluecollection
-  name: NameValueCollection
-  nameWithType: NameValueCollection
-  fullName: System.Collections.Specialized.NameValueCollection
 - uid: System.Collections.Specialized
   commentId: N:System.Collections.Specialized
   isExternal: true
@@ -520,3 +786,50 @@ references:
     name: Specialized
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.specialized
+- uid: System.Text.Json.Serialization
+  commentId: N:System.Text.Json.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.Json.Serialization
+  nameWithType: System.Text.Json.Serialization
+  fullName: System.Text.Json.Serialization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.Json
+    name: Json
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json
+  - name: .
+  - uid: System.Text.Json.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.json.serialization

@@ -1,4 +1,5 @@
 ﻿using Pelias.NET.Model.Exceptions;
+using Pelias.NET.Model.Resources;
 using System.Text.Json;
 
 namespace Pelias.NET.Model.Interfaces
@@ -22,7 +23,7 @@ namespace Pelias.NET.Model.Interfaces
             // Checking if there is mismatch
             if (!source.ValueKind.Equals(target.ValueKind))
             {
-                exceptions.Add(new TypeMismatchException($"The type '{target.ValueKind}' of the argument '{nameof(target)}' is not the equal to the type '{source.ValueKind}' of the argument '{nameof(source)}'."));
+                exceptions.Add(new TypeMismatchException(string.Format(ExceptionsResources.TypeMismatchException_NotEqual_JsonValueKind, target.ValueKind, nameof(target), source.ValueKind, nameof(source))));
             }
 
             // Checking it the document is an dictionary
@@ -50,7 +51,6 @@ namespace Pelias.NET.Model.Interfaces
                     {
                         // Yield the missing entries
                         yield return keys;
-
                     }
                 }
             }
@@ -78,7 +78,7 @@ namespace Pelias.NET.Model.Interfaces
                         }
                         else
                         {
-                            exceptions.Add(new CollectionIterationException($"The collection '{nameof(target)}' has '{target.GetArrayLength()}' elements instead of '{source.GetArrayLength()}'."));
+                            exceptions.Add(new ArgumentException(string.Format(ExceptionsResources.ArgumentException_InvalidNumberOfElements, nameof(target), target.GetArrayLength(), source.GetArrayLength())));
                         }
                     }
                 }

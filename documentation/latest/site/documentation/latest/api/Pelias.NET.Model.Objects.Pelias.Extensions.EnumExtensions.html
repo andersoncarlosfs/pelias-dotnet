@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class EnumExtensions | Pelias.NET ">
       
-      
+      <meta name="description" content="Provides extension methods for enums, specifically for retrieving the value of the .">
       <link rel="icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../public/docfx.min.css">
       <link rel="stylesheet" href="../../../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions" data-uid="Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions" class="text-break">
-Class EnumExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/EnumExtensions.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Class EnumExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/EnumExtensions.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class EnumExtensions  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>Pelias.NET.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Provides extension methods for enums, specifically for retrieving the value of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.enummemberattribute">EnumMemberAttribute</a>.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -156,10 +157,12 @@ Class EnumExtensions  <a class="header-action link-secondary" title="View source
 
   <h3 id="Pelias_NET_Model_Objects_Pelias_Extensions_EnumExtensions_GetEnumMemberValue__1___0_" data-uid="Pelias.NET.Model.Objects.Pelias.Extensions.EnumExtensions.GetEnumMemberValue``1(``0)">
   GetEnumMemberValue&lt;T&gt;(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/EnumExtensions.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/EnumExtensions.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Retrieves the string value of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.enummemberattribute">EnumMemberAttribute</a> associated with the specified enum value.
+If no <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.enummemberattribute">EnumMemberAttribute</a> is found, an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a> is thrown.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -169,19 +172,22 @@ Class EnumExtensions  <a class="header-action link-secondary" title="View source
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>value</code> <span class="xref">T</span></dt>
-    <dd></dd>
+    <dd><p>The enum value for which the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.enummemberattribute">EnumMemberAttribute</a> value should be retrieved.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>The string value of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.enummemberattribute">EnumMemberAttribute</a> for the specified enum value.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd></dd>
+    <dd><p>The enum type.</p>
+</dd>
   </dl>
 
 
@@ -190,6 +196,12 @@ Class EnumExtensions  <a class="header-action link-secondary" title="View source
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.enummemberattribute">EnumMemberAttribute</a> is not found for the specified enum value.</p>
+</dd>
+  </dl>
 
 
 
@@ -197,7 +209,7 @@ Class EnumExtensions  <a class="header-action link-secondary" title="View source
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/EnumExtensions.cs/#L5" class="edit-link">Edit this page</a>
+          <a href="https://github.com/andersoncarlosfs/pelias-dotnet/blob/main/sources/Pelias.NET/Model/Objects/Pelias/Extensions/EnumExtensions.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

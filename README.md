@@ -18,14 +18,13 @@ namespace Pelias.NET
 
             var client = new Client("http://localhost:4000/");
 
-            var request = new SearchParameters() { Text = address };
+            var request = new SearchParameters() { Text = address, Layers = new HashSet<Layer>() { Layer.Locality, Layer.Address } };
 
-            var response = await client.Search(request);
+            var options = new JsonSerializerOptions();
 
-            using (StreamReader reader = new StreamReader(response))
-            {
-                Console.WriteLine(reader.ReadToEnd());
-            }
+            var document = JsonSerializer.Serialize(await client.Search(request), options);
+
+            Console.WriteLine(document);
         }
     }
 }

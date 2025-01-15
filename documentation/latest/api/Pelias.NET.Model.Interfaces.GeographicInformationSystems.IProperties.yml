@@ -25,7 +25,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: IProperties
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
     startLine: 5
@@ -54,7 +54,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Identifier
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
     startLine: 10
@@ -85,7 +85,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: GroupIdentifier
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
     startLine: 15
@@ -116,7 +116,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Layer
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
     startLine: 20
@@ -147,7 +147,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Source
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
     startLine: 25
@@ -178,7 +178,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: SourceIdentifier
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
     startLine: 30
@@ -209,7 +209,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Name
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
     startLine: 35
@@ -240,7 +240,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Confidence
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
     startLine: 40
@@ -271,7 +271,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Accuracy
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
     startLine: 45
@@ -302,7 +302,7 @@ items:
     remote:
       path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
       branch: main
-      repo: https://github.com/andersoncarlosfs/pelias-dotnet
+      repo: git@github.com:andersoncarlosfs/pelias-dotnet.git
     id: Label
     path: sources/Pelias.NET/Model/Interfaces/GeographicInformationSystems/IProperties.cs
     startLine: 50
